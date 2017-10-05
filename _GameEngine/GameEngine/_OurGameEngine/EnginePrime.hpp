@@ -3,14 +3,13 @@
 //Abstract Class
 class EnginePrime
 {
+public:
 
 	//gets called once before game starts
-	virtual Start();
+	virtual void Start() = 0;
 
 	//gets called every program iteration "Frame"
-	virtual Update();
+	virtual void Update() = 0;
 
-	//Virtual destructor to insure class is abstract
-	virtual ~EnginePrime() = 0;
 
 };

@@ -1,4 +1,4 @@
-# Install script for directory: D:/__Faculty/_GameEngine/GameEngine/external/assimp-3.0.1270/contrib/zlib
+# Install script for directory: D:/Github projects/CG-Project/_GameEngine/GameEngine/external/assimp-3.0.1270/contrib/zlib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

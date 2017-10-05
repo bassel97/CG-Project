@@ -1,75 +1,75 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\adler32.c">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\adler32.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\compress.c">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\compress.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\crc32.c">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\crc32.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\deflate.c">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\deflate.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\inffast.c">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\inffast.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\inflate.c">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\inflate.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\inftrees.c">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\inftrees.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\trees.c">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\trees.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\zutil.c">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\zutil.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\zconf.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\zconf.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\zlib.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\zlib.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\crc32.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\crc32.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\deflate.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\deflate.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\inffast.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\inffast.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\inffixed.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\inffixed.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\inflate.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\inflate.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\inftrees.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\inftrees.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\trees.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\trees.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\zutil.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\zutil.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\CMakeLists.txt" />
+    <CustomBuild Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{D4DD8F43-B4CD-3970-B402-E9B3A606C645}</UniqueIdentifier>
+      <UniqueIdentifier>{37ECA4C2-479C-38E0-8BA7-D9078C86166A}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{DCEC9B76-09E2-348F-BD63-6DA34A0401CC}</UniqueIdentifier>
+      <UniqueIdentifier>{795396C8-A319-3972-AFDF-D673EF7802C5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

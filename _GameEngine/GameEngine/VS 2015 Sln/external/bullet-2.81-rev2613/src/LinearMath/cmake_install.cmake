@@ -1,4 +1,4 @@
-# Install script for directory: D:/__Faculty/_GameEngine/GameEngine/external/bullet-2.81-rev2613/src/LinearMath
+# Install script for directory: D:/Github projects/CG-Project/_GameEngine/GameEngine/external/bullet-2.81-rev2613/src/LinearMath
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

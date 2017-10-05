@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{F249C5D3-124A-310D-A0DB-CFD658B74459}</ProjectGuid>
+    <ProjectGuid>{04A68ED4-6963-3A68-AE8D-0DFFD69F47D0}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
     <ProjectName>zlib</ProjectName>
@@ -55,26 +55,26 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\external\assimp-3.0.1270\contrib\zlib\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\external\assimp-3.0.1270\contrib\zlib\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">zlib.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">zlibd</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\external\assimp-3.0.1270\contrib\zlib\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\external\assimp-3.0.1270\contrib\zlib\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">zlib.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">zlib</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\external\assimp-3.0.1270\contrib\zlib\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\external\assimp-3.0.1270\contrib\zlib\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">zlib.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">zlib</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\external\assimp-3.0.1270\contrib\zlib\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\external\assimp-3.0.1270\contrib\zlib\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">zlib.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">zlib</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\lib\win32;D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\lib;D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\include;D:\__Faculty\_GameEngine\GameEngine\external\glew-1.9.0\include;D:\__Faculty\_GameEngine\GameEngine\external\AntTweakBar-1.16\include;D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\lib\win32;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\lib;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glew-1.9.0\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\AntTweakBar-1.16\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsC</CompileAs>
@@ -92,10 +92,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;NO_FSEEKO;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\lib\win32;D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\lib;D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\include;D:\__Faculty\_GameEngine\GameEngine\external\glew-1.9.0\include;D:\__Faculty\_GameEngine\GameEngine\external\AntTweakBar-1.16\include;D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\lib\win32;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\lib;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glew-1.9.0\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\AntTweakBar-1.16\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\lib\win32;D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\lib;D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\include;D:\__Faculty\_GameEngine\GameEngine\external\glew-1.9.0\include;D:\__Faculty\_GameEngine\GameEngine\external\AntTweakBar-1.16\include;D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\lib\win32;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\lib;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glew-1.9.0\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\AntTweakBar-1.16\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -108,7 +108,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\lib\win32;D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\lib;D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\include;D:\__Faculty\_GameEngine\GameEngine\external\glew-1.9.0\include;D:\__Faculty\_GameEngine\GameEngine\external\AntTweakBar-1.16\include;D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\lib\win32;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\lib;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glew-1.9.0\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\AntTweakBar-1.16\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsC</CompileAs>
       <ExceptionHandling>
@@ -125,10 +125,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;NO_FSEEKO;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\lib\win32;D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\lib;D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\include;D:\__Faculty\_GameEngine\GameEngine\external\glew-1.9.0\include;D:\__Faculty\_GameEngine\GameEngine\external\AntTweakBar-1.16\include;D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\lib\win32;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\lib;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glew-1.9.0\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\AntTweakBar-1.16\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\lib\win32;D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\lib;D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\include;D:\__Faculty\_GameEngine\GameEngine\external\glew-1.9.0\include;D:\__Faculty\_GameEngine\GameEngine\external\AntTweakBar-1.16\include;D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\lib\win32;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\lib;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glew-1.9.0\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\AntTweakBar-1.16\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -141,7 +141,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\lib\win32;D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\lib;D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\include;D:\__Faculty\_GameEngine\GameEngine\external\glew-1.9.0\include;D:\__Faculty\_GameEngine\GameEngine\external\AntTweakBar-1.16\include;D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\lib\win32;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\lib;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glew-1.9.0\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\AntTweakBar-1.16\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
       <CompileAs>CompileAsC</CompileAs>
       <ExceptionHandling>
@@ -158,10 +158,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;NO_FSEEKO;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\lib\win32;D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\lib;D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\include;D:\__Faculty\_GameEngine\GameEngine\external\glew-1.9.0\include;D:\__Faculty\_GameEngine\GameEngine\external\AntTweakBar-1.16\include;D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\lib\win32;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\lib;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glew-1.9.0\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\AntTweakBar-1.16\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\lib\win32;D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\lib;D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\include;D:\__Faculty\_GameEngine\GameEngine\external\glew-1.9.0\include;D:\__Faculty\_GameEngine\GameEngine\external\AntTweakBar-1.16\include;D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\lib\win32;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\lib;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glew-1.9.0\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\AntTweakBar-1.16\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -174,7 +174,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\lib\win32;D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\lib;D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\include;D:\__Faculty\_GameEngine\GameEngine\external\glew-1.9.0\include;D:\__Faculty\_GameEngine\GameEngine\external\AntTweakBar-1.16\include;D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\lib\win32;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\lib;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glew-1.9.0\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\AntTweakBar-1.16\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
       <CompileAs>CompileAsC</CompileAs>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -191,10 +191,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;NO_FSEEKO;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\lib\win32;D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\lib;D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\include;D:\__Faculty\_GameEngine\GameEngine\external\glew-1.9.0\include;D:\__Faculty\_GameEngine\GameEngine\external\AntTweakBar-1.16\include;D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\lib\win32;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\lib;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glew-1.9.0\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\AntTweakBar-1.16\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\lib\win32;D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\lib;D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\include;D:\__Faculty\_GameEngine\GameEngine\external\glew-1.9.0\include;D:\__Faculty\_GameEngine\GameEngine\external\AntTweakBar-1.16\include;D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\lib\win32;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\lib;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glew-1.9.0\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\AntTweakBar-1.16\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -206,10 +206,10 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/__Faculty/_GameEngine/GameEngine/external/assimp-3.0.1270/contrib/zlib/CMakeLists.txt</Message>
+    <CustomBuild Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/Github projects/CG-Project/_GameEngine/GameEngine/external/assimp-3.0.1270/contrib/zlib/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HD:/__Faculty/_GameEngine/GameEngine "-BD:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln" --check-stamp-file "D:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln/external/assimp-3.0.1270/contrib/zlib/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" "-HD:/Github projects/CG-Project/_GameEngine/GameEngine" "-BD:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln" --check-stamp-file "D:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln/external/assimp-3.0.1270/contrib/zlib/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -217,12 +217,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/__Faculty/_GameEngine/GameEngine/external/assimp-3.0.1270/contrib/zlib/CMakeLists.txt;D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckTypeSize.c.in;D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CheckTypeSize\OFF64_T.c;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckFunctionExists.c;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFile.c.in;D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\external\assimp-3.0.1270\contrib\zlib\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/Github projects/CG-Project/_GameEngine/GameEngine/external/assimp-3.0.1270/contrib/zlib/CMakeLists.txt;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckTypeSize.c.in;D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CheckTypeSize\OFF64_T.c;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckFunctionExists.c;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFile.c.in;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\external\assimp-3.0.1270\contrib\zlib\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/__Faculty/_GameEngine/GameEngine/external/assimp-3.0.1270/contrib/zlib/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/Github projects/CG-Project/_GameEngine/GameEngine/external/assimp-3.0.1270/contrib/zlib/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HD:/__Faculty/_GameEngine/GameEngine "-BD:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln" --check-stamp-file "D:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln/external/assimp-3.0.1270/contrib/zlib/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" "-HD:/Github projects/CG-Project/_GameEngine/GameEngine" "-BD:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln" --check-stamp-file "D:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln/external/assimp-3.0.1270/contrib/zlib/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -230,12 +230,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/__Faculty/_GameEngine/GameEngine/external/assimp-3.0.1270/contrib/zlib/CMakeLists.txt;D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckTypeSize.c.in;D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CheckTypeSize\OFF64_T.c;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckFunctionExists.c;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFile.c.in;D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\external\assimp-3.0.1270\contrib\zlib\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/Github projects/CG-Project/_GameEngine/GameEngine/external/assimp-3.0.1270/contrib/zlib/CMakeLists.txt;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckTypeSize.c.in;D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CheckTypeSize\OFF64_T.c;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckFunctionExists.c;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFile.c.in;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\external\assimp-3.0.1270\contrib\zlib\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule D:/__Faculty/_GameEngine/GameEngine/external/assimp-3.0.1270/contrib/zlib/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule D:/Github projects/CG-Project/_GameEngine/GameEngine/external/assimp-3.0.1270/contrib/zlib/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HD:/__Faculty/_GameEngine/GameEngine "-BD:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln" --check-stamp-file "D:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln/external/assimp-3.0.1270/contrib/zlib/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" "-HD:/Github projects/CG-Project/_GameEngine/GameEngine" "-BD:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln" --check-stamp-file "D:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln/external/assimp-3.0.1270/contrib/zlib/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -243,12 +243,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/__Faculty/_GameEngine/GameEngine/external/assimp-3.0.1270/contrib/zlib/CMakeLists.txt;D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckTypeSize.c.in;D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CheckTypeSize\OFF64_T.c;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckFunctionExists.c;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFile.c.in;D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\external\assimp-3.0.1270\contrib\zlib\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/Github projects/CG-Project/_GameEngine/GameEngine/external/assimp-3.0.1270/contrib/zlib/CMakeLists.txt;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckTypeSize.c.in;D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CheckTypeSize\OFF64_T.c;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckFunctionExists.c;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFile.c.in;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\external\assimp-3.0.1270\contrib\zlib\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule D:/__Faculty/_GameEngine/GameEngine/external/assimp-3.0.1270/contrib/zlib/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule D:/Github projects/CG-Project/_GameEngine/GameEngine/external/assimp-3.0.1270/contrib/zlib/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HD:/__Faculty/_GameEngine/GameEngine "-BD:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln" --check-stamp-file "D:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln/external/assimp-3.0.1270/contrib/zlib/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" "-HD:/Github projects/CG-Project/_GameEngine/GameEngine" "-BD:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln" --check-stamp-file "D:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln/external/assimp-3.0.1270/contrib/zlib/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -256,35 +256,35 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/__Faculty/_GameEngine/GameEngine/external/assimp-3.0.1270/contrib/zlib/CMakeLists.txt;D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckTypeSize.c.in;D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CheckTypeSize\OFF64_T.c;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckFunctionExists.c;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFile.c.in;D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\external\assimp-3.0.1270\contrib\zlib\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/Github projects/CG-Project/_GameEngine/GameEngine/external/assimp-3.0.1270/contrib/zlib/CMakeLists.txt;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFile.c.in;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckTypeSize.c.in;D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CheckTypeSize\OFF64_T.c;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckFunctionExists.c;C:\Program Files\CMake\share\cmake-3.9\Modules\CheckIncludeFile.c.in;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\external\assimp-3.0.1270\contrib\zlib\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\adler32.c"  />
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\compress.c"  />
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\crc32.c"  />
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\deflate.c"  />
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\inffast.c"  />
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\inflate.c"  />
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\inftrees.c"  />
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\trees.c"  />
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\zutil.c"  />
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\zconf.h" />
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\zlib.h" />
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\crc32.h" />
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\deflate.h" />
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\inffast.h" />
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\inffixed.h" />
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\inflate.h" />
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\inftrees.h" />
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\trees.h" />
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\zutil.h" />
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\adler32.c"  />
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\compress.c"  />
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\crc32.c"  />
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\deflate.c"  />
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\inffast.c"  />
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\inflate.c"  />
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\inftrees.c"  />
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\trees.c"  />
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\zutil.c"  />
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\zconf.h" />
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\zlib.h" />
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\crc32.h" />
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\deflate.h" />
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\inffast.h" />
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\inffixed.h" />
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\inflate.h" />
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\inftrees.h" />
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\trees.h" />
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\zlib\zutil.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\ZERO_CHECK.vcxproj">
-      <Project>{302FE4E5-3082-3A74-AC30-C30CA95740C2}</Project>
+    <ProjectReference Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\ZERO_CHECK.vcxproj">
+      <Project>{FC12D4E2-1DF5-3CC2-9915-50FC1C4033E6}</Project>
       <Name>ZERO_CHECK</Name>
     </ProjectReference>
   </ItemGroup>

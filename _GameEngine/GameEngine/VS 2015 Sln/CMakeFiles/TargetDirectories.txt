@@ -1,20 +1,20 @@
-D:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln/CMakeFiles/main_window.dir
-D:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln/CMakeFiles/INSTALL.dir
-D:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln/CMakeFiles/ALL_BUILD.dir
-D:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln/CMakeFiles/ZERO_CHECK.dir
-D:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln/external/CMakeFiles/GLEW_190.dir
-D:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln/external/CMakeFiles/GLFW_276.dir
-D:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir
-D:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln/external/CMakeFiles/INSTALL.dir
-D:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln/external/assimp-3.0.1270/contrib/zlib/CMakeFiles/zlib.dir
-D:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln/external/assimp-3.0.1270/contrib/zlib/CMakeFiles/INSTALL.dir
-D:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln/external/assimp-3.0.1270/code/CMakeFiles/assimp.dir
-D:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln/external/assimp-3.0.1270/code/CMakeFiles/INSTALL.dir
-D:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln/external/bullet-2.81-rev2613/src/BulletSoftBody/CMakeFiles/BulletSoftBody.dir
-D:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln/external/bullet-2.81-rev2613/src/BulletSoftBody/CMakeFiles/INSTALL.dir
-D:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln/external/bullet-2.81-rev2613/src/BulletCollision/CMakeFiles/BulletCollision.dir
-D:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln/external/bullet-2.81-rev2613/src/BulletCollision/CMakeFiles/INSTALL.dir
-D:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln/external/bullet-2.81-rev2613/src/BulletDynamics/CMakeFiles/BulletDynamics.dir
-D:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln/external/bullet-2.81-rev2613/src/BulletDynamics/CMakeFiles/INSTALL.dir
-D:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln/external/bullet-2.81-rev2613/src/LinearMath/CMakeFiles/LinearMath.dir
-D:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln/external/bullet-2.81-rev2613/src/LinearMath/CMakeFiles/INSTALL.dir
+D:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln/CMakeFiles/main_window.dir
+D:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln/CMakeFiles/INSTALL.dir
+D:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln/CMakeFiles/ALL_BUILD.dir
+D:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln/CMakeFiles/ZERO_CHECK.dir
+D:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln/external/CMakeFiles/GLEW_190.dir
+D:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln/external/CMakeFiles/GLFW_276.dir
+D:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir
+D:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln/external/CMakeFiles/INSTALL.dir
+D:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln/external/assimp-3.0.1270/contrib/zlib/CMakeFiles/zlib.dir
+D:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln/external/assimp-3.0.1270/contrib/zlib/CMakeFiles/INSTALL.dir
+D:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln/external/assimp-3.0.1270/code/CMakeFiles/assimp.dir
+D:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln/external/assimp-3.0.1270/code/CMakeFiles/INSTALL.dir
+D:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln/external/bullet-2.81-rev2613/src/BulletSoftBody/CMakeFiles/BulletSoftBody.dir
+D:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln/external/bullet-2.81-rev2613/src/BulletSoftBody/CMakeFiles/INSTALL.dir
+D:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln/external/bullet-2.81-rev2613/src/BulletCollision/CMakeFiles/BulletCollision.dir
+D:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln/external/bullet-2.81-rev2613/src/BulletCollision/CMakeFiles/INSTALL.dir
+D:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln/external/bullet-2.81-rev2613/src/BulletDynamics/CMakeFiles/BulletDynamics.dir
+D:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln/external/bullet-2.81-rev2613/src/BulletDynamics/CMakeFiles/INSTALL.dir
+D:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln/external/bullet-2.81-rev2613/src/LinearMath/CMakeFiles/LinearMath.dir
+D:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln/external/bullet-2.81-rev2613/src/LinearMath/CMakeFiles/INSTALL.dir

@@ -1,1209 +1,1209 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Assimp.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Assimp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\AssimpPCH.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\AssimpPCH.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BaseImporter.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BaseImporter.cpp">
       <Filter>Common</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BaseProcess.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BaseProcess.cpp">
       <Filter>Common</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\PostStepRegistry.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\PostStepRegistry.cpp">
       <Filter>Common</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ImporterRegistry.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ImporterRegistry.cpp">
       <Filter>Common</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\DefaultIOStream.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\DefaultIOStream.cpp">
       <Filter>Common</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\DefaultIOSystem.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\DefaultIOSystem.cpp">
       <Filter>Common</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Importer.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Importer.cpp">
       <Filter>Common</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\SGSpatialSort.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\SGSpatialSort.cpp">
       <Filter>Common</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\VertexTriangleAdjacency.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\VertexTriangleAdjacency.cpp">
       <Filter>Common</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\SpatialSort.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\SpatialSort.cpp">
       <Filter>Common</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\SceneCombiner.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\SceneCombiner.cpp">
       <Filter>Common</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ScenePreprocessor.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ScenePreprocessor.cpp">
       <Filter>Common</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\SkeletonMeshBuilder.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\SkeletonMeshBuilder.cpp">
       <Filter>Common</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\SplitByBoneCountProcess.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\SplitByBoneCountProcess.cpp">
       <Filter>Common</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\StandardShapes.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\StandardShapes.cpp">
       <Filter>Common</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\TargetAnimation.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\TargetAnimation.cpp">
       <Filter>Common</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\RemoveComments.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\RemoveComments.cpp">
       <Filter>Common</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Subdivision.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Subdivision.cpp">
       <Filter>Common</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\DefaultLogger.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\DefaultLogger.cpp">
       <Filter>Logging</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Exporter.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Exporter.cpp">
       <Filter>Exporter</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\AssimpCExport.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\AssimpCExport.cpp">
       <Filter>Exporter</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\CalcTangentsProcess.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\CalcTangentsProcess.cpp">
       <Filter>PostProcessing</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ComputeUVMappingProcess.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ComputeUVMappingProcess.cpp">
       <Filter>PostProcessing</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ConvertToLHProcess.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ConvertToLHProcess.cpp">
       <Filter>PostProcessing</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\FindDegenerates.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\FindDegenerates.cpp">
       <Filter>PostProcessing</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\FindInstancesProcess.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\FindInstancesProcess.cpp">
       <Filter>PostProcessing</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\FindInvalidDataProcess.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\FindInvalidDataProcess.cpp">
       <Filter>PostProcessing</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\FixNormalsStep.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\FixNormalsStep.cpp">
       <Filter>PostProcessing</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\GenFaceNormalsProcess.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\GenFaceNormalsProcess.cpp">
       <Filter>PostProcessing</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\GenVertexNormalsProcess.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\GenVertexNormalsProcess.cpp">
       <Filter>PostProcessing</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\PretransformVertices.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\PretransformVertices.cpp">
       <Filter>PostProcessing</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ImproveCacheLocality.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ImproveCacheLocality.cpp">
       <Filter>PostProcessing</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\JoinVerticesProcess.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\JoinVerticesProcess.cpp">
       <Filter>PostProcessing</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\LimitBoneWeightsProcess.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\LimitBoneWeightsProcess.cpp">
       <Filter>PostProcessing</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\RemoveRedundantMaterials.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\RemoveRedundantMaterials.cpp">
       <Filter>PostProcessing</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\RemoveVCProcess.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\RemoveVCProcess.cpp">
       <Filter>PostProcessing</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\SortByPTypeProcess.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\SortByPTypeProcess.cpp">
       <Filter>PostProcessing</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\SplitLargeMeshes.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\SplitLargeMeshes.cpp">
       <Filter>PostProcessing</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\TerragenLoader.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\TerragenLoader.cpp">
       <Filter>PostProcessing</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\TextureTransform.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\TextureTransform.cpp">
       <Filter>PostProcessing</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\TriangulateProcess.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\TriangulateProcess.cpp">
       <Filter>PostProcessing</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ValidateDataStructure.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ValidateDataStructure.cpp">
       <Filter>PostProcessing</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\OptimizeGraph.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\OptimizeGraph.cpp">
       <Filter>PostProcessing</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\OptimizeMeshes.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\OptimizeMeshes.cpp">
       <Filter>PostProcessing</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\DeboneProcess.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\DeboneProcess.cpp">
       <Filter>PostProcessing</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ProcessHelper.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ProcessHelper.cpp">
       <Filter>PostProcessing</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MakeVerboseFormat.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MakeVerboseFormat.cpp">
       <Filter>PostProcessing</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\3DSConverter.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\3DSConverter.cpp">
       <Filter>3DS</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\3DSLoader.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\3DSLoader.cpp">
       <Filter>3DS</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ACLoader.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ACLoader.cpp">
       <Filter>AC</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ASELoader.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ASELoader.cpp">
       <Filter>ASE</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ASEParser.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ASEParser.cpp">
       <Filter>ASE</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\B3DImporter.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\B3DImporter.cpp">
       <Filter>B3D</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BVHLoader.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BVHLoader.cpp">
       <Filter>BVH</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ColladaLoader.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ColladaLoader.cpp">
       <Filter>Collada</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ColladaParser.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ColladaParser.cpp">
       <Filter>Collada</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ColladaExporter.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ColladaExporter.cpp">
       <Filter>Collada</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\DXFLoader.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\DXFLoader.cpp">
       <Filter>DXF</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\CSMLoader.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\CSMLoader.cpp">
       <Filter>CSM</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\HMPLoader.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\HMPLoader.cpp">
       <Filter>HMP</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\IRRLoader.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\IRRLoader.cpp">
       <Filter>Irr</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\IRRMeshLoader.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\IRRMeshLoader.cpp">
       <Filter>Irr</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\IRRShared.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\IRRShared.cpp">
       <Filter>Irr</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\LWOAnimation.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\LWOAnimation.cpp">
       <Filter>LWO</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\LWOBLoader.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\LWOBLoader.cpp">
       <Filter>LWO</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\LWOLoader.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\LWOLoader.cpp">
       <Filter>LWO</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\LWOMaterial.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\LWOMaterial.cpp">
       <Filter>LWO</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\LWSLoader.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\LWSLoader.cpp">
       <Filter>LWS</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\M3Importer.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\M3Importer.cpp">
       <Filter>M3</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MD2Loader.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MD2Loader.cpp">
       <Filter>MD2</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MD3Loader.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MD3Loader.cpp">
       <Filter>MD3</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MD5Loader.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MD5Loader.cpp">
       <Filter>MD5</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MD5Parser.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MD5Parser.cpp">
       <Filter>MD5</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MDCLoader.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MDCLoader.cpp">
       <Filter>MDC</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MDLLoader.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MDLLoader.cpp">
       <Filter>MDL</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MDLMaterialLoader.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MDLMaterialLoader.cpp">
       <Filter>MDL</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MaterialSystem.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MaterialSystem.cpp">
       <Filter>MaterialSystem</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\NFFLoader.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\NFFLoader.cpp">
       <Filter>NFF</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\OFFLoader.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\OFFLoader.cpp">
       <Filter>OFFFormat</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ObjFileImporter.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ObjFileImporter.cpp">
       <Filter>Obj</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ObjFileMtlImporter.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ObjFileMtlImporter.cpp">
       <Filter>Obj</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ObjFileParser.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ObjFileParser.cpp">
       <Filter>Obj</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ObjExporter.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ObjExporter.cpp">
       <Filter>Obj</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\OgreImporter.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\OgreImporter.cpp">
       <Filter>Ogre</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\OgreMaterial.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\OgreMaterial.cpp">
       <Filter>Ogre</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\OgreMesh.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\OgreMesh.cpp">
       <Filter>Ogre</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\OgreSkeleton.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\OgreSkeleton.cpp">
       <Filter>Ogre</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\PlyLoader.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\PlyLoader.cpp">
       <Filter>Ply</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\PlyParser.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\PlyParser.cpp">
       <Filter>Ply</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\PlyExporter.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\PlyExporter.cpp">
       <Filter>Ply</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Q3DLoader.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Q3DLoader.cpp">
       <Filter>Q3D</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Q3BSPFileParser.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Q3BSPFileParser.cpp">
       <Filter>Q3BSP</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Q3BSPFileImporter.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Q3BSPFileImporter.cpp">
       <Filter>Q3BSP</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Q3BSPZipArchive.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Q3BSPZipArchive.cpp">
       <Filter>Q3BSP</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\RawLoader.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\RawLoader.cpp">
       <Filter>Raw</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\SMDLoader.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\SMDLoader.cpp">
       <Filter>SMD</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\STLLoader.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\STLLoader.cpp">
       <Filter>STL</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\STLExporter.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\STLExporter.cpp">
       <Filter>STL</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\UnrealLoader.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\UnrealLoader.cpp">
       <Filter>Unreal</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\XFileImporter.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\XFileImporter.cpp">
       <Filter>XFile</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\XFileParser.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\XFileParser.cpp">
       <Filter>XFile</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MS3DLoader.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MS3DLoader.cpp">
       <Filter>MS3D</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\COBLoader.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\COBLoader.cpp">
       <Filter>COB</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BlenderLoader.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BlenderLoader.cpp">
       <Filter>BLENDER</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BlenderDNA.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BlenderDNA.cpp">
       <Filter>BLENDER</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BlenderScene.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BlenderScene.cpp">
       <Filter>BLENDER</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BlenderModifier.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BlenderModifier.cpp">
       <Filter>BLENDER</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\NDOLoader.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\NDOLoader.cpp">
       <Filter>NDO</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\IFCLoader.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\IFCLoader.cpp">
       <Filter>IFC</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\IFCReaderGen.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\IFCReaderGen.cpp">
       <Filter>IFC</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\IFCUtil.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\IFCUtil.cpp">
       <Filter>IFC</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\IFCGeometry.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\IFCGeometry.cpp">
       <Filter>IFC</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\IFCMaterial.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\IFCMaterial.cpp">
       <Filter>IFC</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\IFCProfile.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\IFCProfile.cpp">
       <Filter>IFC</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\IFCCurve.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\IFCCurve.cpp">
       <Filter>IFC</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\STEPFileReader.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\STEPFileReader.cpp">
       <Filter>IFC</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\XGLLoader.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\XGLLoader.cpp">
       <Filter>XGL</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\irrXML\irrXML.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\irrXML\irrXML.cpp">
       <Filter>IrrXML</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\ConvertUTF\ConvertUTF.c">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\ConvertUTF\ConvertUTF.c">
       <Filter>ConvertUTF</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\unzip\ioapi.c">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\unzip\ioapi.c">
       <Filter>unzip</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\unzip\unzip.c">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\unzip\unzip.c">
       <Filter>unzip</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\common\shapes.cc">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\common\shapes.cc">
       <Filter>Poly2Tri</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\sweep\advancing_front.cc">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\sweep\advancing_front.cc">
       <Filter>Poly2Tri</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\sweep\cdt.cc">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\sweep\cdt.cc">
       <Filter>Poly2Tri</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\sweep\sweep.cc">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\sweep\sweep.cc">
       <Filter>Poly2Tri</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\sweep\sweep_context.cc">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\sweep\sweep_context.cc">
       <Filter>Poly2Tri</Filter>
     </ClCompile>
-    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\clipper\clipper.cpp">
+    <ClCompile Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\clipper\clipper.cpp">
       <Filter>Clipper</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\AssimpPCH.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\AssimpPCH.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\fast_atof.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\fast_atof.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\qnan.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\qnan.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BaseImporter.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BaseImporter.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BaseProcess.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BaseProcess.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Importer.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Importer.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ScenePrivate.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ScenePrivate.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ByteSwap.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ByteSwap.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\DefaultProgressHandler.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\DefaultProgressHandler.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\DefaultIOStream.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\DefaultIOStream.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\DefaultIOSystem.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\DefaultIOSystem.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\CInterfaceIOWrapper.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\CInterfaceIOWrapper.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Hash.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Hash.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\IFF.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\IFF.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ParsingUtils.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ParsingUtils.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\StdOStreamLogStream.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\StdOStreamLogStream.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\StreamReader.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\StreamReader.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\StringComparison.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\StringComparison.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\SGSpatialSort.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\SGSpatialSort.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\VertexTriangleAdjacency.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\VertexTriangleAdjacency.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\GenericProperty.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\GenericProperty.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\SpatialSort.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\SpatialSort.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\SceneCombiner.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\SceneCombiner.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ScenePreprocessor.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ScenePreprocessor.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\SkeletonMeshBuilder.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\SkeletonMeshBuilder.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\SplitByBoneCountProcess.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\SplitByBoneCountProcess.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\SmoothingGroups.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\SmoothingGroups.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\StandardShapes.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\StandardShapes.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\TargetAnimation.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\TargetAnimation.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\RemoveComments.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\RemoveComments.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Subdivision.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Subdivision.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Vertex.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Vertex.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\LineSplitter.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\LineSplitter.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\TinyFormatter.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\TinyFormatter.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Profiler.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Profiler.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\LogAux.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\LogAux.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\DefaultLogger.hpp">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\DefaultLogger.hpp">
       <Filter>Logging</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\IOStream.hpp">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\IOStream.hpp">
       <Filter>Logging</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\LogStream.hpp">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\LogStream.hpp">
       <Filter>Logging</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\Logger.hpp">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\Logger.hpp">
       <Filter>Logging</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\NullLogger.hpp">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\NullLogger.hpp">
       <Filter>Logging</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Win32DebugLogStream.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Win32DebugLogStream.h">
       <Filter>Logging</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\FileLogStream.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\FileLogStream.h">
       <Filter>Logging</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BlobIOSystem.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BlobIOSystem.h">
       <Filter>Exporter</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\CalcTangentsProcess.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\CalcTangentsProcess.h">
       <Filter>PostProcessing</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ComputeUVMappingProcess.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ComputeUVMappingProcess.h">
       <Filter>PostProcessing</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ConvertToLHProcess.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ConvertToLHProcess.h">
       <Filter>PostProcessing</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\FindDegenerates.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\FindDegenerates.h">
       <Filter>PostProcessing</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\FindInstancesProcess.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\FindInstancesProcess.h">
       <Filter>PostProcessing</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\FindInvalidDataProcess.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\FindInvalidDataProcess.h">
       <Filter>PostProcessing</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\FixNormalsStep.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\FixNormalsStep.h">
       <Filter>PostProcessing</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\GenFaceNormalsProcess.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\GenFaceNormalsProcess.h">
       <Filter>PostProcessing</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\GenVertexNormalsProcess.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\GenVertexNormalsProcess.h">
       <Filter>PostProcessing</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\PretransformVertices.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\PretransformVertices.h">
       <Filter>PostProcessing</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ImproveCacheLocality.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ImproveCacheLocality.h">
       <Filter>PostProcessing</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\JoinVerticesProcess.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\JoinVerticesProcess.h">
       <Filter>PostProcessing</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\LimitBoneWeightsProcess.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\LimitBoneWeightsProcess.h">
       <Filter>PostProcessing</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\RemoveRedundantMaterials.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\RemoveRedundantMaterials.h">
       <Filter>PostProcessing</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\RemoveVCProcess.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\RemoveVCProcess.h">
       <Filter>PostProcessing</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\SortByPTypeProcess.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\SortByPTypeProcess.h">
       <Filter>PostProcessing</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\SplitLargeMeshes.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\SplitLargeMeshes.h">
       <Filter>PostProcessing</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\TerragenLoader.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\TerragenLoader.h">
       <Filter>PostProcessing</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\TextureTransform.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\TextureTransform.h">
       <Filter>PostProcessing</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\TriangulateProcess.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\TriangulateProcess.h">
       <Filter>PostProcessing</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ValidateDataStructure.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ValidateDataStructure.h">
       <Filter>PostProcessing</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\OptimizeGraph.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\OptimizeGraph.h">
       <Filter>PostProcessing</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\OptimizeMeshes.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\OptimizeMeshes.h">
       <Filter>PostProcessing</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\DeboneProcess.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\DeboneProcess.h">
       <Filter>PostProcessing</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ProcessHelper.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ProcessHelper.h">
       <Filter>PostProcessing</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\PolyTools.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\PolyTools.h">
       <Filter>PostProcessing</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MakeVerboseFormat.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MakeVerboseFormat.h">
       <Filter>PostProcessing</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\3DSHelper.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\3DSHelper.h">
       <Filter>3DS</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\3DSLoader.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\3DSLoader.h">
       <Filter>3DS</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ACLoader.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ACLoader.h">
       <Filter>AC</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ASELoader.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ASELoader.h">
       <Filter>ASE</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ASEParser.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ASEParser.h">
       <Filter>ASE</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\B3DImporter.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\B3DImporter.h">
       <Filter>B3D</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BVHLoader.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BVHLoader.h">
       <Filter>BVH</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ColladaHelper.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ColladaHelper.h">
       <Filter>Collada</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ColladaLoader.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ColladaLoader.h">
       <Filter>Collada</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ColladaParser.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ColladaParser.h">
       <Filter>Collada</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ColladaExporter.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ColladaExporter.h">
       <Filter>Collada</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\DXFLoader.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\DXFLoader.h">
       <Filter>DXF</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\DXFHelper.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\DXFHelper.h">
       <Filter>DXF</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\CSMLoader.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\CSMLoader.h">
       <Filter>CSM</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\HMPFileData.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\HMPFileData.h">
       <Filter>HMP</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\HMPLoader.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\HMPLoader.h">
       <Filter>HMP</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\HalfLifeFileData.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\HalfLifeFileData.h">
       <Filter>HMP</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\IRRLoader.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\IRRLoader.h">
       <Filter>Irr</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\IRRMeshLoader.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\IRRMeshLoader.h">
       <Filter>Irr</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\IRRShared.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\IRRShared.h">
       <Filter>Irr</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\LWOAnimation.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\LWOAnimation.h">
       <Filter>LWO</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\LWOFileData.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\LWOFileData.h">
       <Filter>LWO</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\LWOLoader.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\LWOLoader.h">
       <Filter>LWO</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\LWSLoader.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\LWSLoader.h">
       <Filter>LWS</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\M3Importer.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\M3Importer.h">
       <Filter>M3</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MD2FileData.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MD2FileData.h">
       <Filter>MD2</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MD2Loader.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MD2Loader.h">
       <Filter>MD2</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MD2NormalTable.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MD2NormalTable.h">
       <Filter>MD2</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MD3FileData.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MD3FileData.h">
       <Filter>MD3</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MD3Loader.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MD3Loader.h">
       <Filter>MD3</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MD5Loader.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MD5Loader.h">
       <Filter>MD5</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MD5Parser.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MD5Parser.h">
       <Filter>MD5</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MDCFileData.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MDCFileData.h">
       <Filter>MDC</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MDCLoader.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MDCLoader.h">
       <Filter>MDC</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MDCNormalTable.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MDCNormalTable.h">
       <Filter>MDC</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MDLDefaultColorMap.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MDLDefaultColorMap.h">
       <Filter>MDL</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MDLFileData.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MDLFileData.h">
       <Filter>MDL</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MDLLoader.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MDLLoader.h">
       <Filter>MDL</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MaterialSystem.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MaterialSystem.h">
       <Filter>MaterialSystem</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\NFFLoader.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\NFFLoader.h">
       <Filter>NFF</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\OFFLoader.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\OFFLoader.h">
       <Filter>OFFFormat</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ObjFileData.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ObjFileData.h">
       <Filter>Obj</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ObjFileImporter.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ObjFileImporter.h">
       <Filter>Obj</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ObjFileMtlImporter.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ObjFileMtlImporter.h">
       <Filter>Obj</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ObjFileParser.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ObjFileParser.h">
       <Filter>Obj</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ObjTools.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ObjTools.h">
       <Filter>Obj</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ObjExporter.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\ObjExporter.h">
       <Filter>Obj</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\OgreImporter.hpp">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\OgreImporter.hpp">
       <Filter>Ogre</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\OgreXmlHelper.hpp">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\OgreXmlHelper.hpp">
       <Filter>Ogre</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\PlyLoader.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\PlyLoader.h">
       <Filter>Ply</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\PlyParser.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\PlyParser.h">
       <Filter>Ply</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\PlyExporter.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\PlyExporter.h">
       <Filter>Ply</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Q3DLoader.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Q3DLoader.h">
       <Filter>Q3D</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Q3BSPFileData.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Q3BSPFileData.h">
       <Filter>Q3BSP</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Q3BSPFileParser.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Q3BSPFileParser.h">
       <Filter>Q3BSP</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Q3BSPFileImporter.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Q3BSPFileImporter.h">
       <Filter>Q3BSP</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Q3BSPZipArchive.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\Q3BSPZipArchive.h">
       <Filter>Q3BSP</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\RawLoader.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\RawLoader.h">
       <Filter>Raw</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\SMDLoader.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\SMDLoader.h">
       <Filter>SMD</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\STLLoader.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\STLLoader.h">
       <Filter>STL</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\STLExporter.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\STLExporter.h">
       <Filter>STL</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\UnrealLoader.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\UnrealLoader.h">
       <Filter>Unreal</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\XFileHelper.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\XFileHelper.h">
       <Filter>XFile</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\XFileImporter.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\XFileImporter.h">
       <Filter>XFile</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\XFileParser.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\XFileParser.h">
       <Filter>XFile</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MD4FileData.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MD4FileData.h">
       <Filter>Extra</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MS3DLoader.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\MS3DLoader.h">
       <Filter>MS3D</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\COBLoader.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\COBLoader.h">
       <Filter>COB</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\COBScene.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\COBScene.h">
       <Filter>COB</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BlenderLoader.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BlenderLoader.h">
       <Filter>BLENDER</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BlenderDNA.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BlenderDNA.h">
       <Filter>BLENDER</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BlenderDNA.inl">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BlenderDNA.inl">
       <Filter>BLENDER</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BlenderScene.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BlenderScene.h">
       <Filter>BLENDER</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BlenderSceneGen.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BlenderSceneGen.h">
       <Filter>BLENDER</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BlenderIntermediate.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BlenderIntermediate.h">
       <Filter>BLENDER</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BlenderModifier.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BlenderModifier.h">
       <Filter>BLENDER</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\NDOLoader.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\NDOLoader.h">
       <Filter>NDO</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\IFCLoader.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\IFCLoader.h">
       <Filter>IFC</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\IFCReaderGen.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\IFCReaderGen.h">
       <Filter>IFC</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\IFCUtil.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\IFCUtil.h">
       <Filter>IFC</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\STEPFile.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\STEPFile.h">
       <Filter>IFC</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\STEPFileReader.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\STEPFileReader.h">
       <Filter>IFC</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\XGLLoader.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\XGLLoader.h">
       <Filter>XGL</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\irrXMLWrapper.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\irrXMLWrapper.h">
       <Filter>IrrXML</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\irrXML\CXMLReaderImpl.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\irrXML\CXMLReaderImpl.h">
       <Filter>IrrXML</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\irrXML\heapsort.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\irrXML\heapsort.h">
       <Filter>IrrXML</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\irrXML\irrArray.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\irrXML\irrArray.h">
       <Filter>IrrXML</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\irrXML\irrString.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\irrXML\irrString.h">
       <Filter>IrrXML</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\irrXML\irrTypes.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\irrXML\irrTypes.h">
       <Filter>IrrXML</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\irrXML\irrXML.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\irrXML\irrXML.h">
       <Filter>IrrXML</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\ConvertUTF\ConvertUTF.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\ConvertUTF\ConvertUTF.h">
       <Filter>ConvertUTF</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\unzip\crypt.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\unzip\crypt.h">
       <Filter>unzip</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\unzip\ioapi.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\unzip\ioapi.h">
       <Filter>unzip</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\unzip\unzip.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\unzip\unzip.h">
       <Filter>unzip</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\common\shapes.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\common\shapes.h">
       <Filter>Poly2Tri</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\common\utils.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\common\utils.h">
       <Filter>Poly2Tri</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\sweep\advancing_front.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\sweep\advancing_front.h">
       <Filter>Poly2Tri</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\sweep\cdt.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\sweep\cdt.h">
       <Filter>Poly2Tri</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\sweep\sweep.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\sweep\sweep.h">
       <Filter>Poly2Tri</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\sweep\sweep_context.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\sweep\sweep_context.h">
       <Filter>Poly2Tri</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\clipper\clipper.hpp">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\contrib\clipper\clipper.hpp">
       <Filter>Clipper</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BoostWorkaround\boost\math\common_factor_rt.hpp">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BoostWorkaround\boost\math\common_factor_rt.hpp">
       <Filter>Boost</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BoostWorkaround\boost\foreach.hpp">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BoostWorkaround\boost\foreach.hpp">
       <Filter>Boost</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BoostWorkaround\boost\format.hpp">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BoostWorkaround\boost\format.hpp">
       <Filter>Boost</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BoostWorkaround\boost\scoped_array.hpp">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BoostWorkaround\boost\scoped_array.hpp">
       <Filter>Boost</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BoostWorkaround\boost\scoped_ptr.hpp">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BoostWorkaround\boost\scoped_ptr.hpp">
       <Filter>Boost</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BoostWorkaround\boost\shared_array.hpp">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BoostWorkaround\boost\shared_array.hpp">
       <Filter>Boost</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BoostWorkaround\boost\shared_ptr.hpp">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BoostWorkaround\boost\shared_ptr.hpp">
       <Filter>Boost</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BoostWorkaround\boost\make_shared.hpp">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BoostWorkaround\boost\make_shared.hpp">
       <Filter>Boost</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BoostWorkaround\boost\static_assert.hpp">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BoostWorkaround\boost\static_assert.hpp">
       <Filter>Boost</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BoostWorkaround\boost\tuple\tuple.hpp">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\BoostWorkaround\boost\tuple\tuple.hpp">
       <Filter>Boost</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\anim.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\anim.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\ai_assert.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\ai_assert.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\camera.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\camera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\color4.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\color4.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\color4.inl">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\color4.inl">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\config.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\config.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\defs.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\defs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\cfileio.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\cfileio.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\light.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\light.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\material.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\material.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\material.inl">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\material.inl">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\matrix3x3.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\matrix3x3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\matrix3x3.inl">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\matrix3x3.inl">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\matrix4x4.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\matrix4x4.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\matrix4x4.inl">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\matrix4x4.inl">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\mesh.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\mesh.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\postprocess.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\postprocess.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\quaternion.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\quaternion.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\quaternion.inl">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\quaternion.inl">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\scene.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\scene.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\texture.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\texture.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\types.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\types.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\vector2.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\vector2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\vector2.inl">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\vector2.inl">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\vector3.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\vector3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\vector3.inl">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\vector3.inl">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\version.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\version.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\cimport.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\cimport.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\importerdesc.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\importerdesc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\Importer.hpp">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\Importer.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\ProgressHandler.hpp">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\ProgressHandler.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\IOSystem.hpp">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\IOSystem.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\cexport.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\cexport.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\Exporter.hpp">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\Exporter.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\Compiler\pushpack1.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\Compiler\pushpack1.h">
       <Filter>Compiler</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\Compiler\poppack1.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include\assimp\Compiler\poppack1.h">
       <Filter>Compiler</Filter>
     </ClInclude>
-    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\pstdint.h">
+    <ClInclude Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\pstdint.h">
       <Filter>Compiler</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\code\CMakeLists.txt" />
+    <CustomBuild Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\code\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{D4DD8F43-B4CD-3970-B402-E9B3A606C645}</UniqueIdentifier>
+      <UniqueIdentifier>{37ECA4C2-479C-38E0-8BA7-D9078C86166A}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{DCEC9B76-09E2-348F-BD63-6DA34A0401CC}</UniqueIdentifier>
+      <UniqueIdentifier>{795396C8-A319-3972-AFDF-D673EF7802C5}</UniqueIdentifier>
     </Filter>
     <Filter Include="Compiler">
-      <UniqueIdentifier>{D10A1F7D-BAC0-35CB-890A-20C79D30701B}</UniqueIdentifier>
+      <UniqueIdentifier>{9A0F183E-65E1-3AD9-8A0F-8C67BBF132E6}</UniqueIdentifier>
     </Filter>
     <Filter Include="Boost">
-      <UniqueIdentifier>{3F9757DA-9593-31EC-B631-9ACE91A31236}</UniqueIdentifier>
+      <UniqueIdentifier>{7A865075-D65E-3392-AA5B-2ACBA0C47FB3}</UniqueIdentifier>
     </Filter>
     <Filter Include="Logging">
-      <UniqueIdentifier>{BD237F3E-44C3-3004-90D6-DD655C3B4675}</UniqueIdentifier>
+      <UniqueIdentifier>{389B6C8F-1F3F-3BD6-B8E9-7945390859C0}</UniqueIdentifier>
     </Filter>
     <Filter Include="Common">
-      <UniqueIdentifier>{A2654C12-250B-3680-8A0F-8A21579DB679}</UniqueIdentifier>
+      <UniqueIdentifier>{1BB8C13D-1357-3268-89FA-309C27DE1A37}</UniqueIdentifier>
     </Filter>
     <Filter Include="3DS">
-      <UniqueIdentifier>{4EA49F94-0684-33E3-8D57-5C587AC0A3EC}</UniqueIdentifier>
+      <UniqueIdentifier>{47FE98A6-269A-326E-90DB-8A6A5B7B80D2}</UniqueIdentifier>
     </Filter>
     <Filter Include="AC">
-      <UniqueIdentifier>{94358F57-2E6B-3B62-910B-D6E6DF6813BB}</UniqueIdentifier>
+      <UniqueIdentifier>{E5BD3BCD-8E36-32B6-921D-D81C0FFBD362}</UniqueIdentifier>
     </Filter>
     <Filter Include="ASE">
-      <UniqueIdentifier>{8860C456-81E8-396F-8293-3517C2F29E83}</UniqueIdentifier>
+      <UniqueIdentifier>{0123C97E-9671-3DD1-8B99-42B76B9937F8}</UniqueIdentifier>
     </Filter>
     <Filter Include="B3D">
-      <UniqueIdentifier>{BD9716CE-606F-333E-9E94-F8ABF55C3DBC}</UniqueIdentifier>
+      <UniqueIdentifier>{A98D4423-1A55-303D-8E07-21D521AC8E4C}</UniqueIdentifier>
     </Filter>
     <Filter Include="BVH">
-      <UniqueIdentifier>{4FD2A7C1-5E40-3318-BB81-E4F3D01488B0}</UniqueIdentifier>
+      <UniqueIdentifier>{237F0B8F-C4D2-3C23-8538-88071E58F10B}</UniqueIdentifier>
     </Filter>
     <Filter Include="Collada">
-      <UniqueIdentifier>{4827BD5B-457D-30AF-AA7E-06AD53A9EECB}</UniqueIdentifier>
+      <UniqueIdentifier>{EBB8EC0A-E93A-343D-A1C8-E9BC7652AAA4}</UniqueIdentifier>
     </Filter>
     <Filter Include="DXF">
-      <UniqueIdentifier>{77A4DD85-0A95-3ECE-B2D5-64436EFE3497}</UniqueIdentifier>
+      <UniqueIdentifier>{B8B7AD49-0676-383C-B01B-3F821AAE5D28}</UniqueIdentifier>
     </Filter>
     <Filter Include="CSM">
-      <UniqueIdentifier>{916FA824-D501-38DD-97A2-4EEE47F53E12}</UniqueIdentifier>
+      <UniqueIdentifier>{B7E46FFD-671B-3650-8A06-36C4C4F1E0CE}</UniqueIdentifier>
     </Filter>
     <Filter Include="HMP">
-      <UniqueIdentifier>{7EC8643E-45E0-349C-A0C6-077C5A1DCABB}</UniqueIdentifier>
+      <UniqueIdentifier>{10ACD928-2E30-399D-9BB4-FAB4E3970576}</UniqueIdentifier>
     </Filter>
     <Filter Include="Irr">
-      <UniqueIdentifier>{82C15BE1-E718-3EEA-A5E5-F0431E3FC7CA}</UniqueIdentifier>
+      <UniqueIdentifier>{1000E3DB-F6FE-3F17-9F07-F9162DCE287E}</UniqueIdentifier>
     </Filter>
     <Filter Include="LWO">
-      <UniqueIdentifier>{20A2741F-758B-3EA1-BC9C-DCA12B92B390}</UniqueIdentifier>
+      <UniqueIdentifier>{B64F173E-0261-3D9C-9262-4335C2E57558}</UniqueIdentifier>
     </Filter>
     <Filter Include="LWS">
-      <UniqueIdentifier>{5E03D004-2C0A-3E4B-BB2E-99F163CC3DE5}</UniqueIdentifier>
+      <UniqueIdentifier>{A18DBE27-FAB7-34AF-8AD6-C8ABA3A8D6EE}</UniqueIdentifier>
     </Filter>
     <Filter Include="M3">
-      <UniqueIdentifier>{BB932FFA-7805-386B-9C42-F1C637B7D66F}</UniqueIdentifier>
+      <UniqueIdentifier>{A80561D2-F87D-38FE-9886-141B55B4E431}</UniqueIdentifier>
     </Filter>
     <Filter Include="MD2">
-      <UniqueIdentifier>{CFC42596-18BF-3F4E-9A2D-D978628E4292}</UniqueIdentifier>
+      <UniqueIdentifier>{4EB48720-02DF-3B98-A9D9-18FD729226C5}</UniqueIdentifier>
     </Filter>
     <Filter Include="MD3">
-      <UniqueIdentifier>{418646C0-1D4B-3BD1-8388-8146DDC529B8}</UniqueIdentifier>
+      <UniqueIdentifier>{34D6BF5D-DD2B-3D87-82D7-43DBEE96EFC3}</UniqueIdentifier>
     </Filter>
     <Filter Include="MD5">
-      <UniqueIdentifier>{9FD61AE1-190F-3270-8636-2DD68C5DBC13}</UniqueIdentifier>
+      <UniqueIdentifier>{ECAD5A8B-47D5-368B-AE47-48F6A4F69449}</UniqueIdentifier>
     </Filter>
     <Filter Include="MDC">
-      <UniqueIdentifier>{DBEF5236-9572-3A6E-A85E-AB3F312B10E8}</UniqueIdentifier>
+      <UniqueIdentifier>{979DCE81-CF41-3EE8-BC09-4730A563A45E}</UniqueIdentifier>
     </Filter>
     <Filter Include="MDL">
-      <UniqueIdentifier>{A579E6B7-90EB-39AA-A5D9-8B5F4AC23644}</UniqueIdentifier>
+      <UniqueIdentifier>{20915C1A-88A2-3988-9559-8169C88D572B}</UniqueIdentifier>
     </Filter>
     <Filter Include="MaterialSystem">
-      <UniqueIdentifier>{DAD0363C-114E-36F1-8FB7-C2415AE8FF9F}</UniqueIdentifier>
+      <UniqueIdentifier>{CF27C454-68D6-333E-BCAA-8D542194A6A8}</UniqueIdentifier>
     </Filter>
     <Filter Include="NFF">
-      <UniqueIdentifier>{08B90B92-E1C6-3424-81D5-0ECE18AA7501}</UniqueIdentifier>
+      <UniqueIdentifier>{686B9B3A-206B-3BD3-BBCA-CA7518E855C3}</UniqueIdentifier>
     </Filter>
     <Filter Include="NDO">
-      <UniqueIdentifier>{9C06EFA9-315F-3F4F-A92E-5F2E292B4914}</UniqueIdentifier>
+      <UniqueIdentifier>{C8E77CDA-EE29-3A0B-8AE1-EBA2E98BD44A}</UniqueIdentifier>
     </Filter>
     <Filter Include="OFFFormat">
-      <UniqueIdentifier>{DFE7FD63-8929-3661-A738-663F5F04B90E}</UniqueIdentifier>
+      <UniqueIdentifier>{A306A869-0370-3AB4-ACD9-E9C157429736}</UniqueIdentifier>
     </Filter>
     <Filter Include="Obj">
-      <UniqueIdentifier>{DEBFA065-B59E-3FC3-BF10-4D2C49F1544A}</UniqueIdentifier>
+      <UniqueIdentifier>{1B1F5374-64BD-3AEA-9C5F-755C97729FBA}</UniqueIdentifier>
     </Filter>
     <Filter Include="Ogre">
-      <UniqueIdentifier>{0E73A934-7C8A-3444-8E2F-8F8ED86C7219}</UniqueIdentifier>
+      <UniqueIdentifier>{29F24CDD-42E2-3DE7-AB38-163F15105543}</UniqueIdentifier>
     </Filter>
     <Filter Include="Ply">
-      <UniqueIdentifier>{5C4A0D06-03E5-3B4F-A892-7D65CBF0A022}</UniqueIdentifier>
+      <UniqueIdentifier>{367ACB9C-B1EC-35B6-81AC-04E74E7FD8F6}</UniqueIdentifier>
     </Filter>
     <Filter Include="MS3D">
-      <UniqueIdentifier>{968AB572-0070-3B81-86FB-96588A73D19F}</UniqueIdentifier>
+      <UniqueIdentifier>{9F48F0B5-CBB4-383D-8338-B929403BE414}</UniqueIdentifier>
     </Filter>
     <Filter Include="COB">
-      <UniqueIdentifier>{2CF320E8-9AD3-377A-A530-CDAC2B8AA5E7}</UniqueIdentifier>
+      <UniqueIdentifier>{EDBC35E5-7677-3C9F-9E8C-034E34A60000}</UniqueIdentifier>
     </Filter>
     <Filter Include="BLENDER">
-      <UniqueIdentifier>{B26874BB-3B17-3693-9852-4BAC8B28FD59}</UniqueIdentifier>
+      <UniqueIdentifier>{5E93AB89-3DC9-369B-BBEC-A62E84904560}</UniqueIdentifier>
     </Filter>
     <Filter Include="IFC">
-      <UniqueIdentifier>{F3485D99-F983-3477-8651-E5F827563BA4}</UniqueIdentifier>
+      <UniqueIdentifier>{2017A37A-CA68-351A-A214-E7D2603EF36C}</UniqueIdentifier>
     </Filter>
     <Filter Include="XGL">
-      <UniqueIdentifier>{43FF55CC-93B1-3024-A63E-A2DDD6AB83A2}</UniqueIdentifier>
+      <UniqueIdentifier>{9EB5BA68-09D2-394A-A4CF-9BD64E19F69B}</UniqueIdentifier>
     </Filter>
     <Filter Include="PostProcessing">
-      <UniqueIdentifier>{CCD66DAA-3695-3ED7-8F65-02D20CF9ABB7}</UniqueIdentifier>
+      <UniqueIdentifier>{C1C2E60F-85E2-3D3F-BB5A-0F45F508D624}</UniqueIdentifier>
     </Filter>
     <Filter Include="Q3D">
-      <UniqueIdentifier>{A14B9457-2071-3D21-8ED4-1B5D8F5B3C4F}</UniqueIdentifier>
+      <UniqueIdentifier>{AC8BA452-155F-3C1C-9384-6C60F2EDB077}</UniqueIdentifier>
     </Filter>
     <Filter Include="Q3BSP">
-      <UniqueIdentifier>{4E3FD10F-F56D-3D5C-9EC8-C9DC7E274A21}</UniqueIdentifier>
+      <UniqueIdentifier>{B75D6167-AADD-3B4A-9CE2-81B275125BD5}</UniqueIdentifier>
     </Filter>
     <Filter Include="Raw">
-      <UniqueIdentifier>{533E7268-A24B-33B8-B6A8-4E277FCC48C3}</UniqueIdentifier>
+      <UniqueIdentifier>{C17F18C7-AAC7-3884-82BD-BB5DAE44800B}</UniqueIdentifier>
     </Filter>
     <Filter Include="SMD">
-      <UniqueIdentifier>{B38E78DF-2E77-3B8F-9E95-99C0B17128C7}</UniqueIdentifier>
+      <UniqueIdentifier>{A621D44F-9C43-3201-A558-3D2A125890AA}</UniqueIdentifier>
     </Filter>
     <Filter Include="STL">
-      <UniqueIdentifier>{BFFA9506-EA11-313E-A829-D7CB55AC1C2B}</UniqueIdentifier>
+      <UniqueIdentifier>{9EC3B7B0-A677-3022-A663-418B399E3B91}</UniqueIdentifier>
     </Filter>
     <Filter Include="Unreal">
-      <UniqueIdentifier>{0CC98A45-020A-3D6D-BF9E-615EA47E0511}</UniqueIdentifier>
+      <UniqueIdentifier>{C1CBB2B4-3CCC-3603-8F58-EA378A93834D}</UniqueIdentifier>
     </Filter>
     <Filter Include="XFile">
-      <UniqueIdentifier>{CEF01DCA-65A0-353B-BA99-4DD44E4A7C47}</UniqueIdentifier>
+      <UniqueIdentifier>{03CFC32D-EF8F-3547-9CBD-0E0423451972}</UniqueIdentifier>
     </Filter>
     <Filter Include="Exporter">
-      <UniqueIdentifier>{1393F94A-DC66-393B-A676-72F382775887}</UniqueIdentifier>
+      <UniqueIdentifier>{25EBD267-3096-3636-BB54-41718A8DD73E}</UniqueIdentifier>
     </Filter>
     <Filter Include="Extra">
-      <UniqueIdentifier>{58DBD011-3A5F-3DD6-8BAE-DAB06C6A8694}</UniqueIdentifier>
+      <UniqueIdentifier>{E1C0C2D9-DB15-386C-84C4-C8D4ED5AEEE4}</UniqueIdentifier>
     </Filter>
     <Filter Include="IrrXML">
-      <UniqueIdentifier>{5D8505D6-24CA-3F92-ADB3-F93987CA6F83}</UniqueIdentifier>
+      <UniqueIdentifier>{8E7FA887-6040-3B0E-8ACD-866A055B3271}</UniqueIdentifier>
     </Filter>
     <Filter Include="ConvertUTF">
-      <UniqueIdentifier>{5FBF95AD-BF58-30EC-87CA-EB2E2A8421BB}</UniqueIdentifier>
+      <UniqueIdentifier>{434242A2-DB84-38CC-B9C8-476CBD963411}</UniqueIdentifier>
     </Filter>
     <Filter Include="Clipper">
-      <UniqueIdentifier>{A9780CEA-73D5-3626-8F61-C83C8B04B7C5}</UniqueIdentifier>
+      <UniqueIdentifier>{8A90415F-416A-3832-A9F5-964771DC2D64}</UniqueIdentifier>
     </Filter>
     <Filter Include="Poly2Tri">
-      <UniqueIdentifier>{16CADCF5-9473-3367-AA52-E8A5CDB43A72}</UniqueIdentifier>
+      <UniqueIdentifier>{A931FB22-44C6-37E3-B59D-DCC21B19E137}</UniqueIdentifier>
     </Filter>
     <Filter Include="unzip">
-      <UniqueIdentifier>{E6AC1AFD-195F-3E85-82F9-A260AE1EB1B9}</UniqueIdentifier>
+      <UniqueIdentifier>{46B2B132-0659-38FE-A8A9-9A826B0AF25C}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -1,5 +1,5 @@
 # CMake generation dependency list for this directory.
-D:/__Faculty/_GameEngine/GameEngine/external/CMakeLists.txt
+D:/Github projects/CG-Project/_GameEngine/GameEngine/external/CMakeLists.txt
 C:/Program Files/CMake/share/cmake-3.9/Modules/CheckIncludeFile.cmake
 C:/Program Files/CMake/share/cmake-3.9/Modules/CheckTypeSize.cmake
 C:/Program Files/CMake/share/cmake-3.9/Modules/CheckIncludeFile.cmake

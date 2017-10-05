@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\e5a058811339d1e300f2babf325fe602\INSTALL_force.rule">
+    <CustomBuild Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\ffe336d6f401159f9dee23f77cb2773d\INSTALL_force.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{E748A99B-7A92-3578-88A5-D2EE8E5DC13B}</UniqueIdentifier>
+      <UniqueIdentifier>{4DFE624A-0D69-3053-89C8-D0F04FE7F465}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

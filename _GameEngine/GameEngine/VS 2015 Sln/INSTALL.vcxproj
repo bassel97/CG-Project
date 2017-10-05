@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{2B3C50D7-011B-38AA-B3E9-F6421089FE69}</ProjectGuid>
+    <ProjectGuid>{7400E60E-4396-38B5-9733-4618245BC29B}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
     <ProjectName>INSTALL</ProjectName>
@@ -62,7 +62,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>D:\__Faculty\_GameEngine\GameEngine\external\AntTweakBar-1.16\include;D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\include;D:\__Faculty\_GameEngine\GameEngine\external\glm-0.9.4.0;D:\__Faculty\_GameEngine\GameEngine\external\glew-1.9.0\include;D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include;D:\__Faculty\_GameEngine\GameEngine\external\bullet-2.81-rev2613\src;D:\__Faculty\_GameEngine\GameEngine\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Github projects\CG-Project\_GameEngine\GameEngine\external\AntTweakBar-1.16\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glm-0.9.4.0;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glew-1.9.0\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\bullet-2.81-rev2613\src;D:\Github projects\CG-Project\_GameEngine\GameEngine\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -84,7 +84,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>D:\__Faculty\_GameEngine\GameEngine\external\AntTweakBar-1.16\include;D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\include;D:\__Faculty\_GameEngine\GameEngine\external\glm-0.9.4.0;D:\__Faculty\_GameEngine\GameEngine\external\glew-1.9.0\include;D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include;D:\__Faculty\_GameEngine\GameEngine\external\bullet-2.81-rev2613\src;D:\__Faculty\_GameEngine\GameEngine\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Github projects\CG-Project\_GameEngine\GameEngine\external\AntTweakBar-1.16\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glm-0.9.4.0;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glew-1.9.0\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\bullet-2.81-rev2613\src;D:\Github projects\CG-Project\_GameEngine\GameEngine\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -106,7 +106,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>D:\__Faculty\_GameEngine\GameEngine\external\AntTweakBar-1.16\include;D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\include;D:\__Faculty\_GameEngine\GameEngine\external\glm-0.9.4.0;D:\__Faculty\_GameEngine\GameEngine\external\glew-1.9.0\include;D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include;D:\__Faculty\_GameEngine\GameEngine\external\bullet-2.81-rev2613\src;D:\__Faculty\_GameEngine\GameEngine\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Github projects\CG-Project\_GameEngine\GameEngine\external\AntTweakBar-1.16\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glm-0.9.4.0;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glew-1.9.0\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\bullet-2.81-rev2613\src;D:\Github projects\CG-Project\_GameEngine\GameEngine\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -128,7 +128,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>D:\__Faculty\_GameEngine\GameEngine\external\AntTweakBar-1.16\include;D:\__Faculty\_GameEngine\GameEngine\external\glfw-2.7.6\include;D:\__Faculty\_GameEngine\GameEngine\external\glm-0.9.4.0;D:\__Faculty\_GameEngine\GameEngine\external\glew-1.9.0\include;D:\__Faculty\_GameEngine\GameEngine\external\assimp-3.0.1270\include;D:\__Faculty\_GameEngine\GameEngine\external\bullet-2.81-rev2613\src;D:\__Faculty\_GameEngine\GameEngine\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Github projects\CG-Project\_GameEngine\GameEngine\external\AntTweakBar-1.16\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glfw-2.7.6\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glm-0.9.4.0;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\glew-1.9.0\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\assimp-3.0.1270\include;D:\Github projects\CG-Project\_GameEngine\GameEngine\external\bullet-2.81-rev2613\src;D:\Github projects\CG-Project\_GameEngine\GameEngine\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -149,7 +149,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\a5ba706c7757b96af8bf33637fee7f14\INSTALL_force.rule">
+    <CustomBuild Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\c80f98a169559cfe75707d6d63504191\INSTALL_force.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
 cd .
@@ -160,8 +160,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln/CMakeFiles/a5ba706c7757b96af8bf33637fee7f14/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\INSTALL_force</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln/CMakeFiles/c80f98a169559cfe75707d6d63504191/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\INSTALL_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
@@ -173,8 +173,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln/CMakeFiles/a5ba706c7757b96af8bf33637fee7f14/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\INSTALL_force</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln/CMakeFiles/c80f98a169559cfe75707d6d63504191/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\INSTALL_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
@@ -186,8 +186,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln/CMakeFiles/a5ba706c7757b96af8bf33637fee7f14/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\INSTALL_force</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln/CMakeFiles/c80f98a169559cfe75707d6d63504191/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\INSTALL_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
@@ -199,18 +199,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln/CMakeFiles/a5ba706c7757b96af8bf33637fee7f14/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\INSTALL_force</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln/CMakeFiles/c80f98a169559cfe75707d6d63504191/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\INSTALL_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\ZERO_CHECK.vcxproj">
-      <Project>{302FE4E5-3082-3A74-AC30-C30CA95740C2}</Project>
+    <ProjectReference Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\ZERO_CHECK.vcxproj">
+      <Project>{FC12D4E2-1DF5-3CC2-9915-50FC1C4033E6}</Project>
       <Name>ZERO_CHECK</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\ALL_BUILD.vcxproj">
-      <Project>{EB210930-1C97-3B5B-98FA-FF37B9AA60A4}</Project>
+    <ProjectReference Include="D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\ALL_BUILD.vcxproj">
+      <Project>{9AD5ACFE-3D87-3170-97F2-46CE8EDA6B97}</Project>
       <Name>ALL_BUILD</Name>
     </ProjectReference>
   </ItemGroup>

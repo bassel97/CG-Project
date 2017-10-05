@@ -1,50 +1,50 @@
 Determining size of off64_t failed with the following output:
-Change Dir: D:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln/CMakeFiles/CMakeTmp
+Change Dir: D:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_cf3a8.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_5ad03.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
 Microsoft (R) Build Engine version 14.0.24720.0
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 10/5/2017 4:25:07 PM.
+Build started 10/5/2017 4:55:25 PM.
 The target "BeforeGenerateProjectPriFile" listed in a BeforeTargets attribute at "C:\Program Files (x86)\MSBuild\Microsoft\NuGet\Microsoft.NuGet.targets (186,61)" does not exist in the project, and will be ignored.
-Project "D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_cf3a8.vcxproj" on node 1 (default targets).
+Project "D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_5ad03.vcxproj" on node 1 (default targets).
 PrepareForBuild:
-  Creating directory "cmTC_cf3a8.dir\Debug\".
-  Creating directory "D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\Debug\".
-  Creating directory "cmTC_cf3a8.dir\Debug\cmTC_cf3a8.tlog\".
+  Creating directory "cmTC_5ad03.dir\Debug\".
+  Creating directory "D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_5ad03.dir\Debug\cmTC_5ad03.tlog\".
 InitializeBuildStatus:
-  Creating "cmTC_cf3a8.dir\Debug\cmTC_cf3a8.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Creating "cmTC_5ad03.dir\Debug\cmTC_5ad03.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
 ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _LARGEFILE64_SOURCE=1 /D HAVE_SYS_TYPES_H /D HAVE_STDINT_H /D HAVE_STDDEF_H /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_cf3a8.dir\Debug\\" /Fd"cmTC_cf3a8.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CheckTypeSize\OFF64_T.c"
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _LARGEFILE64_SOURCE=1 /D HAVE_SYS_TYPES_H /D HAVE_STDINT_H /D HAVE_STDDEF_H /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5ad03.dir\Debug\\" /Fd"cmTC_5ad03.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CheckTypeSize\OFF64_T.c"
   Microsoft (R) C/C++ Optimizing Compiler Version 19.00.23506 for x86
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _LARGEFILE64_SOURCE=1 /D HAVE_SYS_TYPES_H /D HAVE_STDINT_H /D HAVE_STDDEF_H /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_cf3a8.dir\Debug\\" /Fd"cmTC_cf3a8.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CheckTypeSize\OFF64_T.c"
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _LARGEFILE64_SOURCE=1 /D HAVE_SYS_TYPES_H /D HAVE_STDINT_H /D HAVE_STDDEF_H /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5ad03.dir\Debug\\" /Fd"cmTC_5ad03.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CheckTypeSize\OFF64_T.c"
   
   OFF64_T.c
-D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CheckTypeSize\OFF64_T.c(19): error C2065: 'off64_t': undeclared identifier [D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_cf3a8.vcxproj]
-D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CheckTypeSize\OFF64_T.c(20): error C2065: 'off64_t': undeclared identifier [D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_cf3a8.vcxproj]
-D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CheckTypeSize\OFF64_T.c(21): error C2065: 'off64_t': undeclared identifier [D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_cf3a8.vcxproj]
-D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CheckTypeSize\OFF64_T.c(22): error C2065: 'off64_t': undeclared identifier [D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_cf3a8.vcxproj]
-D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CheckTypeSize\OFF64_T.c(23): error C2065: 'off64_t': undeclared identifier [D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_cf3a8.vcxproj]
-Done Building Project "D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_cf3a8.vcxproj" (default targets) -- FAILED.
+D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CheckTypeSize\OFF64_T.c(19): error C2065: 'off64_t': undeclared identifier [D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_5ad03.vcxproj]
+D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CheckTypeSize\OFF64_T.c(20): error C2065: 'off64_t': undeclared identifier [D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_5ad03.vcxproj]
+D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CheckTypeSize\OFF64_T.c(21): error C2065: 'off64_t': undeclared identifier [D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_5ad03.vcxproj]
+D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CheckTypeSize\OFF64_T.c(22): error C2065: 'off64_t': undeclared identifier [D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_5ad03.vcxproj]
+D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CheckTypeSize\OFF64_T.c(23): error C2065: 'off64_t': undeclared identifier [D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_5ad03.vcxproj]
+Done Building Project "D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_5ad03.vcxproj" (default targets) -- FAILED.
 
 Build FAILED.
 
-"D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_cf3a8.vcxproj" (default target) (1) ->
+"D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_5ad03.vcxproj" (default target) (1) ->
 (ClCompile target) -> 
-  D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CheckTypeSize\OFF64_T.c(19): error C2065: 'off64_t': undeclared identifier [D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_cf3a8.vcxproj]
-  D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CheckTypeSize\OFF64_T.c(20): error C2065: 'off64_t': undeclared identifier [D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_cf3a8.vcxproj]
-  D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CheckTypeSize\OFF64_T.c(21): error C2065: 'off64_t': undeclared identifier [D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_cf3a8.vcxproj]
-  D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CheckTypeSize\OFF64_T.c(22): error C2065: 'off64_t': undeclared identifier [D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_cf3a8.vcxproj]
-  D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CheckTypeSize\OFF64_T.c(23): error C2065: 'off64_t': undeclared identifier [D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_cf3a8.vcxproj]
+  D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CheckTypeSize\OFF64_T.c(19): error C2065: 'off64_t': undeclared identifier [D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_5ad03.vcxproj]
+  D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CheckTypeSize\OFF64_T.c(20): error C2065: 'off64_t': undeclared identifier [D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_5ad03.vcxproj]
+  D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CheckTypeSize\OFF64_T.c(21): error C2065: 'off64_t': undeclared identifier [D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_5ad03.vcxproj]
+  D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CheckTypeSize\OFF64_T.c(22): error C2065: 'off64_t': undeclared identifier [D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_5ad03.vcxproj]
+  D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CheckTypeSize\OFF64_T.c(23): error C2065: 'off64_t': undeclared identifier [D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_5ad03.vcxproj]
 
     0 Warning(s)
     5 Error(s)
 
-Time Elapsed 00:00:00.43
+Time Elapsed 00:00:00.37
 
-D:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln/CMakeFiles/CheckTypeSize/OFF64_T.c:
+D:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln/CMakeFiles/CheckTypeSize/OFF64_T.c:
 #include <sys/types.h>
 #include <stdint.h>
 #include <stddef.h>
@@ -88,41 +88,41 @@ int main(int argc, char *argv[])
 
 
 Determining if the function fseeko exists failed with the following output:
-Change Dir: D:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln/CMakeFiles/CMakeTmp
+Change Dir: D:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_fd2bb.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_ce0d7.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
 Microsoft (R) Build Engine version 14.0.24720.0
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 10/5/2017 4:25:07 PM.
+Build started 10/5/2017 4:55:26 PM.
 The target "BeforeGenerateProjectPriFile" listed in a BeforeTargets attribute at "C:\Program Files (x86)\MSBuild\Microsoft\NuGet\Microsoft.NuGet.targets (186,61)" does not exist in the project, and will be ignored.
-Project "D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_fd2bb.vcxproj" on node 1 (default targets).
+Project "D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_ce0d7.vcxproj" on node 1 (default targets).
 PrepareForBuild:
-  Creating directory "cmTC_fd2bb.dir\Debug\".
-  Creating directory "D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\Debug\".
-  Creating directory "cmTC_fd2bb.dir\Debug\cmTC_fd2bb.tlog\".
+  Creating directory "cmTC_ce0d7.dir\Debug\".
+  Creating directory "D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_ce0d7.dir\Debug\cmTC_ce0d7.tlog\".
 InitializeBuildStatus:
-  Creating "cmTC_fd2bb.dir\Debug\cmTC_fd2bb.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Creating "cmTC_ce0d7.dir\Debug\cmTC_ce0d7.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
 ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=fseeko /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_fd2bb.dir\Debug\\" /Fd"cmTC_fd2bb.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.9\Modules\CheckFunctionExists.c"
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=fseeko /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ce0d7.dir\Debug\\" /Fd"cmTC_ce0d7.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.9\Modules\CheckFunctionExists.c"
   Microsoft (R) C/C++ Optimizing Compiler Version 19.00.23506 for x86
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=fseeko /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_fd2bb.dir\Debug\\" /Fd"cmTC_fd2bb.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.9\Modules\CheckFunctionExists.c"
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=fseeko /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ce0d7.dir\Debug\\" /Fd"cmTC_ce0d7.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.9\Modules\CheckFunctionExists.c"
   
   CheckFunctionExists.c
 Link:
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\Debug\cmTC_fd2bb.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln/CMakeFiles/CMakeTmp/Debug/cmTC_fd2bb.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln/CMakeFiles/CMakeTmp/Debug/cmTC_fd2bb.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_fd2bb.dir\Debug\CheckFunctionExists.obj
-CheckFunctionExists.obj : error LNK2019: unresolved external symbol _fseeko referenced in function _main [D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_fd2bb.vcxproj]
-D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\Debug\cmTC_fd2bb.exe : fatal error LNK1120: 1 unresolved externals [D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_fd2bb.vcxproj]
-Done Building Project "D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_fd2bb.vcxproj" (default targets) -- FAILED.
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\Debug\cmTC_ce0d7.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln/CMakeFiles/CMakeTmp/Debug/cmTC_ce0d7.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln/CMakeFiles/CMakeTmp/Debug/cmTC_ce0d7.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_ce0d7.dir\Debug\CheckFunctionExists.obj
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol _fseeko referenced in function _main [D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_ce0d7.vcxproj]
+D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\Debug\cmTC_ce0d7.exe : fatal error LNK1120: 1 unresolved externals [D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_ce0d7.vcxproj]
+Done Building Project "D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_ce0d7.vcxproj" (default targets) -- FAILED.
 
 Build FAILED.
 
-"D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_fd2bb.vcxproj" (default target) (1) ->
+"D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_ce0d7.vcxproj" (default target) (1) ->
 (Link target) -> 
-  CheckFunctionExists.obj : error LNK2019: unresolved external symbol _fseeko referenced in function _main [D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_fd2bb.vcxproj]
-  D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\Debug\cmTC_fd2bb.exe : fatal error LNK1120: 1 unresolved externals [D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_fd2bb.vcxproj]
+  CheckFunctionExists.obj : error LNK2019: unresolved external symbol _fseeko referenced in function _main [D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_ce0d7.vcxproj]
+  D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\Debug\cmTC_ce0d7.exe : fatal error LNK1120: 1 unresolved externals [D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_ce0d7.vcxproj]
 
     0 Warning(s)
     2 Error(s)
@@ -131,41 +131,41 @@ Time Elapsed 00:00:00.59
 
 
 Determining if the include file unistd.h exists failed with the following output:
-Change Dir: D:/__Faculty/_GameEngine/GameEngine/VS 2015 Sln/CMakeFiles/CMakeTmp
+Change Dir: D:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_0fcb3.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_51878.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
 Microsoft (R) Build Engine version 14.0.24720.0
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 10/5/2017 4:25:08 PM.
+Build started 10/5/2017 4:55:27 PM.
 The target "BeforeGenerateProjectPriFile" listed in a BeforeTargets attribute at "C:\Program Files (x86)\MSBuild\Microsoft\NuGet\Microsoft.NuGet.targets (186,61)" does not exist in the project, and will be ignored.
-Project "D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_0fcb3.vcxproj" on node 1 (default targets).
+Project "D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_51878.vcxproj" on node 1 (default targets).
 PrepareForBuild:
-  Creating directory "cmTC_0fcb3.dir\Debug\".
-  Creating directory "D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\Debug\".
-  Creating directory "cmTC_0fcb3.dir\Debug\cmTC_0fcb3.tlog\".
+  Creating directory "cmTC_51878.dir\Debug\".
+  Creating directory "D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_51878.dir\Debug\cmTC_51878.tlog\".
 InitializeBuildStatus:
-  Creating "cmTC_0fcb3.dir\Debug\cmTC_0fcb3.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Creating "cmTC_51878.dir\Debug\cmTC_51878.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
 ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0fcb3.dir\Debug\\" /Fd"cmTC_0fcb3.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_51878.dir\Debug\\" /Fd"cmTC_51878.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
   Microsoft (R) C/C++ Optimizing Compiler Version 19.00.23506 for x86
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0fcb3.dir\Debug\\" /Fd"cmTC_0fcb3.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_51878.dir\Debug\\" /Fd"cmTC_51878.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
   
   CheckIncludeFile.c
-D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory [D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_0fcb3.vcxproj]
-Done Building Project "D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_0fcb3.vcxproj" (default targets) -- FAILED.
+D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory [D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_51878.vcxproj]
+Done Building Project "D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_51878.vcxproj" (default targets) -- FAILED.
 
 Build FAILED.
 
-"D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_0fcb3.vcxproj" (default target) (1) ->
+"D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_51878.vcxproj" (default target) (1) ->
 (ClCompile target) -> 
-  D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory [D:\__Faculty\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_0fcb3.vcxproj]
+  D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory [D:\Github projects\CG-Project\_GameEngine\GameEngine\VS 2015 Sln\CMakeFiles\CMakeTmp\cmTC_51878.vcxproj]
 
     0 Warning(s)
     1 Error(s)
 
-Time Elapsed 00:00:00.39
+Time Elapsed 00:00:00.38
 
 
