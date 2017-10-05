@@ -1,0 +1,6 @@
+Bassel Mostafa:
+	Adding files and classes is done manually by adding certain files in _OurGameEngine folder location and then
+adding the path in CmakeLists.text so for simplicity contact me if a new class is needed and then i will add it and 
+build it suing cmake :D
+
+Add Instruction here:

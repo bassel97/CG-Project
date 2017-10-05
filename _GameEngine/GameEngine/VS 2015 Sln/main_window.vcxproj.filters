@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\main_window\main_window.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\_OurGameEngine\ObjectsAndComponents\GameObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\__Faculty\_GameEngine\GameEngine\_OurGameEngine\ObjectsAndComponents\Transform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\_OurGameEngine\EnginePrime.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\_OurGameEngine\ObjectsAndComponents\GameObject.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\_OurGameEngine\ObjectsAndComponents\Transform.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\_OurGameEngine\StaticClasses\Input.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\__Faculty\_GameEngine\GameEngine\_OurGameEngine\StaticClasses\Time.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\__Faculty\_GameEngine\GameEngine\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{D4DD8F43-B4CD-3970-B402-E9B3A606C645}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{DCEC9B76-09E2-348F-BD63-6DA34A0401CC}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
