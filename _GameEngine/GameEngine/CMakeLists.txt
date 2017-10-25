@@ -46,12 +46,25 @@ add_definitions(
 add_executable(main_window 
 	main_window/main_window.cpp
 	_OurGameEngine/EnginePrime.hpp
+	_OurGameEngine/Component.hpp
 	_OurGameEngine/ObjectsAndComponents/GameObject.cpp
 	_OurGameEngine/ObjectsAndComponents/GameObject.hpp
 	_OurGameEngine/ObjectsAndComponents/Transform.cpp
 	_OurGameEngine/ObjectsAndComponents/Transform.hpp
 	_OurGameEngine/StaticClasses/Input.hpp
 	_OurGameEngine/StaticClasses/Time.hpp
+	_OurGameEngine/ObjectsAndComponents/MeshRenderer.cpp
+	_OurGameEngine/ObjectsAndComponents/MeshRenderer.hpp
+	_OurGameEngine/ObjectsAndComponents/Camera.cpp
+	_OurGameEngine/ObjectsAndComponents/Camera.hpp
+	common/shader.cpp
+	common/shader.hpp
+	common/objloader.cpp
+	common/objloader.hpp
+	common/texture.cpp
+	common/texture.hpp
+	main_game/MainGame.hpp
+
 )
 target_link_libraries(main_window
 	${ALL_LIBS}
@@ -65,6 +78,7 @@ create_target_launcher(main_window WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR
 
 
 SOURCE_GROUP(common REGULAR_EXPRESSION ".*/common/.*" )
+SOURCE_GROUP(_OurGameEngine REGULAR_EXPRESSION ".*/_OurGameEngine/.*" )
 
 
 if (NOT ${CMAKE_GENERATOR} MATCHES "Xcode" )

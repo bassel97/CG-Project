@@ -1,9 +1,0 @@
-# CMake generation dependency list for this directory.
-D:/Github projects/CG-Project/_GameEngine/GameEngine/external/assimp-3.0.1270/contrib/zlib/CMakeLists.txt
-C:/Program Files/CMake/share/cmake-3.9/Modules/CheckIncludeFile.c.in
-C:/Program Files/CMake/share/cmake-3.9/Modules/CheckIncludeFile.c.in
-C:/Program Files/CMake/share/cmake-3.9/Modules/CheckIncludeFile.c.in
-C:/Program Files/CMake/share/cmake-3.9/Modules/CheckTypeSize.c.in
-D:/Github projects/CG-Project/_GameEngine/GameEngine/VS 2015 Sln/CMakeFiles/CheckTypeSize/OFF64_T.c
-C:/Program Files/CMake/share/cmake-3.9/Modules/CheckFunctionExists.c
-C:/Program Files/CMake/share/cmake-3.9/Modules/CheckIncludeFile.c.in

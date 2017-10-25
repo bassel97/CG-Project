@@ -1,3 +1,5 @@
+#ifndef ENGINE_PRIME
+#define ENGINE_PRIME
 //All Objects and Components must inherit from it.
 //Contains the most vital functions all components need.
 //Abstract Class
@@ -13,3 +15,4 @@ public:
 
 
 };
+#endif
