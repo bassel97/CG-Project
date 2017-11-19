@@ -18,8 +18,9 @@ public:
 
 
 	//Add every component to the all the component list
-	Component() {
+	Component(GameObject* _ContainingObject) {
 		Component::allComponents.push_back(this);
+		containingObject = _ContainingObject;
 	}
 
 	//gets called once before game starts

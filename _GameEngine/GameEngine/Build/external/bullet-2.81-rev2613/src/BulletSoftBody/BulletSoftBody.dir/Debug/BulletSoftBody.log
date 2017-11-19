@@ -1,0 +1,12 @@
+﻿  Building Custom Rule D:/Github projects/CG-Project/_GameEngine/GameEngine/external/bullet-2.81-rev2613/src/BulletSoftBody/CMakeLists.txt
+  CMake does not need to re-run because D:/Github projects/CG-Project/_GameEngine/GameEngine/Build/external/bullet-2.81-rev2613/src/BulletSoftBody/CMakeFiles/generate.stamp is up-to-date.
+  btSoftBody.cpp
+  btSoftBodyConcaveCollisionAlgorithm.cpp
+  btSoftBodyHelpers.cpp
+  btSoftBodyRigidBodyCollisionConfiguration.cpp
+  btSoftRigidCollisionAlgorithm.cpp
+  btSoftRigidDynamicsWorld.cpp
+  btSoftSoftCollisionAlgorithm.cpp
+  btDefaultSoftBodySolver.cpp
+D:\Github projects\CG-Project\_GameEngine\GameEngine\external\bullet-2.81-rev2613\src\BulletSoftBody\btSoftBodyHelpers.cpp(916): warning C4838: conversion from 'unsigned int' to 'const int' requires a narrowing conversion
+  BulletSoftBody.vcxproj -> D:\Github projects\CG-Project\_GameEngine\GameEngine\Build\external\bullet-2.81-rev2613\src\BulletSoftBody\Debug\BulletSoftBody.lib

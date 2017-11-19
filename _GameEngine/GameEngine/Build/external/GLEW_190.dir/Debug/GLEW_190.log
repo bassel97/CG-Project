@@ -1,0 +1,4 @@
+﻿  Building Custom Rule D:/Github projects/CG-Project/_GameEngine/GameEngine/external/CMakeLists.txt
+  CMake does not need to re-run because D:/Github projects/CG-Project/_GameEngine/GameEngine/Build/external/CMakeFiles/generate.stamp is up-to-date.
+  glew.c
+  GLEW_190.vcxproj -> D:\Github projects\CG-Project\_GameEngine\GameEngine\Build\external\Debug\GLEW_190.lib

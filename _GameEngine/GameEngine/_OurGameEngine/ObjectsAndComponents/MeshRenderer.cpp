@@ -1,17 +1,16 @@
 #include "MeshRenderer.hpp"
 
-MeshRenderer::MeshRenderer()
-{
-}
+//MeshRenderer::MeshRenderer()
+//{
+//}
 
-MeshRenderer::MeshRenderer(GameObject *containingObject)
-{
-}
+//MeshRenderer::MeshRenderer(GameObject *containingObject)
+//{
+//}
 
 MeshRenderer::MeshRenderer(GameObject * containingObject, std::string modelPath, std::string vertexShaderPath, std::string fragmentShaderPath)
+	:Component(containingObject)
 {
-	this->containingObject = containingObject;
-
 	shadersProgramID = LoadShaders(vertexShaderPath.c_str(), fragmentShaderPath.c_str());
 
 	vertexPosition_modelspaceID = glGetAttribLocation(shadersProgramID, "vertexPosition_modelspace");
@@ -62,7 +61,7 @@ void MeshRenderer::Update()
 		glm::vec3(4, 3, -3), // Camera is at (4,3,-3), in World Space (6,1.5,0)
 		glm::vec3(0, 0, 0), // and looks at the origin
 		glm::vec3(0, 1, 0)  // Head is up (set to 0,-1,0 to look upside-down)
-		);
+	);
 
 
 
@@ -79,7 +78,7 @@ void MeshRenderer::Update()
 		GL_FALSE,           // normalized?(i.e. map to -1 and 1)
 		0,                  // stride: specifies the byte stride from one attribute to the next
 		(void*)0            // array buffer offset: start from the beginning of the buffer
-		);
+	);
 
 	glEnableVertexAttribArray(color_modelspaceID);
 	glBindBuffer(GL_ARRAY_BUFFER, colorbuffer);
@@ -90,7 +89,7 @@ void MeshRenderer::Update()
 		GL_FALSE,           // normalized?(i.e. map to -1 and 1)
 		0,                  // stride: specifies the byte stride from one attribute to the next
 		(void*)0            // array buffer offset: start from the beginning of the buffer
-		);
+	);
 
 	if (containingObject) {
 		transformLocationID = glGetUniformLocation(shadersProgramID, "transform");
@@ -101,14 +100,16 @@ void MeshRenderer::Update()
 		glm::mat4 MVP = Projection * View * transformMatrix; // Remember, matrix multiplication is the other way around
 
 
-		if (hasMVP)
-			MVP = vp * transformMatrix;
+		if (hasMVP) {
+			//MVP = vp * transformMatrix;
+			glUniformMatrix4fv(glGetUniformLocation(shadersProgramID, "projection"), 1, GL_FALSE, glm::value_ptr(vp));
+		}
 
-		glUniformMatrix4fv(transformLocationID, 1, GL_FALSE, glm::value_ptr(MVP));
+		glUniformMatrix4fv(transformLocationID, 1, GL_FALSE, glm::value_ptr(transformMatrix));
 	}
 
 	if (hasTexture) {
-		
+
 		glEnableVertexAttribArray(texCoordID);
 		glBindBuffer(GL_ARRAY_BUFFER, texCoordBuffer);
 		glVertexAttribPointer(
@@ -118,7 +119,7 @@ void MeshRenderer::Update()
 			GL_FALSE,           // normalized?(i.e. map to -1 and 1)
 			0,                  // stride: specifies the byte stride from one attribute to the next
 			(void*)0            // array buffer offset: start from the beginning of the buffer
-			);
+		);
 
 		glBindTexture(GL_TEXTURE_2D, textureID);
 	}

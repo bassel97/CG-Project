@@ -1,18 +1,52 @@
 #version 330
 // Input vertex data, different for all executions of this shader.
+
+
 attribute vec3 vertexPosition_modelspace;
-attribute vec3 color_modelspace;
 attribute vec2 aTexCoord;
+attribute vec3 color_modelspace;
+
+
+attribute ivec2 jointInd;
+attribute vec2 weights;
 
 uniform mat4 transform;
+uniform mat4 projection;
+
+const int maxTransforms = 50;
+uniform mat4 joints[maxTransforms];
+uniform int numBones;
 
 out vec4 myColor;
 out vec2 TexCoord;
 
 void main(){
 
-	gl_Position = transform * vec4(vertexPosition_modelspace, 1.0);
-	myColor = vec4(color_modelspace, 1.0);
+	
+
+	gl_Position = projection * transform * vec4(vertexPosition_modelspace, 1.0);
+	
+	//myColor = vec4(color_modelspace, 1.0);
+
+	int test = 4;
+
+	myColor = vec4(0,0,0,1);
+
+	if(jointInd.x == test)
+		myColor += vec4(0, 0, 1 , 1);
+
+	if(jointInd.y == test)
+		myColor += vec4(1, 0, 0 , 1);
+	
+
+
+	for (int i = 0; i < numBones; i++){
+		if (i == jointInd.x){
+			gl_Position =   projection  * transform * joints[i] * vec4(vertexPosition_modelspace, 1.0);
+		}else{
+			//gl_Position = transform * projection * vec4(vertexPosition_modelspace, 1.0);
+		}
+	}
 
 	TexCoord = aTexCoord;	
 }

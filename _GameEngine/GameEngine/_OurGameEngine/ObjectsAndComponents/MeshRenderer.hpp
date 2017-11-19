@@ -18,8 +18,8 @@
 class MeshRenderer : public Component
 {
 public:
-	MeshRenderer();
-	MeshRenderer(GameObject* containingObject);
+	//MeshRenderer();
+	//MeshRenderer(GameObject* containingObject);
 	MeshRenderer(GameObject * containingObject, std::string modelPath, std::string vertexShaderPath, std::string fragmentShaderPath);
 	~MeshRenderer();
 

@@ -23,7 +23,7 @@ include_directories(
 	external/glfw-2.7.6/include/
 	external/glm-0.9.4.0/
 	external/glew-1.9.0/include/
-	external/assimp-3.0.1270/include/
+	external/assimp-4.0.1/include/
 	external/bullet-2.81-rev2613/src/
 	.
 )
@@ -47,6 +47,7 @@ add_executable(main_window
 	main_window/main_window.cpp
 	_OurGameEngine/EnginePrime.hpp
 	_OurGameEngine/Component.hpp
+	_OurGameEngine/ObjectsAndComponents/shader.hpp
 	_OurGameEngine/ObjectsAndComponents/GameObject.cpp
 	_OurGameEngine/ObjectsAndComponents/GameObject.hpp
 	_OurGameEngine/ObjectsAndComponents/Transform.cpp
@@ -57,12 +58,16 @@ add_executable(main_window
 	_OurGameEngine/ObjectsAndComponents/MeshRenderer.hpp
 	_OurGameEngine/ObjectsAndComponents/Camera.cpp
 	_OurGameEngine/ObjectsAndComponents/Camera.hpp
+	_OurGameEngine/ObjectsAndComponents/AnimatedModel.cpp
+	_OurGameEngine/ObjectsAndComponents/AnimatedModel.hpp
 	common/shader.cpp
 	common/shader.hpp
 	common/objloader.cpp
 	common/objloader.hpp
 	common/texture.cpp
 	common/texture.hpp
+	common/controls.cpp
+	common/controls.hpp
 	main_game/MainGame.hpp
 
 )

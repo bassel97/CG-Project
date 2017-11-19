@@ -18,10 +18,14 @@ using namespace glm;
 #include "_OurGameEngine\Component.hpp"
 #include "_OurGameEngine\ObjectsAndComponents\Transform.hpp"
 #include "_OurGameEngine\ObjectsAndComponents\MeshRenderer.hpp"
+#include "_OurGameEngine\ObjectsAndComponents\AnimatedModel.hpp"
+
+#include"common\controls.hpp"
 
 //Static variabled declared here because component has no .cpp file
 std::vector<Component*> Component::allComponents;
 
+#include<assimp\Importer.hpp>
 
 int main(void)
 {
@@ -72,6 +76,9 @@ int main(void)
 	// Accept fragment if it closer to the camera than the former one
 	glDepthFunc(GL_LESS);
 
+	//universal view-projection matrix
+	glm::mat4 viewProj;
+
 	//Instantiate GameObject
 	GameObject go2;
 	MeshRenderer m2(&go2, "poinsr.obj", "SimpleVertexShader.vertexshader", "SimpleFragmentShader.fragmentshader");
@@ -80,10 +87,10 @@ int main(void)
 	go2.setScale(0.02, 0.02, .02);
 	go2.addComponent(&m2);
 
-	GameObject cube;
+	/*GameObject cube;
 	MeshRenderer cubeMesh(&cube, "cube.obj", "SimpleVertexShader.vertexshader", "SimpleFragmentShaderColor.fragmentshader");
 	cubeMesh.hasMVP = true;
-	cube.setPosition(0, 1, 0);
+	cube.setPosition(0, 1, 0);*/
 
 	GameObject ground;
 	MeshRenderer groundMesh(&ground, "ground.obj", "SimpleVertexShader.vertexshader", "SimpleFragmentShader.fragmentshader");
@@ -91,21 +98,38 @@ int main(void)
 	groundMesh.hasMVP = true;
 	groundMesh.setTexture("playgroundbakedhigh.bmp");
 
+	GameObject testAssimp;
+	//testAssimp.setPosition(0, 0, 3);
+	testAssimp.setScale(0.5f, 0.5f, 0.5f);
+	Shader shader1("SimpleVertexShader.vertexshader", "SimpleFragmentShaderColor.fragmentshader");
+	//am.shader = &shader1;
+	AnimatedModel am(&testAssimp, "assimpTestAnim2.fbx", &shader1);
+	am.universalViewProj = &viewProj;
+
+
 
 	do {
 
-		go2.setRotation(45, 0, 0);
+		//testAssimp.setRotation(0, glfwGetTime() * 90, 0);
+
+		go2.setRotation(45, 90, 0);
 		glm::vec3 go2Up = go2.getUpVector();
 		glm::vec3 go2F = go2.getForwardVector();
 
-		glm::vec3 pos = glm::vec3(-sin(glfwGetTime() / 2) * 6, 5.5, sin(glfwGetTime() / 2 + 1) * 5 - 4.5);
+		//glm::vec3 pos = glm::vec3(-sin(glfwGetTime() / 2) * 6, 5.5, sin(glfwGetTime() / 2 + 1) * 5 - 4.5);
+		glm::vec3 pos = glm::vec3(-7 * 2, 5.5 * 2, 0);
 		groundMesh.vp = glm::perspective(45.0f, 4.0f / 3.0f, 0.1f, 100.0f) * glm::lookAt(
 			pos,
 			pos + go2F,
 			go2Up
-			);
+		);
 
-		cubeMesh.vp = groundMesh.vp;
+		//cubeMesh.vp = groundMesh.vp;
+		//viewProj = groundMesh.vp;
+
+		computeMatricesFromInputs();
+		viewProj = getProjectionMatrix() * getViewMatrix();
+		groundMesh.vp = viewProj;
 
 		//ImageMesh.vp = glm::mat4(1.0);
 

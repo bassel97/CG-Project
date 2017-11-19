@@ -1,0 +1,16 @@
+﻿  Building Custom Rule D:/Github projects/CG-Project/_GameEngine/GameEngine/external/bullet-2.81-rev2613/src/LinearMath/CMakeLists.txt
+  CMake does not need to re-run because D:/Github projects/CG-Project/_GameEngine/GameEngine/Build/external/bullet-2.81-rev2613/src/LinearMath/CMakeFiles/generate.stamp is up-to-date.
+  btAlignedAllocator.cpp
+  btConvexHull.cpp
+  btConvexHullComputer.cpp
+  btGeometryUtil.cpp
+  btPolarDecomposition.cpp
+  btQuickprof.cpp
+  btSerializer.cpp
+  btVector3.cpp
+D:\Github projects\CG-Project\_GameEngine\GameEngine\external\bullet-2.81-rev2613\src\LinearMath\btVector3.cpp(46): warning C4838: conversion from 'int' to 'const unsigned char' requires a narrowing conversion
+D:\Github projects\CG-Project\_GameEngine\GameEngine\external\bullet-2.81-rev2613\src\LinearMath\btVector3.cpp(431): warning C4838: conversion from 'int' to 'const unsigned char' requires a narrowing conversion
+D:\Github projects\CG-Project\_GameEngine\GameEngine\external\bullet-2.81-rev2613\src\LinearMath\btPolarDecomposition.cpp(63): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+D:\Github projects\CG-Project\_GameEngine\GameEngine\external\bullet-2.81-rev2613\src\LinearMath\btPolarDecomposition.cpp(63): warning C4244: 'initializing': conversion from 'double' to 'const btScalar', possible loss of data
+D:\Github projects\CG-Project\_GameEngine\GameEngine\external\bullet-2.81-rev2613\src\LinearMath\btPolarDecomposition.cpp(66): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+  LinearMath.vcxproj -> D:\Github projects\CG-Project\_GameEngine\GameEngine\Build\external\bullet-2.81-rev2613\src\LinearMath\Debug\LinearMath.lib

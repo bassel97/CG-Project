@@ -18,11 +18,6 @@ public:
 
 	static void gameCode() {
 
-		GameObject *go = new GameObject;
-		MeshRenderer *m = new MeshRenderer;
-		m->Initialize(go, NULL, "SimpleVertexShader.vertexshader", "SimpleFragmentShader.fragmentshader");
-		go->addComponent(m);
-
 	}
 
 private:

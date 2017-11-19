@@ -1,0 +1,32 @@
+﻿  Building Custom Rule D:/Github projects/CG-Project/_GameEngine/GameEngine/external/bullet-2.81-rev2613/src/BulletDynamics/CMakeLists.txt
+  CMake does not need to re-run because D:/Github projects/CG-Project/_GameEngine/GameEngine/Build/external/bullet-2.81-rev2613/src/BulletDynamics/CMakeFiles/generate.stamp is up-to-date.
+  btKinematicCharacterController.cpp
+  btConeTwistConstraint.cpp
+  btContactConstraint.cpp
+  btGearConstraint.cpp
+  btGeneric6DofConstraint.cpp
+  btGeneric6DofSpringConstraint.cpp
+  btHinge2Constraint.cpp
+  btHingeConstraint.cpp
+d:\github projects\cg-project\_gameengine\gameengine\external\bullet-2.81-rev2613\src\bulletdynamics\constraintsolver\btContactConstraint.h(25): warning C4359: 'btContactConstraint': Alignment specifier is less than actual alignment (128), and will be ignored. (compiling source file D:\Github projects\CG-Project\_GameEngine\GameEngine\external\bullet-2.81-rev2613\src\BulletDynamics\ConstraintSolver\btContactConstraint.cpp)
+D:\Github projects\CG-Project\_GameEngine\GameEngine\external\bullet-2.81-rev2613\src\BulletDynamics\ConstraintSolver\btConeTwistConstraint.cpp(860): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+D:\Github projects\CG-Project\_GameEngine\GameEngine\external\bullet-2.81-rev2613\src\BulletDynamics\ConstraintSolver\btConeTwistConstraint.cpp(905): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Github projects\CG-Project\_GameEngine\GameEngine\external\bullet-2.81-rev2613\src\BulletDynamics\ConstraintSolver\btConeTwistConstraint.cpp(965): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+D:\Github projects\CG-Project\_GameEngine\GameEngine\external\bullet-2.81-rev2613\src\BulletDynamics\ConstraintSolver\btConeTwistConstraint.cpp(967): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+  btPoint2PointConstraint.cpp
+  btSequentialImpulseConstraintSolver.cpp
+  btSliderConstraint.cpp
+  btSolve2LinearConstraint.cpp
+  btTypedConstraint.cpp
+  btUniversalConstraint.cpp
+  btDiscreteDynamicsWorld.cpp
+D:\Github projects\CG-Project\_GameEngine\GameEngine\external\bullet-2.81-rev2613\src\BulletDynamics\Character\btKinematicCharacterController.cpp(133): warning C4305: '=': truncation from 'double' to 'btScalar'
+D:\Github projects\CG-Project\_GameEngine\GameEngine\external\bullet-2.81-rev2613\src\BulletDynamics\Character\btKinematicCharacterController.cpp(144): warning C4305: '=': truncation from 'double' to 'btScalar'
+  btRigidBody.cpp
+  btSimpleDynamicsWorld.cpp
+  Bullet-C-API.cpp
+  btRaycastVehicle.cpp
+  btWheelInfo.cpp
+D:\Github projects\CG-Project\_GameEngine\GameEngine\external\bullet-2.81-rev2613\src\BulletDynamics/ConstraintSolver/btContactConstraint.h(25): warning C4359: 'btContactConstraint': Alignment specifier is less than actual alignment (128), and will be ignored. (compiling source file D:\Github projects\CG-Project\_GameEngine\GameEngine\external\bullet-2.81-rev2613\src\BulletDynamics\Dynamics\btDiscreteDynamicsWorld.cpp)
+D:\Github projects\CG-Project\_GameEngine\GameEngine\external\bullet-2.81-rev2613\src\BulletDynamics/ConstraintSolver/btContactConstraint.h(25): warning C4359: 'btContactConstraint': Alignment specifier is less than actual alignment (128), and will be ignored. (compiling source file D:\Github projects\CG-Project\_GameEngine\GameEngine\external\bullet-2.81-rev2613\src\BulletDynamics\Vehicle\btRaycastVehicle.cpp)
+  BulletDynamics.vcxproj -> D:\Github projects\CG-Project\_GameEngine\GameEngine\Build\external\bullet-2.81-rev2613\src\BulletDynamics\Debug\BulletDynamics.lib

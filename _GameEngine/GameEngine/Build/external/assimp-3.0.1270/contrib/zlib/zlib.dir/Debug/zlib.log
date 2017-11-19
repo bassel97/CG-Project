@@ -1,0 +1,12 @@
+﻿  Building Custom Rule D:/Github projects/CG-Project/_GameEngine/GameEngine/external/assimp-3.0.1270/contrib/zlib/CMakeLists.txt
+  CMake does not need to re-run because D:/Github projects/CG-Project/_GameEngine/GameEngine/Build/external/assimp-3.0.1270/contrib/zlib/CMakeFiles/generate.stamp is up-to-date.
+  adler32.c
+  compress.c
+  crc32.c
+  deflate.c
+  inffast.c
+  inflate.c
+  inftrees.c
+  trees.c
+  zutil.c
+  zlib.vcxproj -> D:\Github projects\CG-Project\_GameEngine\GameEngine\Build\external\assimp-3.0.1270\contrib\zlib\Debug\zlibd.lib
