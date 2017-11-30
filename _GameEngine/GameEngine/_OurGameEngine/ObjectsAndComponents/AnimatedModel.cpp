@@ -6,24 +6,36 @@
 
 //yahiazakaria13@gmail.com
 
+aiNodeAnim* FindNodeAnim(aiAnimation* pAnimation, std::string NodeName)
+{
+	for (int i = 0; i < pAnimation->mNumChannels; i++) {
+		aiNodeAnim* pNodeAnim = pAnimation->mChannels[i];
+		std::string pNodeAnimName = pAnimation->mChannels[i]->mNodeName.C_Str();
+
+		if (pNodeAnimName == NodeName) return pNodeAnim;
+	}
+
+	return NULL;
+}
+
 AnimatedModel::AnimatedModel(GameObject* contObject, const char* path, Shader* _shader) :Component(contObject) {
 
 	shader = _shader;
 
 	Assimp::Importer importer;
-	const aiScene* scene = importer.ReadFile(path, aiProcess_Triangulate | aiProcess_FlipUVs | aiProcess_CalcTangentSpace);
+	//aiProcess_FlipUVs
+	const aiScene* scene = importer.ReadFile(path, aiProcess_Triangulate | aiProcess_CalcTangentSpace);
 	// check for errors
 	if (!scene || scene->mFlags & AI_SCENE_FLAGS_INCOMPLETE || !scene->mRootNode) // if is Not Zero
 	{
 		std::cout << "ERROR::ASSIMP:: " << importer.GetErrorString() << std::endl;
 		return;
 	}
-	//retrieve the directory path of the filepath
-	//directory = path.substr(0, path.find_last_of('/'));
 
-	shader_jointIndId = glGetAttribLocation(shader->ID, "jointInd");
-	shader_weightsId = glGetAttribLocation(shader->ID, "weights");
+	shader->use();
+
 	shader_vertexPosModelSpaceID = glGetAttribLocation(shader->ID, "vertexPosition_modelspace");
+	shader_textureCoordinateID = glGetAttribLocation(shader->ID, "aTexCoord");
 
 	bonesNumber = 0;
 
@@ -32,10 +44,19 @@ AnimatedModel::AnimatedModel(GameObject* contObject, const char* path, Shader* _
 	else
 		processMesh(scene->mMeshes[0]);
 
-	processBones(scene->mMeshes[0]->mBones, scene->mAnimations, scene->mMeshes[0]->mNumBones);
+	//processBones(scene->mMeshes[0]->mBones, scene->mAnimations, scene->mMeshes[0]->mNumBones);
 
 	if (scene->HasAnimations())
 		processAnimation(scene->mNumAnimations, scene->mAnimations);
+}
+
+void AnimatedModel::setTexture(const char * imagepath, std::string type) {
+	Texture t;
+
+	t.id = loadBMP_custom(imagepath);
+	t.type = type;
+
+	textures.push_back(t);
 }
 
 void AnimatedModel::processAnimation(int animationNum, aiAnimation ** animations) {
@@ -142,25 +163,25 @@ void AnimatedModel::processMesh(aiMesh *mesh)
 	glEnableVertexAttribArray(shader_vertexPosModelSpaceID);
 	glVertexAttribPointer(shader_vertexPosModelSpaceID, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)0);
 	// vertex normals
-	glEnableVertexAttribArray(1);
-	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, Normal));
+	//glEnableVertexAttribArray(1);
+	//glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, Normal));
 	// vertex texture coords
-	glEnableVertexAttribArray(2);
-	glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, TexCoords));
+	glEnableVertexAttribArray(shader_textureCoordinateID);
+	glVertexAttribPointer(shader_textureCoordinateID, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, TexCoords));
 	// vertex tangent
-	glEnableVertexAttribArray(3);
-	glVertexAttribPointer(3, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, Tangent));
+	//glEnableVertexAttribArray(3);
+	//glVertexAttribPointer(3, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, Tangent));
 	// vertex bitangent
-	glEnableVertexAttribArray(4);
-	glVertexAttribPointer(4, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, Bitangent));
+	//glEnableVertexAttribArray(4);
+	//glVertexAttribPointer(4, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, Bitangent));
 
 	// Weights bitangent
-	glEnableVertexAttribArray(shader_jointIndId);
-	glVertexAttribPointer(shader_jointIndId, 2, GL_INT, GL_FALSE, sizeof(float), (void*)offsetof(Vertex, Bitangent));
+	//glEnableVertexAttribArray(shader_jointIndId);
+	//glVertexAttribPointer(shader_jointIndId, 2, GL_INT, GL_FALSE, sizeof(float), (void*)offsetof(Vertex, Bitangent));
 
 	// Indexes bitangent
-	glEnableVertexAttribArray(shader_weightsId);
-	glVertexAttribPointer(shader_weightsId, 2, GL_FLOAT, GL_FALSE, sizeof(float), (void*)offsetof(Vertex, Bitangent));
+	//glEnableVertexAttribArray(shader_weightsId);
+	//glVertexAttribPointer(shader_weightsId, 2, GL_FLOAT, GL_FALSE, sizeof(float), (void*)offsetof(Vertex, Bitangent));
 
 	glBindVertexArray(0);
 }
@@ -169,6 +190,9 @@ void AnimatedModel::processMesh(aiBone ** bones, aiMesh *mesh, int numBones)
 {
 	bonesNumber = numBones;
 	BonesTransforms = new glm::mat4[numBones];
+
+	shader_jointIndId = glGetAttribLocation(shader->ID, "jointInd");
+	shader_weightsId = glGetAttribLocation(shader->ID, "weights");
 
 	// Walk through each of the mesh's vertices
 	for (unsigned int i = 0; i < mesh->mNumVertices; i++)
@@ -264,17 +288,17 @@ void AnimatedModel::processMesh(aiBone ** bones, aiMesh *mesh, int numBones)
 	glEnableVertexAttribArray(shader_vertexPosModelSpaceID);
 	glVertexAttribPointer(shader_vertexPosModelSpaceID, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)0);
 	// vertex normals
-	glEnableVertexAttribArray(1);
-	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, Normal));
+	//glEnableVertexAttribArray(1);
+	//glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, Normal));
 	// vertex texture coords
-	glEnableVertexAttribArray(2);
-	glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, TexCoords));
+	glEnableVertexAttribArray(shader_textureCoordinateID);
+	glVertexAttribPointer(shader_textureCoordinateID, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, TexCoords));
 	// vertex tangent
-	glEnableVertexAttribArray(3);
-	glVertexAttribPointer(3, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, Tangent));
+	//glEnableVertexAttribArray(3);
+	//glVertexAttribPointer(3, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, Tangent));
 	// vertex bitangent
-	glEnableVertexAttribArray(4);
-	glVertexAttribPointer(4, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, Bitangent));
+	//glEnableVertexAttribArray(4);
+	//glVertexAttribPointer(4, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, Bitangent));
 
 	// Weights bitangent
 	glEnableVertexAttribArray(shader_jointIndId);
@@ -287,59 +311,75 @@ void AnimatedModel::processMesh(aiBone ** bones, aiMesh *mesh, int numBones)
 	glBindVertexArray(0);
 }
 
-void AnimatedModel::processBones(aiBone ** bones, aiAnimation** animations, int numBones)
-{
-
-	for (int i = 0; i < numBones; i++) {
-		glm::mat4 boneTrans;
-
-		// Interpolate scaling and generate scaling transformation matrix
-		glm::vec3 Scaling = glm::vec3(animations[0]->mChannels[i + 1]->mScalingKeys[0].mValue.x, animations[0]->mChannels[0]->mScalingKeys[0].mValue.y, animations[0]->mChannels[0]->mScalingKeys[0].mValue.z);
-		glm::mat4 ScalingMatrix = glm::scale(Scaling);
-
-		aiQuaternion rotationQuat = animations[0]->mChannels[i + 1]->mRotationKeys[1].mValue;
-		aiVector3D xRotated = rotationQuat.Rotate(aiVector3D(1, 0, 0));
-		aiVector3D yRotated = rotationQuat.Rotate(aiVector3D(0, 1, 0));
-		aiVector3D zRotated = rotationQuat.Rotate(aiVector3D(0, 0, 1));
-
-		glm::vec3 Translation = glm::vec3(animations[0]->mChannels[i + 1]->mPositionKeys[1].mValue.x, animations[0]->mChannels[i + 1]->mPositionKeys[1].mValue.y, animations[0]->mChannels[i + 1]->mPositionKeys[1].mValue.z);
-		glm::mat4 TranslationMatrix = glm::translate(Translation);
-
-		glm::mat4 rotationMatrix = glm::translate(glm::mat4(1.0f), Translation);
-		float RotaionX = acos(yRotated.y);
-		float RotaionY = acos(yRotated.z);
-		float RotaionZ = acos(yRotated.x);
-		rotationMatrix = glm::rotate(rotationMatrix, RotaionX, glm::vec3(1, 0, 0));
-		rotationMatrix = glm::rotate(rotationMatrix, RotaionY, glm::vec3(0, 1, 0));
-		rotationMatrix = glm::rotate(rotationMatrix, RotaionZ, glm::vec3(0, 0, 1));
-
-		BonesTransforms[i] = rotationMatrix * TranslationMatrix;
-
-		//CalcInterpolatedScaling(Scaling, AnimationTime, pNodeAnim);
-		//Matrix4f ScalingM = new Matrix4f().InitScale(Scaling.x(), Scaling.y(), Scaling.z());
-
-		//// Interpolate rotation and generate rotation transformation matrix
-		//Quaternion RotationQ = new Quaternion(0, 0, 0, 0);
-		//CalcInterpolatedRotation(RotationQ, AnimationTime, pNodeAnim);
-		//Matrix4f RotationM = RotationQ.ToRotationMatrix();
-
-		//// Interpolate translation and generate translation transformation matrix
-		//Vector3f Translation = new Vector3f(0, 0, 0);
-		//CalcInterpolatedPosition(Translation, AnimationTime, pNodeAnim);
-		//Matrix4f TranslationM = new Matrix4f().InitTranslation(Translation.x(), Translation.y(), Translation.z());
-
-		//// Combine the above transformations
-		//NodeTransformation = TranslationM.Mul(RotationM).Mul(ScalingM);
-
-		aiMatrix4x4 boneTransformationToOrigin = bones[i]->mOffsetMatrix.Inverse();
-		aiMatrix4x4 boneTransformationToBone = bones[i]->mOffsetMatrix;
-
-		//aiMatrix4x4  a = animations[0]->mChannels[0]->mRotationKeys->mValue.GetMatrix();
-
-
-	}
-}
-
+//void AnimatedModel::processBones(aiNode FirstBone, aiAnimation** animations, glm::mat4 parentMatrix)
+//{
+//	glm::mat4 boneTrans = glm::mat4();
+//
+//	//int i = 0;
+//
+//	aiNodeAnim* pNodeAnim = FindNodeAnim(animations[0], FirstBone.mName.C_Str());
+//
+//	if (pNodeAnim != NULL)
+//	{
+//		// Interpolate scaling and generate scaling transformation matrix
+//		glm::vec3 Scaling = glm::vec3(animations[0]->mChannels[i + 1]->mScalingKeys[0].mValue.x, animations[0]->mChannels[0]->mScalingKeys[0].mValue.y, animations[0]->mChannels[0]->mScalingKeys[0].mValue.z);
+//		glm::mat4 ScalingMatrix = glm::scale(Scaling);
+//
+//		aiQuaternion rotationQuat = animations[0]->mChannels[i + 1]->mRotationKeys[1].mValue;
+//		aiVector3D xRotated = rotationQuat.Rotate(aiVector3D(1, 0, 0));
+//		aiVector3D yRotated = rotationQuat.Rotate(aiVector3D(0, 1, 0));
+//		aiVector3D zRotated = rotationQuat.Rotate(aiVector3D(0, 0, 1));
+//
+//		glm::vec3 Translation = glm::vec3(animations[0]->mChannels[i + 1]->mPositionKeys[1].mValue.x, animations[0]->mChannels[i + 1]->mPositionKeys[1].mValue.y, animations[0]->mChannels[i + 1]->mPositionKeys[1].mValue.z);
+//		glm::mat4 TranslationMatrix = glm::translate(Translation);
+//
+//		glm::mat4 rotationMatrix = glm::translate(glm::mat4(1.0f), Translation);
+//		float RotaionX = acos(yRotated.y);
+//		float RotaionY = acos(yRotated.z);
+//		float RotaionZ = acos(yRotated.x);
+//		rotationMatrix = glm::rotate(rotationMatrix, RotaionX, glm::vec3(1, 0, 0));
+//		rotationMatrix = glm::rotate(rotationMatrix, RotaionY, glm::vec3(0, 1, 0));
+//		rotationMatrix = glm::rotate(rotationMatrix, RotaionZ, glm::vec3(0, 0, 1));
+//
+//		BonesTransforms[i] = rotationMatrix * TranslationMatrix;
+//
+//	}
+//
+//	glm::mat4 GlobalTransformation = parentMatrix * (boneTrans);
+//
+//	//Bone bone = null;
+//
+//	if ((bone = findBone(NodeName)) != null)
+//	{
+//		bone.finalTransformation = globalInverseTransform.Mul(GlobalTransformation).Mul(bone.offsetMatrix);
+//	}
+//
+//	for (int i = 0; i < pNode.mNumChildren(); i++) {
+//		ReadNodeHeirarchy(AnimationTime, AINode.create(pNode.mChildren().get(i)), GlobalTransformation);
+//	}
+//
+//	//CalcInterpolatedScaling(Scaling, AnimationTime, pNodeAnim);
+//	//Matrix4f ScalingM = new Matrix4f().InitScale(Scaling.x(), Scaling.y(), Scaling.z());
+//
+//	//// Interpolate rotation and generate rotation transformation matrix
+//	//Quaternion RotationQ = new Quaternion(0, 0, 0, 0);
+//	//CalcInterpolatedRotation(RotationQ, AnimationTime, pNodeAnim);
+//	//Matrix4f RotationM = RotationQ.ToRotationMatrix();
+//
+//	//// Interpolate translation and generate translation transformation matrix
+//	//Vector3f Translation = new Vector3f(0, 0, 0);
+//	//CalcInterpolatedPosition(Translation, AnimationTime, pNodeAnim);
+//	//Matrix4f TranslationM = new Matrix4f().InitTranslation(Translation.x(), Translation.y(), Translation.z());
+//
+//	//// Combine the above transformations
+//	//NodeTransformation = TranslationM.Mul(RotationM).Mul(ScalingM);
+//
+//	aiMatrix4x4 boneTransformationToOrigin = bones[i]->mOffsetMatrix.Inverse();
+//	aiMatrix4x4 boneTransformationToBone = bones[i]->mOffsetMatrix;
+//
+//
+//
+//}
 
 void AnimatedModel::Draw()
 {
@@ -364,31 +404,33 @@ void AnimatedModel::Draw()
 
 
 
-	// bind appropriate textures
-	//unsigned int diffuseNr = 1;
-	//unsigned int specularNr = 1;
-	//unsigned int normalNr = 1;
-	//unsigned int heightNr = 1;
-	//for (unsigned int i = 0; i < textures.size(); i++)
-	//{
-	//	glActiveTexture(GL_TEXTURE0 + i); // active proper texture unit before binding
-	//									  // retrieve texture number (the N in diffuse_textureN)
-	//	std::string number;
-	//	std::string name = textures[i].type;
-	//	if (name == "texture_diffuse")
-	//		number = std::to_string(diffuseNr++);
-	//	else if (name == "texture_specular")
-	//		number = std::to_string(specularNr++); // transfer unsigned int to stream
-	//	else if (name == "texture_normal")
-	//		number = std::to_string(normalNr++); // transfer unsigned int to stream
-	//	else if (name == "texture_height")
-	//		number = std::to_string(heightNr++); // transfer unsigned int to stream
+	//bind appropriate textures
+	unsigned int diffuseNr = 1;
+	unsigned int specularNr = 1;
+	unsigned int normalNr = 1;
+	unsigned int heightNr = 1;
+	for (unsigned int i = 0; i < textures.size(); i++)
+	{
+		glActiveTexture(GL_TEXTURE0 + i); // active proper texture unit before binding
+										  // retrieve texture number (the N in diffuse_textureN)
+		//std::string number;
+		std::string name = textures[i].type;
+		//if (name == "texture_diffuse")
+		//	number = std::to_string(diffuseNr++);
+		//else if (name == "texture_specular")
+		//	number = std::to_string(specularNr++); // transfer unsigned int to stream
+		//else if (name == "texture_normal")
+		//	number = std::to_string(normalNr++); // transfer unsigned int to stream
+		//else if (name == "texture_height")
+		//	number = std::to_string(heightNr++); // transfer unsigned int to stream
 
-	//											 // now set the sampler to the correct texture unit
-	//	glUniform1i(glGetUniformLocation(shader->ID, (name + number).c_str()), i);
-	//	// and finally bind the texture
-	//	glBindTexture(GL_TEXTURE_2D, textures[i].id);
-	//}
+		//printf("%f\n", (name + number).c_str());
+
+		// now set the sampler to the correct texture unit
+		glUniform1i(glGetUniformLocation(shader->ID, name.c_str()), i);
+		// and finally bind the texture
+		glBindTexture(GL_TEXTURE_2D, textures[i].id);
+	}
 
 	// draw mesh
 	glBindVertexArray(VAO);

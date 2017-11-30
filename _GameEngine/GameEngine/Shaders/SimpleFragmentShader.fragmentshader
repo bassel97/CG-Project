@@ -3,7 +3,7 @@
 in vec4 myColor;
 in vec2 TexCoord;
 
-uniform sampler2D Texture;
+uniform sampler2D Diffuse;
 
 void main()
 {
@@ -14,5 +14,5 @@ void main()
 
 	//gl_FragColor = myColor;
 	
-	gl_FragColor = texture(Texture, TexCoord);
+	gl_FragColor = texture(Diffuse, TexCoord);
 }

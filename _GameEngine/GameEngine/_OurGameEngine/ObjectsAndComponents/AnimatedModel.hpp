@@ -45,7 +45,6 @@ struct Vertex {
 struct Texture {
 	unsigned int id;
 	std::string type;
-	aiString path;
 };
 
 class AnimatedModel : public Component
@@ -67,11 +66,16 @@ class AnimatedModel : public Component
 	unsigned int VBO, EBO;
 
 	GLuint shader_vertexPosModelSpaceID;
+	GLuint shader_textureCoordinateID;
 	GLuint shader_jointIndId;
 	GLuint shader_weightsId;
 
+
 	glm::vec3 testRotaions;
 	glm::mat4* BonesTransforms;
+
+	bool hasTexture;
+	GLuint textureID;
 
 public:
 
@@ -80,6 +84,8 @@ public:
 
 	AnimatedModel(GameObject* contObject, const char* path, Shader* _shader);
 
+	void setTexture(const char * imagepath, std::string type);
+
 	void processAnimation(int animationNum, aiAnimation ** animations);
 
 	glm::vec3 getTestRotaions(float time);
@@ -87,7 +93,7 @@ public:
 
 	void processMesh(aiMesh * mesh);
 	void processMesh(aiBone ** bones, aiMesh *mesh, int numBones);
-	void processBones(aiBone ** bones, aiAnimation** animations, int numBones);
+	void processBones(aiNode FirstBone, aiAnimation** animations, glm::mat4 parentMatrix);
 
 
 	//std::vector<Texture> loadMaterialTextures(aiMaterial * mat, aiTextureType type, std::string typeName);

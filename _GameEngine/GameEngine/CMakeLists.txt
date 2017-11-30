@@ -60,6 +60,8 @@ add_executable(main_window
 	_OurGameEngine/ObjectsAndComponents/Camera.hpp
 	_OurGameEngine/ObjectsAndComponents/AnimatedModel.cpp
 	_OurGameEngine/ObjectsAndComponents/AnimatedModel.hpp
+	_OurGameEngine/ObjectsAndComponents/GUI.cpp
+	_OurGameEngine/ObjectsAndComponents/GUI.hpp
 	common/shader.cpp
 	common/shader.hpp
 	common/objloader.cpp

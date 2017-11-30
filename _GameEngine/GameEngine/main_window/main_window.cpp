@@ -18,6 +18,7 @@ using namespace glm;
 #include "_OurGameEngine\Component.hpp"
 #include "_OurGameEngine\ObjectsAndComponents\Transform.hpp"
 #include "_OurGameEngine\ObjectsAndComponents\MeshRenderer.hpp"
+#include "_OurGameEngine\ObjectsAndComponents\GUI.hpp"
 #include "_OurGameEngine\ObjectsAndComponents\AnimatedModel.hpp"
 
 #include"common\controls.hpp"
@@ -69,71 +70,126 @@ int main(void)
 	glfwEnable(GLFW_STICKY_KEYS);
 
 	// Dark blue background
-	glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
+	glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
 
 	// Enable depth test
 	glEnable(GL_DEPTH_TEST);
 	// Accept fragment if it closer to the camera than the former one
 	glDepthFunc(GL_LESS);
 
+
 	//universal view-projection matrix
 	glm::mat4 viewProj;
 
 	//Instantiate GameObject
-	GameObject go2;
-	MeshRenderer m2(&go2, "poinsr.obj", "SimpleVertexShader.vertexshader", "SimpleFragmentShader.fragmentshader");
+	//GameObject go2;
+	//MeshRenderer m2(&go2, "poinsr.obj", "SimpleVertexShader.vertexshader", "SimpleFragmentShader.fragmentshader");
 	//go2.setPosition(0, 2, 0);
 	//go2.setRotation(-45, 0, 0);
-	go2.setScale(0.02, 0.02, .02);
-	go2.addComponent(&m2);
+	//go2.setScale(0.02, 0.02, .02);
+	//go2.addComponent(&m2);
 
 	/*GameObject cube;
 	MeshRenderer cubeMesh(&cube, "cube.obj", "SimpleVertexShader.vertexshader", "SimpleFragmentShaderColor.fragmentshader");
 	cubeMesh.hasMVP = true;
 	cube.setPosition(0, 1, 0);*/
 
-	GameObject ground;
+	/*GameObject ground;
 	MeshRenderer groundMesh(&ground, "ground.obj", "SimpleVertexShader.vertexshader", "SimpleFragmentShader.fragmentshader");
 	ground.addComponent(&groundMesh);
 	groundMesh.hasMVP = true;
-	groundMesh.setTexture("playgroundbakedhigh.bmp");
+	groundMesh.setTexture("playgroundbakedhigh.bmp");*/
 
-	GameObject testAssimp;
-	//testAssimp.setPosition(0, 0, 3);
-	testAssimp.setScale(0.5f, 0.5f, 0.5f);
-	Shader shader1("SimpleVertexShader.vertexshader", "SimpleFragmentShaderColor.fragmentshader");
-	//am.shader = &shader1;
-	AnimatedModel am(&testAssimp, "assimpTestAnim2.fbx", &shader1);
-	am.universalViewProj = &viewProj;
+	//GameObject testAssimp;
+	////testAssimp.setPosition(0, 0, 3);
+	//testAssimp.setScale(0.5f, 0.5f, 0.5f);
+	////am.shader = &shader1;
+	//AnimatedModel am(&testAssimp, "assimpTestAnim2.fbx", &shader1);
+	//am.universalViewProj = &viewProj;
 
+	// Clear the screen
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	Shader guiSh("GUI.vs", "GUI.fs");
+	GameObject Logo;
+	GUI logoUI(&Logo, &guiSh, "Loading.bmp");
+	logoUI.scale = glm::vec3(0.5, 0.5, 0.5);
+	logoUI.Update();
+	// Swap buffers
+	glfwSwapBuffers();
 
+	Shader staticShader("Static.vs", "Static.fs");
+	Shader animatedShader("Animated.vs", "Animated.fs");
+
+	GameObject Ground;
+	Ground.setScale(2, 2, 2);
+	AnimatedModel groundMesh(&Ground, "PlayGround.fbx", &staticShader);
+	groundMesh.setTexture("PlayGroundBaked.bmp", "Diffuse");
+	groundMesh.setTexture("GroundAO.bmp", "AO");
+
+	GameObject DataTeam1;
+	DataTeam1.setPosition(26, 0, 0);
+	DataTeam1.setRotation(0, 90, 0);
+	AnimatedModel dataMesh(&DataTeam1, "DataFile.fbx", &staticShader);
+	dataMesh.setTexture("DataColor.bmp", "Diffuse");
+	dataMesh.setTexture("DataAO.bmp", "AO");
+
+	GameObject DataTeam2;
+	DataTeam2.setPosition(-26, 0, 0);
+	DataTeam2.setRotation(0, 90, 0);
+	AnimatedModel data2Mesh(&DataTeam2, "DataFile.fbx", &staticShader);
+	data2Mesh.setTexture("DataColor.bmp", "Diffuse");
+	data2Mesh.setTexture("DataAO.bmp", "AO");
+
+	GameObject Character01;
+	Character01.setPosition(-16, 0, 0);
+	Character01.setRotation(0, 90, 0);
+	AnimatedModel characterMesh(&Character01, "Character01.fbx", &animatedShader);
+	characterMesh.setTexture("CharacterHWColor.bmp", "Diffuse");
+	characterMesh.setTexture("DataAO.bmp", "AO");
+
+	GameObject Character02;
+	Character02.setPosition(-16, 0, -5.5);
+	Character02.setRotation(0, 70, 0);
+	AnimatedModel character2Mesh(&Character02, "Character02.fbx", &animatedShader);
+	character2Mesh.setTexture("CharacterShieldColor.bmp", "Diffuse");
+	character2Mesh.setTexture("DataAO.bmp", "AO");
+
+	logoUI.setTexture("LogoPresented.bmp");
+	logoUI.position = glm::vec3(-0.5, -0.5, 0);
 
 	do {
 
+		DataTeam1.setRotation(0, glfwGetTime() * 50, 0);
+		DataTeam2.setRotation(0, -glfwGetTime() * 50, 0);
+
 		//testAssimp.setRotation(0, glfwGetTime() * 90, 0);
 
-		go2.setRotation(45, 90, 0);
-		glm::vec3 go2Up = go2.getUpVector();
-		glm::vec3 go2F = go2.getForwardVector();
+		//go2.setRotation(45, 90, 0);
+		//glm::vec3 go2Up = go2.getUpVector();
+		//glm::vec3 go2F = go2.getForwardVector();
 
 		//glm::vec3 pos = glm::vec3(-sin(glfwGetTime() / 2) * 6, 5.5, sin(glfwGetTime() / 2 + 1) * 5 - 4.5);
-		glm::vec3 pos = glm::vec3(-7 * 2, 5.5 * 2, 0);
-		groundMesh.vp = glm::perspective(45.0f, 4.0f / 3.0f, 0.1f, 100.0f) * glm::lookAt(
+		glm::vec3 pos = glm::vec3(0, 7, 0);
+		glm::vec3 forward = glm::rotateY(glm::vec3(-1, -0.5, 0), (float)glfwGetTime() * 15);
+		viewProj = glm::perspective(45.0f, 4.0f / 3.0f, 0.1f, 100.0f) * glm::lookAt(
 			pos,
-			pos + go2F,
-			go2Up
+			pos + forward,
+			glm::vec3(0, 1, 0)
 		);
 
 		//cubeMesh.vp = groundMesh.vp;
 		//viewProj = groundMesh.vp;
 
-		computeMatricesFromInputs();
-		viewProj = getProjectionMatrix() * getViewMatrix();
-		groundMesh.vp = viewProj;
+		/*computeMatricesFromInputs();
+		viewProj = getProjectionMatrix() * getViewMatrix();*/
 
-		//ImageMesh.vp = glm::mat4(1.0);
+		groundMesh.universalViewProj = &viewProj;
+		dataMesh.universalViewProj = &viewProj;
+		data2Mesh.universalViewProj = &viewProj;
+		characterMesh.universalViewProj = &viewProj;
+		character2Mesh.universalViewProj = &viewProj;
 
-		//printf("%f,%f,%f\n", go2F.x, go2F.y, go2F.z);
+
 
 		// Clear the screen
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);

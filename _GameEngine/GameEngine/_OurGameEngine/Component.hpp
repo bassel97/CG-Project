@@ -29,6 +29,11 @@ public:
 	//gets called every program iteration "Frame"
 	virtual void Update() = 0;
 
+	//Remove Component From List
+	~Component() {
+		
+	}
+
 protected:
 	//GameObject Container for this Component
 	GameObject* containingObject;
