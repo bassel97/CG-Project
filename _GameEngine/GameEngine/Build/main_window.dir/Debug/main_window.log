@@ -1,8 +1,0 @@
-﻿  AnimatedModel.cpp
-D:\Github projects\CG-Project\_GameEngine\GameEngine\_OurGameEngine\ObjectsAndComponents\shader.hpp(52): warning C4101: 'infoLog': unreferenced local variable
-D:\Github projects\CG-Project\_GameEngine\GameEngine\_OurGameEngine\ObjectsAndComponents\shader.hpp(51): warning C4101: 'success': unreferenced local variable
-D:\Github projects\CG-Project\_GameEngine\GameEngine\_OurGameEngine\ObjectsAndComponents\AnimatedModel.cpp(44): warning C4018: '<': signed/unsigned mismatch
-D:\Github projects\CG-Project\_GameEngine\GameEngine\_OurGameEngine\ObjectsAndComponents\AnimatedModel.cpp(49): warning C4018: '<': signed/unsigned mismatch
-D:\Github projects\CG-Project\_GameEngine\GameEngine\_OurGameEngine\ObjectsAndComponents\AnimatedModel.cpp(218): warning C4018: '<': signed/unsigned mismatch
-  main_window.vcxproj -> D:\Github projects\CG-Project\_GameEngine\GameEngine\Build\Debug\main_window.exe
-  main_window.vcxproj -> D:/Github projects/CG-Project/_GameEngine/GameEngine/Build/Debug/main_window.pdb (Full PDB)
