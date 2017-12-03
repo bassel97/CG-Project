@@ -12,5 +12,7 @@ void main()
         discard;
 
     gl_FragColor = color; 
+    //gl_FragColor.a = 0.8f;
+    
     //gl_FragColor = vec4(1.0f, 0.0f, 1.0f , 1.0f);
 }

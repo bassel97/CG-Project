@@ -37,9 +37,9 @@ struct Vertex {
 
 
 	//affecting bones
-	glm::ivec2 affectingBonesId;
+	float affectingBoneId;
 	//Bone weight
-	glm::vec2 boneWeights;
+	//glm::vec2 boneWeights;
 };
 
 struct Texture {

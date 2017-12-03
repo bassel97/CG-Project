@@ -69,14 +69,16 @@ int main(void)
 	// Ensure we can capture the escape key being pressed below
 	glfwEnable(GLFW_STICKY_KEYS);
 
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+	glEnable(GL_BLEND);
+
 	// Dark blue background
-	glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+	glClearColor(0.15f, 0.15f, 0.2f, 0.0f);
 
 	// Enable depth test
 	glEnable(GL_DEPTH_TEST);
 	// Accept fragment if it closer to the camera than the former one
 	glDepthFunc(GL_LESS);
-
 
 	//universal view-projection matrix
 	glm::mat4 viewProj;
@@ -126,6 +128,34 @@ int main(void)
 	groundMesh.setTexture("PlayGroundBaked.bmp", "Diffuse");
 	groundMesh.setTexture("GroundAO.bmp", "AO");
 
+	GameObject Character01;
+	Character01.setPosition(-16, 0, 0);
+	Character01.setRotation(0, 90, 0);
+	AnimatedModel characterMesh(&Character01, "Character01.fbx", &animatedShader);
+	characterMesh.setTexture("CharacterHWColor.bmp", "Diffuse");
+	characterMesh.setTexture("CharacterHWAO.bmp", "AO");
+
+	GameObject Character02;
+	Character02.setPosition(-16, 0, -5.5);
+	Character02.setRotation(0, 70, 0);
+	AnimatedModel character2Mesh(&Character02, "Character02.fbx", &animatedShader);
+	character2Mesh.setTexture("CharacterShieldColor.bmp", "Diffuse");
+	character2Mesh.setTexture("CharacterShieldAO.bmp", "AO");
+
+	GameObject Character03;
+	Character03.setPosition(-16, 0, 5.5);
+	Character03.setRotation(0, 120, 0);
+	AnimatedModel character3Mesh(&Character03, "Character03.fbx", &animatedShader);
+	character3Mesh.setTexture("CharacterSColor.bmp", "Diffuse");
+	character3Mesh.setTexture("CharacterSAO.bmp", "AO");
+
+	GameObject Character04;
+	Character04.setPosition(-16, 5, 0);
+	Character04.setRotation(0, 90, 0);
+	AnimatedModel character4Mesh(&Character04, "Character04.fbx", &animatedShader);
+	character4Mesh.setTexture("CharceterXColor.bmp", "Diffuse");
+	character4Mesh.setTexture("CharceterXAO.bmp", "AO");
+
 	GameObject DataTeam1;
 	DataTeam1.setPosition(26, 0, 0);
 	DataTeam1.setRotation(0, 90, 0);
@@ -140,22 +170,9 @@ int main(void)
 	data2Mesh.setTexture("DataColor.bmp", "Diffuse");
 	data2Mesh.setTexture("DataAO.bmp", "AO");
 
-	GameObject Character01;
-	Character01.setPosition(-16, 0, 0);
-	Character01.setRotation(0, 90, 0);
-	AnimatedModel characterMesh(&Character01, "Character01.fbx", &animatedShader);
-	characterMesh.setTexture("CharacterHWColor.bmp", "Diffuse");
-	characterMesh.setTexture("DataAO.bmp", "AO");
-
-	GameObject Character02;
-	Character02.setPosition(-16, 0, -5.5);
-	Character02.setRotation(0, 70, 0);
-	AnimatedModel character2Mesh(&Character02, "Character02.fbx", &animatedShader);
-	character2Mesh.setTexture("CharacterShieldColor.bmp", "Diffuse");
-	character2Mesh.setTexture("DataAO.bmp", "AO");
-
 	logoUI.setTexture("LogoPresented.bmp");
-	logoUI.position = glm::vec3(-0.5, -0.5, 0);
+	logoUI.position = glm::vec3(-0.75, 0.65, 0);
+	logoUI.scale = glm::vec3(0.25, 0.25, 0);
 
 	do {
 
@@ -169,26 +186,27 @@ int main(void)
 		//glm::vec3 go2F = go2.getForwardVector();
 
 		//glm::vec3 pos = glm::vec3(-sin(glfwGetTime() / 2) * 6, 5.5, sin(glfwGetTime() / 2 + 1) * 5 - 4.5);
-		glm::vec3 pos = glm::vec3(0, 7, 0);
-		glm::vec3 forward = glm::rotateY(glm::vec3(-1, -0.5, 0), (float)glfwGetTime() * 15);
+		/*glm::vec3 pos = glm::vec3(0, 7, 0);
+		glm::vec3 forward = glm::rotateY(glm::vec3(-1, -0.5, 0), (float)glfwGetTime() * 50);
 		viewProj = glm::perspective(45.0f, 4.0f / 3.0f, 0.1f, 100.0f) * glm::lookAt(
 			pos,
 			pos + forward,
 			glm::vec3(0, 1, 0)
-		);
+		);*/
 
 		//cubeMesh.vp = groundMesh.vp;
 		//viewProj = groundMesh.vp;
 
-		/*computeMatricesFromInputs();
-		viewProj = getProjectionMatrix() * getViewMatrix();*/
+		computeMatricesFromInputs();
+		viewProj = getProjectionMatrix() * getViewMatrix();
 
 		groundMesh.universalViewProj = &viewProj;
 		dataMesh.universalViewProj = &viewProj;
 		data2Mesh.universalViewProj = &viewProj;
 		characterMesh.universalViewProj = &viewProj;
 		character2Mesh.universalViewProj = &viewProj;
-
+		character3Mesh.universalViewProj = &viewProj;
+		character4Mesh.universalViewProj = &viewProj;
 
 
 		// Clear the screen

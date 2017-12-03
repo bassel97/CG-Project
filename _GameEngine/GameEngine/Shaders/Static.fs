@@ -15,4 +15,5 @@ void main()
 	//gl_FragColor = myColor;
 	
 	gl_FragColor = texture(Diffuse, TexCoord) * texture(AO, TexCoord);
+	//gl_FragColor.a = 0.2f;
 }
