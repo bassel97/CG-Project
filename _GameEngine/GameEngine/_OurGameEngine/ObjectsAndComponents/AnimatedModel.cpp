@@ -22,9 +22,8 @@ AnimatedModel::AnimatedModel(GameObject* contObject, const char* path, Shader* _
 
 	shader = _shader;
 
-	Assimp::Importer importer;
 	//aiProcess_FlipUVs
-	const aiScene* scene = importer.ReadFile(path, aiProcess_Triangulate | aiProcess_CalcTangentSpace);
+	scene = importer.ReadFile(path, aiProcess_Triangulate | aiProcess_CalcTangentSpace);
 	// check for errors
 	if (!scene || scene->mFlags & AI_SCENE_FLAGS_INCOMPLETE || !scene->mRootNode) // if is Not Zero
 	{
@@ -36,11 +35,37 @@ AnimatedModel::AnimatedModel(GameObject* contObject, const char* path, Shader* _
 
 	shader_vertexPosModelSpaceID = glGetAttribLocation(shader->ID, "vertexPosition_modelspace");
 	shader_textureCoordinateID = glGetAttribLocation(shader->ID, "aTexCoord");
+	shader_normalID = glGetAttribLocation(shader->ID, "normal");
 
 	bonesNumber = 0;
 
-	if (scene->mMeshes[0]->HasBones())
+	if (scene->mMeshes[0]->HasBones()) {
+
+		/*for (int i = 0; i < scene->mMeshes[0]->mNumBones; i++)
+		{
+			printf(scene->mMeshes[0]->mBones[i]->mName.C_Str());
+			printf("\n");
+		}
+
+		aiMatrix4x4 firstBoneMatrixAI;
+		aiNode* boneNode = scene->mRootNode->FindNode(scene->mMeshes[0]->mBones[0]->mName.C_Str());
+		aiNode* traverseNode = scene->mRootNode;
+		while (boneNode != traverseNode) {
+			firstBoneMatrixAI *= traverseNode->mTransformation;
+			traverseNode = traverseNode->mChildren[0];
+		}
+		glm::mat4 firstBoneMatrix;
+		for (int i = 0; i < 4; i++)
+		{
+			for (int j = 0; j < 4; j++)
+			{
+				firstBoneMatrix[i][j] = firstBoneMatrixAI[i][j];
+			}
+		}*/
+
 		processMesh(scene->mMeshes[0]->mBones, scene->mMeshes[0], scene->mMeshes[0]->mNumBones);
+		//processBones(scene->mMeshes[0]->mBones, scene->mRootNode, scene->mMeshes[0]->mBones[0], glm::mat4());
+	}
 	else
 		processMesh(scene->mMeshes[0]);
 
@@ -163,8 +188,8 @@ void AnimatedModel::processMesh(aiMesh *mesh)
 	glEnableVertexAttribArray(shader_vertexPosModelSpaceID);
 	glVertexAttribPointer(shader_vertexPosModelSpaceID, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)0);
 	// vertex normals
-	//glEnableVertexAttribArray(1);
-	//glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, Normal));
+	glEnableVertexAttribArray(shader_normalID);
+	glVertexAttribPointer(shader_normalID, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, Normal));
 	// vertex texture coords
 	glEnableVertexAttribArray(shader_textureCoordinateID);
 	glVertexAttribPointer(shader_textureCoordinateID, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, TexCoords));
@@ -238,24 +263,23 @@ void AnimatedModel::processMesh(aiBone ** bones, aiMesh *mesh, int numBones)
 		//glm::ivec2 ids = glm::ivec2(-1, -1);
 		int id = 0;
 
+		float maxWeight = 0;
 		//Setting the bone index foreach vertex
 		for (int j = 0; j < numBones; j++)
 		{
 			for (int k = 0; k < bones[j]->mNumWeights; k++)
 			{
-				/*if (bones[j]->mWeights[k].mVertexId == i && numIds < 2) {
-					weights[numIds] = bones[j]->mWeights[k].mWeight;
-					ids[numIds] = j;
-
-					numIds++;
-				}*/
 				if (bones[j]->mWeights[k].mVertexId == i) {
+					if (bones[j]->mWeights[k].mWeight > maxWeight) {
+						maxWeight = bones[j]->mWeights[k].mWeight;
 						id = j;
+					}
 				}
 			}
 		}
 
 		//vertex.boneWeights = weights;
+		//printf("\n\nThe vertex %d has Affecting id = %d with weight = %f", i, id, maxWeight);
 		vertex.affectingBoneId = id;
 
 
@@ -293,8 +317,8 @@ void AnimatedModel::processMesh(aiBone ** bones, aiMesh *mesh, int numBones)
 	glEnableVertexAttribArray(shader_vertexPosModelSpaceID);
 	glVertexAttribPointer(shader_vertexPosModelSpaceID, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)0);
 	// vertex normals
-	//glEnableVertexAttribArray(1);
-	//glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, Normal));
+	glEnableVertexAttribArray(shader_normalID);
+	glVertexAttribPointer(shader_normalID, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, Normal));
 	// vertex texture coords
 	glEnableVertexAttribArray(shader_textureCoordinateID);
 	glVertexAttribPointer(shader_textureCoordinateID, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, TexCoords));
@@ -317,81 +341,126 @@ void AnimatedModel::processMesh(aiBone ** bones, aiMesh *mesh, int numBones)
 
 	for (int i = 0; i < bonesNumber; i++)
 	{
-		BonesTransforms[i] = glm::scale(glm::mat4(), 2.0f, 2.0f, 2.0f);
+		BonesTransforms[i] = glm::scale(glm::mat4(), 1.0f, 1.0f, 1.0f);
 	}
 }
 
-void AnimatedModel::processBones(aiNode FirstBone, aiAnimation** animations, glm::mat4 parentMatrix)
+void AnimatedModel::processBones(aiBone** bones, aiNode* rootNode, aiBone* FirstBone, glm::mat4 parentMatrix)
 {
-	glm::mat4 boneTrans = glm::mat4();
-
-	int i = 0;
-
-	aiNodeAnim* pNodeAnim = FindNodeAnim(animations[0], FirstBone.mName.C_Str());
-
-	if (pNodeAnim != NULL)
+	//printf(FirstBone->mName.C_Str());
+	//printf("     ==============================ParentMatrix\n");
+	/*for (int i = 0; i < 4; i++)
 	{
-		// Interpolate scaling and generate scaling transformation matrix
-		glm::vec3 Scaling = glm::vec3(animations[0]->mChannels[i + 1]->mScalingKeys[0].mValue.x, animations[0]->mChannels[0]->mScalingKeys[0].mValue.y, animations[0]->mChannels[0]->mScalingKeys[0].mValue.z);
-		glm::mat4 ScalingMatrix = glm::scale(Scaling);
-
-		aiQuaternion rotationQuat = animations[0]->mChannels[i + 1]->mRotationKeys[1].mValue;
-		aiVector3D xRotated = rotationQuat.Rotate(aiVector3D(1, 0, 0));
-		aiVector3D yRotated = rotationQuat.Rotate(aiVector3D(0, 1, 0));
-		aiVector3D zRotated = rotationQuat.Rotate(aiVector3D(0, 0, 1));
-
-		glm::vec3 Translation = glm::vec3(animations[0]->mChannels[i + 1]->mPositionKeys[1].mValue.x, animations[0]->mChannels[i + 1]->mPositionKeys[1].mValue.y, animations[0]->mChannels[i + 1]->mPositionKeys[1].mValue.z);
-		glm::mat4 TranslationMatrix = glm::translate(Translation);
-
-		glm::mat4 rotationMatrix = glm::translate(glm::mat4(1.0f), Translation);
-		float RotaionX = acos(yRotated.y);
-		float RotaionY = acos(yRotated.z);
-		float RotaionZ = acos(yRotated.x);
-		rotationMatrix = glm::rotate(rotationMatrix, RotaionX, glm::vec3(1, 0, 0));
-		rotationMatrix = glm::rotate(rotationMatrix, RotaionY, glm::vec3(0, 1, 0));
-		rotationMatrix = glm::rotate(rotationMatrix, RotaionZ, glm::vec3(0, 0, 1));
-
-		BonesTransforms[i] = rotationMatrix * TranslationMatrix;
-
-	}
-
-	glm::mat4 GlobalTransformation = parentMatrix * (boneTrans);
-
-	//Bone bone = null;
-
-	/*if ((bone = findBone(NodeName)) != null)
-	{
-		bone.finalTransformation = globalInverseTransform.Mul(GlobalTransformation).Mul(bone.offsetMatrix);
-	}
-
-	for (int i = 0; i < pNode.mNumChildren(); i++) {
-		ReadNodeHeirarchy(AnimationTime, AINode.create(pNode.mChildren().get(i)), GlobalTransformation);
+		for (int j = 0; j < 4; j++)
+		{
+			printf("%f ,", parentMatrix[i][j]);
+		}
+		printf("\n");
 	}*/
 
-	//CalcInterpolatedScaling(Scaling, AnimationTime, pNodeAnim);
-	//Matrix4f ScalingM = new Matrix4f().InitScale(Scaling.x(), Scaling.y(), Scaling.z());
+	glm::mat4 boneMatrix;
 
-	//// Interpolate rotation and generate rotation transformation matrix
-	//Quaternion RotationQ = new Quaternion(0, 0, 0, 0);
-	//CalcInterpolatedRotation(RotationQ, AnimationTime, pNodeAnim);
-	//Matrix4f RotationM = RotationQ.ToRotationMatrix();
+	aiNode *node = rootNode->FindNode(FirstBone->mName);
 
-	//// Interpolate translation and generate translation transformation matrix
-	//Vector3f Translation = new Vector3f(0, 0, 0);
-	//CalcInterpolatedPosition(Translation, AnimationTime, pNodeAnim);
-	//Matrix4f TranslationM = new Matrix4f().InitTranslation(Translation.x(), Translation.y(), Translation.z());
+	//printf(node->mName.C_Str());
+	//printf(" from parent\n");
 
-	//// Combine the above transformations
-	//NodeTransformation = TranslationM.Mul(RotationM).Mul(ScalingM);
+	for (int i = 0; i < 4; i++)
+	{
+		for (int j = 0; j < 4; j++)
+		{
+			boneMatrix[i][j] = node->mTransformation[i][j];
+			//printf("%f ,", node->mTransformation[i][j]);
+		}
+		//printf("\n");
+	}
 
-	//aiMatrix4x4 boneTransformationToOrigin = bones[i]->mOffsetMatrix.Inverse();
-	//aiMatrix4x4 boneTransformationToBone = bones[i]->mOffsetMatrix;
+	/*printf(node->mName.C_Str());
+	printf(" from origin\n");
+	boneMatrix = parentMatrix * boneMatrix;
+	for (int i = 0; i < 4; i++)
+	{
+		for (int j = 0; j < 4; j++)
+		{
+			printf("%f ,", boneMatrix[i][j]);
+		}
+		printf("\n");
+	}*/
+
+	glm::mat4 rotated = glm::inverse(glm::transpose(parentMatrix));
+
+	//if (strcmp(FirstBone->mName.C_Str(), "Bone.001") == 0) {
+		//rotated = boneMatrix * glm::transpose(glm::rotate(glm::mat4(), 45.0f, glm::vec3(0, 0, 1))) * glm::inverse(boneMatrix);
+		//rotated = glm::transpose(boneMatrix) * glm::transpose(glm::translate(glm::mat4(), glm::vec3(1, 0, 0)))  * glm::transpose(glm::inverse(boneMatrix));
+		//rotated = glm::translate(glm::transpose(boneMatrix), glm::vec3(0, 0, 0));
+		//rotated = glm::rotate(glm::transpose(boneMatrix), 45.0f, glm::vec3(0, 0, 1));
+		//rotated = glm::rotate(glm::transpose(boneMatrix), (float)glfwGetTime() * 50, glm::vec3(0, -1, 0));
+	//}
+	if (strcmp(FirstBone->mName.C_Str(), "shin.L") == 0) {
+		//rotated = boneMatrix * glm::transpose(glm::rotate(glm::mat4(), 45.0f, glm::vec3(0, 0, 1))) * glm::inverse(boneMatrix);
+		//rotated = glm::transpose(boneMatrix) * glm::transpose(glm::translate(glm::mat4(), glm::vec3(1, 0, 0)))  * glm::transpose(glm::inverse(boneMatrix));
+		//rotated = glm::translate(glm::transpose(boneMatrix), glm::vec3(0, 0, 0));
+		//rotated = glm::rotate(glm::transpose(boneMatrix), 45.0f, glm::vec3(0, 0, 1));
+		rotated = glm::rotate(glm::transpose(parentMatrix), sin((float)glfwGetTime() * 5) * 25.0f, glm::vec3(1, 0, 0.5));
+	}
+	if (strcmp(FirstBone->mName.C_Str(), "shin.R") == 0) {
+		//rotated = boneMatrix * glm::transpose(glm::rotate(glm::mat4(), 45.0f, glm::vec3(0, 0, 1))) * glm::inverse(boneMatrix);
+		//rotated = glm::transpose(boneMatrix) * glm::transpose(glm::translate(glm::mat4(), glm::vec3(1, 0, 0)))  * glm::transpose(glm::inverse(boneMatrix));
+		//rotated = glm::translate(glm::transpose(boneMatrix), glm::vec3(0, 0, 0));
+		//rotated = glm::rotate(glm::transpose(boneMatrix), 45.0f, glm::vec3(0, 0, 1));
+		rotated = glm::rotate(glm::transpose(parentMatrix), sin((float)glfwGetTime() * 5) * -25.0f, glm::vec3(1, 0, 0.5));
+	}
+
+	if (strcmp(FirstBone->mName.C_Str(), "upper_arm.R") == 0) {
+		//rotated = boneMatrix * glm::transpose(glm::rotate(glm::mat4(), 45.0f, glm::vec3(0, 0, 1))) * glm::inverse(boneMatrix);
+		//rotated = glm::transpose(boneMatrix) * glm::transpose(glm::translate(glm::mat4(), glm::vec3(1, 0, 0)))  * glm::transpose(glm::inverse(boneMatrix));
+		//rotated = glm::translate(glm::transpose(boneMatrix), glm::vec3(0, 0, 0));
+		//rotated = glm::rotate(glm::transpose(boneMatrix), 45.0f, glm::vec3(0, 0, 1));
+		rotated = glm::rotate(glm::transpose(parentMatrix), sin((float)glfwGetTime() * 5) * -7.0f, glm::vec3(1, 1, 0));
+	}
+
+	if (strcmp(FirstBone->mName.C_Str(), "upper_arm.L") == 0) {
+		//rotated = boneMatrix * glm::transpose(glm::rotate(glm::mat4(), 45.0f, glm::vec3(0, 0, 1))) * glm::inverse(boneMatrix);
+		//rotated = glm::transpose(boneMatrix) * glm::transpose(glm::translate(glm::mat4(), glm::vec3(1, 0, 0)))  * glm::transpose(glm::inverse(boneMatrix));
+		//rotated = glm::translate(glm::transpose(boneMatrix), glm::vec3(0, 0, 0));
+		//rotated = glm::rotate(glm::transpose(boneMatrix), 45.0f, glm::vec3(0, 0, 1));
+		rotated = glm::rotate(glm::transpose(parentMatrix), sin((float)glfwGetTime() * 5) * -7.0f, glm::vec3(1, 1, 0));
+	}
+
+	/*printf("Rotated matrix\n");
+	for (int i = 0; i < 4; i++)
+	{
+		for (int j = 0; j < 4; j++)
+		{
+			printf("%f ,", rotated[i][j]);
+		}
+		printf("\n");
+	}*/
 
 	for (int i = 0; i < bonesNumber; i++)
 	{
-		BonesTransforms[i] = glm::scale(glm::mat4(), 2.0f, 2.0f, 2.0f);
+		if (bones[i]->mName == FirstBone->mName)
+		{
+			BonesTransforms[i] = rotated;
+			//printf("%d", i);
+			//printf(" Passed to shader\n");
+			break;
+		}
 	}
 
+	for (int i = 0; i < node->mNumChildren; i++)
+	{
+		aiMatrix4x4 passed = node->mChildren[i]->mTransformation;
+		glm::mat4 sentMatrix;
+		for (int i = 0; i < 4; i++)
+		{
+			for (int j = 0; j < 4; j++)
+			{
+				sentMatrix[i][j] = passed[i][j];
+			}
+		}
+		processBones(bones, node, (aiBone*)node->mChildren[i], glm::transpose(rotated));
+	}
 
 }
 
@@ -400,11 +469,12 @@ void AnimatedModel::Draw()
 	shader->use();
 
 	glm::mat4 transform = containingObject->getTransformMatrix();
+	glm::mat4 rotationMatrix = containingObject->getRotationMatrix();
 
 	// view/projection transformations
+	shader->setMat4("rotation", rotationMatrix);
 	shader->setMat4("transform", transform);
 	shader->setMat4("projection", (*universalViewProj));
-
 
 	//shader->setVec4("tests[0]", glm::vec4(sin(glfwGetTime()), 0, 0, 0));
 	//shader->setVec4("tests[1]", glm::vec4(0, cos(glfwGetTime()), 0, 0));
@@ -412,9 +482,11 @@ void AnimatedModel::Draw()
 	if (bonesNumber > 0) {
 		shader->setInt("numBones", bonesNumber);
 
+		processBones(scene->mMeshes[0]->mBones, scene->mRootNode, scene->mMeshes[0]->mBones[0], glm::mat4());
+
 		for (int i = 0; i < bonesNumber; i++)
 		{
-			shader->setMat4("joints[" + std::to_string(i) + "]", BonesTransforms[i] /* glm::mat4()*/);
+			shader->setMat4("joints[" + std::to_string(i) + "]", BonesTransforms[i]);
 		}
 	}
 

@@ -69,6 +69,7 @@ class AnimatedModel : public Component
 	GLuint shader_textureCoordinateID;
 	GLuint shader_jointIndId;
 	GLuint shader_weightsId;
+	GLuint shader_normalID;
 
 
 	glm::vec3 testRotaions;
@@ -76,6 +77,9 @@ class AnimatedModel : public Component
 
 	bool hasTexture;
 	GLuint textureID;
+
+	const aiScene* scene;
+	Assimp::Importer importer;
 
 public:
 
@@ -93,7 +97,7 @@ public:
 
 	void processMesh(aiMesh * mesh);
 	void processMesh(aiBone ** bones, aiMesh *mesh, int numBones);
-	void processBones(aiNode FirstBone, aiAnimation** animations, glm::mat4 parentMatrix);
+	void processBones(aiBone** bones, aiNode* rootNode, aiBone* FirstBone, glm::mat4 parentMatrix);
 
 
 	//std::vector<Texture> loadMaterialTextures(aiMaterial * mat, aiTextureType type, std::string typeName);

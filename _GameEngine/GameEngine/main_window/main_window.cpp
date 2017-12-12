@@ -22,9 +22,13 @@ using namespace glm;
 #include "_OurGameEngine\ObjectsAndComponents\AnimatedModel.hpp"
 
 #include"common\controls.hpp"
+#include"_OurGameEngine\ObjectsAndComponents\SpherePhysics.hpp" 
+
+#include "btBulletDynamicsCommon.h"
 
 //Static variabled declared here because component has no .cpp file
 std::vector<Component*> Component::allComponents;
+std::vector<SphereCollider*> SphereCollider::m_PhysicsComponents;
 
 #include<assimp\Importer.hpp>
 
@@ -64,13 +68,10 @@ int main(void)
 		return -1;
 	}
 
-	glfwSetWindowTitle("Game Window");
+	glfwSetWindowTitle("Project Delivery Game Window");
 
 	// Ensure we can capture the escape key being pressed below
 	glfwEnable(GLFW_STICKY_KEYS);
-
-	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-	glEnable(GL_BLEND);
 
 	// Dark blue background
 	glClearColor(0.15f, 0.15f, 0.2f, 0.0f);
@@ -80,34 +81,30 @@ int main(void)
 	// Accept fragment if it closer to the camera than the former one
 	glDepthFunc(GL_LESS);
 
+	////----------------------------Bullet Physics----------------------------------------------------------------//
+	//// Initialize Bullet. This strictly follows http://bulletphysics.org/mediawiki-1.5.8/index.php/Hello_World, 
+	//// even though we won't use most of this stuff.
+
+	//// Build the broadphase
+	//btBroadphaseInterface* broadphase = new btDbvtBroadphase();
+
+	//// Set up the collision configuration and dispatcher
+	//btDefaultCollisionConfiguration* collisionConfiguration = new btDefaultCollisionConfiguration();
+	//btCollisionDispatcher* dispatcher = new btCollisionDispatcher(collisionConfiguration);
+
+	//// The actual physics solver
+	//btSequentialImpulseConstraintSolver* solver = new btSequentialImpulseConstraintSolver;
+
+	//// The world.
+	//btDiscreteDynamicsWorld* dynamicsWorld = new btDiscreteDynamicsWorld(dispatcher, broadphase, solver, collisionConfiguration);
+	//dynamicsWorld->setGravity(btVector3(0, -9.81f, 0));
+	////----------------------------Bullet Physics----------------------------------------------------------------//
+
+
 	//universal view-projection matrix
 	glm::mat4 viewProj;
 
-	//Instantiate GameObject
-	//GameObject go2;
-	//MeshRenderer m2(&go2, "poinsr.obj", "SimpleVertexShader.vertexshader", "SimpleFragmentShader.fragmentshader");
-	//go2.setPosition(0, 2, 0);
-	//go2.setRotation(-45, 0, 0);
-	//go2.setScale(0.02, 0.02, .02);
-	//go2.addComponent(&m2);
 
-	/*GameObject cube;
-	MeshRenderer cubeMesh(&cube, "cube.obj", "SimpleVertexShader.vertexshader", "SimpleFragmentShaderColor.fragmentshader");
-	cubeMesh.hasMVP = true;
-	cube.setPosition(0, 1, 0);*/
-
-	/*GameObject ground;
-	MeshRenderer groundMesh(&ground, "ground.obj", "SimpleVertexShader.vertexshader", "SimpleFragmentShader.fragmentshader");
-	ground.addComponent(&groundMesh);
-	groundMesh.hasMVP = true;
-	groundMesh.setTexture("playgroundbakedhigh.bmp");*/
-
-	//GameObject testAssimp;
-	////testAssimp.setPosition(0, 0, 3);
-	//testAssimp.setScale(0.5f, 0.5f, 0.5f);
-	////am.shader = &shader1;
-	//AnimatedModel am(&testAssimp, "assimpTestAnim2.fbx", &shader1);
-	//am.universalViewProj = &viewProj;
 
 	// Clear the screen
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -129,20 +126,26 @@ int main(void)
 	groundMesh.setTexture("GroundAO.bmp", "AO");
 
 	GameObject Character01;
-	Character01.setPosition(-16, 0, 0);
-	Character01.setRotation(0, 90, 0);
-	AnimatedModel characterMesh(&Character01, "Character01.fbx", &animatedShader);
+	Character01.setPosition(16, 0, 0);
+	Character01.setRotation(0, -90, 0);
+	Character01.name = "Heavy weapon";
+	AnimatedModel characterMesh(&Character01, "character01.fbx", &animatedShader);
 	characterMesh.setTexture("CharacterHWColor.bmp", "Diffuse");
 	characterMesh.setTexture("CharacterHWAO.bmp", "AO");
+	SphereCollider character01Collider(&Character01, 0.5f, glm::vec4(0, 1, 0, 1), false);
+	character01Collider.setMinMax(-27, 27, -17, 17);
+
 
 	GameObject Character02;
-	Character02.setPosition(-16, 0, -5.5);
+	Character02.setPosition(-16, 0, 0);
 	Character02.setRotation(0, 70, 0);
+	Character02.name = "Shield";
 	AnimatedModel character2Mesh(&Character02, "Character02.fbx", &animatedShader);
 	character2Mesh.setTexture("CharacterShieldColor.bmp", "Diffuse");
 	character2Mesh.setTexture("CharacterShieldAO.bmp", "AO");
+	SphereCollider character02Collider(&Character02, 0.5f, glm::vec4(0, 1, 0, 1), false);
 
-	GameObject Character03;
+	/*GameObject Character03;
 	Character03.setPosition(-16, 0, 5.5);
 	Character03.setRotation(0, 120, 0);
 	AnimatedModel character3Mesh(&Character03, "Character03.fbx", &animatedShader);
@@ -154,30 +157,92 @@ int main(void)
 	Character04.setRotation(0, 90, 0);
 	AnimatedModel character4Mesh(&Character04, "Character04.fbx", &animatedShader);
 	character4Mesh.setTexture("CharceterXColor.bmp", "Diffuse");
-	character4Mesh.setTexture("CharceterXAO.bmp", "AO");
+	character4Mesh.setTexture("CharceterXAO.bmp", "AO");*/
 
 	GameObject DataTeam1;
 	DataTeam1.setPosition(26, 0, 0);
 	DataTeam1.setRotation(0, 90, 0);
+	DataTeam1.name = "data 1";
 	AnimatedModel dataMesh(&DataTeam1, "DataFile.fbx", &staticShader);
 	dataMesh.setTexture("DataColor.bmp", "Diffuse");
 	dataMesh.setTexture("DataAO.bmp", "AO");
+	SphereCollider data01Collider(&DataTeam1, 3, glm::vec4(0, 1, 0, 1), true);
 
 	GameObject DataTeam2;
 	DataTeam2.setPosition(-26, 0, 0);
 	DataTeam2.setRotation(0, 90, 0);
+	DataTeam2.name = "data 2";
 	AnimatedModel data2Mesh(&DataTeam2, "DataFile.fbx", &staticShader);
 	data2Mesh.setTexture("DataColor.bmp", "Diffuse");
 	data2Mesh.setTexture("DataAO.bmp", "AO");
+	SphereCollider data02Collider(&DataTeam2, 3, glm::vec4(0, 1, 0, 1), true);
+
+	GameObject skyBox;
+	skyBox.setScale(500, 500, 500);
+	skyBox.setRotation(90, 0, 0);
+	skyBox.setPosition(0, -100, 0);
+	AnimatedModel skyBoxMesh(&skyBox, "skybox.fbx", &staticShader);
+	skyBoxMesh.setTexture("space big2ud.bmp", "Diffuse");
+	skyBoxMesh.setTexture("whiteAO.bmp", "AO");
+
+	GameObject scoreScreen;
+	scoreScreen.setPosition(0, 10, 0);
+	AnimatedModel scoreScreenMesh(&scoreScreen, "scoreScreen.fbx", &staticShader);
+	scoreScreenMesh.setTexture("scoreScreenColor.bmp", "Diffuse");
+	scoreScreenMesh.setTexture("whiteAO.bmp", "AO");
+
+	GameObject camera;
+	camera.setParent(&Character01);
+	camera.setPosition(-0.5f, 0.75f, -2);
+
 
 	logoUI.setTexture("LogoPresented.bmp");
 	logoUI.position = glm::vec3(-0.75, 0.65, 0);
 	logoUI.scale = glm::vec3(0.25, 0.25, 0);
 
+
+	groundMesh.universalViewProj = &viewProj;
+	dataMesh.universalViewProj = &viewProj;
+	data2Mesh.universalViewProj = &viewProj;
+	characterMesh.universalViewProj = &viewProj;
+	character2Mesh.universalViewProj = &viewProj;
+	/*character3Mesh.universalViewProj = &viewProj;
+	character4Mesh.universalViewProj = &viewProj;*/
+	skyBoxMesh.universalViewProj = &viewProj;
+	scoreScreenMesh.universalViewProj = &viewProj;
+
+
 	do {
+
+		//Getting Inputs
+		if (glfwGetKey('W') == GLFW_PRESS || glfwGetKey(GLFW_KEY_UP) == GLFW_PRESS) {
+			CollisionState cs = character01Collider.ApplyForce(Character01.getForwardVector() / 10.0f);
+			if (cs == COLLIDED) {
+				std::cout << "Collided with " << character01Collider.m_CollidedObjectName << std::endl;
+			}
+			else if (cs == TRIGGERED) {
+				std::cout << "Triggered with " << character01Collider.m_CollidedObjectName << std::endl;
+			}
+		}
+		if (glfwGetKey('S') == GLFW_PRESS || glfwGetKey(GLFW_KEY_DOWN) == GLFW_PRESS) {
+			CollisionState cs = character01Collider.ApplyForce(Character01.getForwardVector() / -10.0f);
+			if (cs == COLLIDED) {
+				std::cout << "Collided with " << character01Collider.m_CollidedObjectName << std::endl;
+			}
+			else if (cs == TRIGGERED) {
+				std::cout << "Triggered with " << character01Collider.m_CollidedObjectName << std::endl;
+			}
+		}
+		if (glfwGetKey('A') == GLFW_PRESS || glfwGetKey(GLFW_KEY_LEFT) == GLFW_PRESS) {
+			Character01.RotateAroundY(1);
+		}
+		if (glfwGetKey('D') == GLFW_PRESS || glfwGetKey(GLFW_KEY_RIGHT) == GLFW_PRESS) {
+			Character01.RotateAroundY(-1);
+		}
 
 		DataTeam1.setRotation(0, glfwGetTime() * 50, 0);
 		DataTeam2.setRotation(0, -glfwGetTime() * 50, 0);
+		scoreScreen.setRotation(0, -glfwGetTime() * 50, 0);
 
 		//testAssimp.setRotation(0, glfwGetTime() * 90, 0);
 
@@ -197,17 +262,9 @@ int main(void)
 		//cubeMesh.vp = groundMesh.vp;
 		//viewProj = groundMesh.vp;
 
-		computeMatricesFromInputs();
-		viewProj = getProjectionMatrix() * getViewMatrix();
-
-		groundMesh.universalViewProj = &viewProj;
-		dataMesh.universalViewProj = &viewProj;
-		data2Mesh.universalViewProj = &viewProj;
-		characterMesh.universalViewProj = &viewProj;
-		character2Mesh.universalViewProj = &viewProj;
-		character3Mesh.universalViewProj = &viewProj;
-		character4Mesh.universalViewProj = &viewProj;
-
+		//computeMatricesFromInputs();
+		//viewProj = getProjectionMatrix() * getViewMatrix();
+		viewProj = camera.getViewProjection();
 
 		// Clear the screen
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);

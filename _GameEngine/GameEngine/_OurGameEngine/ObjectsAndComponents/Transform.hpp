@@ -36,6 +36,10 @@ public:
 	}
 
 	glm::mat4 getTransformMatrix();
+	glm::mat4 getViewProjection();
+	glm::mat4 getRotationMatrix();
+
+	glm::vec3 getPosition();
 
 	void setPosition(float x, float y, float z);
 
@@ -43,8 +47,13 @@ public:
 
 	void setRotation(float x, float y, float z);
 
+	void Translate(glm::vec3 displacment);
+	void RotateAroundY(float value);
+
 	glm::vec3 getUpVector();
 	glm::vec3 getForwardVector();
+
+	std::string name;
 
 private:
 

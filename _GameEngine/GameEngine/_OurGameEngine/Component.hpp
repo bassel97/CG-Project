@@ -31,7 +31,7 @@ public:
 
 	//Remove Component From List
 	~Component() {
-		
+
 	}
 
 protected:
