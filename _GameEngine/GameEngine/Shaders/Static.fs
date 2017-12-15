@@ -26,7 +26,20 @@ void main()
 
 	//gl_FragColor = myColor;
 	
-	vec4  light_toon =  (ambient+diffuse) *  texture(Diffuse, TexCoord)  * texture(AO, TexCoord);
+	vec4  light_toon =  (ambient+diffuse) ;
+
+	float mag = length(light_toon);
+
+	if(mag < 0.25)
+		mag = 0.25;
+	else if (mag < 0.5)
+		mag = 0.5;
+	else if (mag < 0.75)
+		mag = 0.75;
+	else 
+		mag = 1;
+
+	light_toon =  mag *  texture(Diffuse, TexCoord)  * texture(AO, TexCoord);
 
 	gl_FragColor = light_toon;
 	//gl_FragColor.a = 0.2f;

@@ -30,8 +30,31 @@ void main()
 
 	//gl_FragColor = myColor;
 	
-	vec4  light_toon =  (ambient+diffuse) *  texture(Diffuse, TexCoord)  * texture(AO, TexCoord);
+	vec4  light_toon =  (ambient+diffuse) ;
 
+	float mag = length(light_toon) ;
+
+	/*for(int i=0; i <3 ; ++i){
+		if(light_toon[i] < 0.25)
+			light_toon[i] = 0.25;
+		else if (light_toon[i] < 0.5)
+			light_toon[i] = 0.5;
+		else if (light_toon[i] < 0.75)
+			light_toon[i] = 0.75;
+		else 
+			light_toon[i] = 1;
+	}*/
+
+	if(mag < 0.25)
+		mag = 0.25;
+	else if (mag < 0.5)
+		mag = 0.5;
+	else if (mag < 0.75)
+		mag = 0.75;
+	else 
+		mag = 1;
+
+	light_toon =  mag * texture(AO, TexCoord) *  texture(Diffuse, TexCoord);
 
 	gl_FragColor = light_toon;
 	//gl_FragColor = color;
