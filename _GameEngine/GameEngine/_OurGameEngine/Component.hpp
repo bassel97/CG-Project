@@ -2,7 +2,6 @@
 #define COMPONENT
 
 #include <_OurGameEngine\EnginePrime.hpp>
-
 #include <vector>
 
 //Forward declaration of gameObject Class

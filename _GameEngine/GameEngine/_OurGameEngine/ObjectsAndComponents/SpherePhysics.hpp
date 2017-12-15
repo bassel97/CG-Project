@@ -28,6 +28,10 @@ public:
 
 	SphereCollider(GameObject * containingObject, float radius, glm::vec4 center, bool trigger = false, float weight = 1);
 
+	SphereCollider();
+
+	void Init(GameObject * containingObject, float radius, glm::vec4 center, bool trigger = false, float weight = 1);
+
 	CollisionState ApplyForce(glm::vec3 force);
 
 	CollisionState DetectCollision();
@@ -41,6 +45,9 @@ public:
 	void Update();
 
 	std::string m_CollidedObjectName;
+	std::string m_CollidedObjectTag;
+
+	bool m_active;
 
 private:
 	static std::vector<SphereCollider*>m_PhysicsComponents;

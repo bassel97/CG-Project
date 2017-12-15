@@ -9,6 +9,27 @@ SphereCollider::SphereCollider(GameObject * containingObject, float radius, glm:
 	m_PhysicsComponents.push_back(this);
 
 	containingObject->addComponent(this);
+
+	m_active = true;
+}
+
+SphereCollider::SphereCollider() : Component(NULL)
+{
+}
+
+void SphereCollider::Init(GameObject * containingObject, float radius, glm::vec4 center, bool trigger, float weight)
+{
+	this->containingObject = containingObject;
+
+	m_radius = radius;
+	m_center = center;
+	m_Trigger = trigger;
+	m_weight = weight;
+	m_PhysicsComponents.push_back(this);
+
+	containingObject->addComponent(this);
+
+	m_active = true;
 }
 
 CollisionState SphereCollider::ApplyForce(glm::vec3 force)
@@ -28,18 +49,21 @@ CollisionState SphereCollider::DetectCollision()
 {
 	for (int i = 0; i < m_PhysicsComponents.size(); i++) {
 		if (m_PhysicsComponents[i] == this) continue;
+		if (!m_PhysicsComponents[i]->m_active)continue;
 		glm::vec4 CenterFromOrigin = this->containingObject->getTransformMatrix() * this->m_center;
 		glm::vec4 otherCenterFromOrigin = m_PhysicsComponents[i]->containingObject->getTransformMatrix() * m_PhysicsComponents[i]->m_center;
 
-		std::cout << CenterFromOrigin.x << ", " << CenterFromOrigin.y << ", " << CenterFromOrigin.z << std::endl;
+		//std::cout << CenterFromOrigin.x << ", " << CenterFromOrigin.y << ", " << CenterFromOrigin.z << std::endl;
 		float distance = glm::distance(CenterFromOrigin, otherCenterFromOrigin);
 		if (distance <= this->m_radius + m_PhysicsComponents[i]->m_radius) {
 			if (m_PhysicsComponents[i]->m_Trigger) {
 				m_CollidedObjectName = m_PhysicsComponents[i]->containingObject->name;
+				m_CollidedObjectTag = m_PhysicsComponents[i]->containingObject->tag;
 				return TRIGGERED;
 			}
 			else {
 				m_CollidedObjectName = m_PhysicsComponents[i]->containingObject->name;
+				m_CollidedObjectTag = m_PhysicsComponents[i]->containingObject->tag;
 				return COLLIDED;
 			}
 		}

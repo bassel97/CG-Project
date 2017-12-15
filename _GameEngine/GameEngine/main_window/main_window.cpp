@@ -81,25 +81,6 @@ int main(void)
 	// Accept fragment if it closer to the camera than the former one
 	glDepthFunc(GL_LESS);
 
-	////----------------------------Bullet Physics----------------------------------------------------------------//
-	//// Initialize Bullet. This strictly follows http://bulletphysics.org/mediawiki-1.5.8/index.php/Hello_World, 
-	//// even though we won't use most of this stuff.
-
-	//// Build the broadphase
-	//btBroadphaseInterface* broadphase = new btDbvtBroadphase();
-
-	//// Set up the collision configuration and dispatcher
-	//btDefaultCollisionConfiguration* collisionConfiguration = new btDefaultCollisionConfiguration();
-	//btCollisionDispatcher* dispatcher = new btCollisionDispatcher(collisionConfiguration);
-
-	//// The actual physics solver
-	//btSequentialImpulseConstraintSolver* solver = new btSequentialImpulseConstraintSolver;
-
-	//// The world.
-	//btDiscreteDynamicsWorld* dynamicsWorld = new btDiscreteDynamicsWorld(dispatcher, broadphase, solver, collisionConfiguration);
-	//dynamicsWorld->setGravity(btVector3(0, -9.81f, 0));
-	////----------------------------Bullet Physics----------------------------------------------------------------//
-
 
 	//universal view-projection matrix
 	glm::mat4 viewProj;
@@ -118,6 +99,8 @@ int main(void)
 
 	Shader staticShader("Static.vs", "Static.fs");
 	Shader animatedShader("Animated.vs", "Animated.fs");
+	Shader emissionShader("Emission.vs", "Emission.fs");
+	Shader negativeShader("Animated.vs", "Negatives.fs");
 
 	GameObject Ground;
 	Ground.setScale(2, 2, 2);
@@ -125,57 +108,123 @@ int main(void)
 	groundMesh.setTexture("PlayGroundBaked.bmp", "Diffuse");
 	groundMesh.setTexture("GroundAO.bmp", "AO");
 
-	GameObject Character01;
-	Character01.setPosition(16, 0, 0);
-	Character01.setRotation(0, -90, 0);
-	Character01.name = "Heavy weapon";
-	AnimatedModel characterMesh(&Character01, "character01.fbx", &animatedShader);
+	GameObject Characters[3];
+	SphereCollider characterColliders[3];
+
+	GameObject team2Characters[3];
+	SphereCollider team2characterColliders[3];
+
+	//==============================Team 1===============================//
+	Characters[0].setPosition(-16, 0, -5.5);
+	Characters[0].setRotation(0, 70, 0);
+	Characters[0].name = "Heavy weapon";
+	Characters[0].tag = "team_1";
+	AnimatedModel characterMesh(&Characters[0], "character01.fbx", &animatedShader);
 	characterMesh.setTexture("CharacterHWColor.bmp", "Diffuse");
 	characterMesh.setTexture("CharacterHWAO.bmp", "AO");
-	SphereCollider character01Collider(&Character01, 0.5f, glm::vec4(0, 1, 0, 1), false);
-	character01Collider.setMinMax(-27, 27, -17, 17);
+	characterColliders[0].Init(&Characters[0], 0.5f, glm::vec4(0, 1, 0, 1), false);
+	characterColliders[0].setMinMax(-27, 27, -17, 17);
 
 
-	GameObject Character02;
-	Character02.setPosition(-16, 0, 0);
-	Character02.setRotation(0, 70, 0);
-	Character02.name = "Shield";
-	AnimatedModel character2Mesh(&Character02, "Character02.fbx", &animatedShader);
+	//GameObject Character02;
+	Characters[1].setPosition(-16, 0, 0);
+	Characters[1].setRotation(0, 90, 0);
+	Characters[1].name = "Shield";
+	Characters[1].tag = "team_1";
+	AnimatedModel character2Mesh(&Characters[1], "Character02.fbx", &animatedShader);
 	character2Mesh.setTexture("CharacterShieldColor.bmp", "Diffuse");
 	character2Mesh.setTexture("CharacterShieldAO.bmp", "AO");
-	SphereCollider character02Collider(&Character02, 0.5f, glm::vec4(0, 1, 0, 1), false);
+	characterColliders[1].Init(&Characters[1], 0.75f, glm::vec4(0, 1, 0, 1), false, 5.0f);
+	characterColliders[1].setMinMax(-27, 27, -17, 17);
 
-	/*GameObject Character03;
-	Character03.setPosition(-16, 0, 5.5);
-	Character03.setRotation(0, 120, 0);
-	AnimatedModel character3Mesh(&Character03, "Character03.fbx", &animatedShader);
+	//GameObject Character03;
+	Characters[2].setPosition(-16, 0, 5.5);
+	Characters[2].setRotation(0, 120, 0);
+	Characters[2].name = "Speed";
+	Characters[2].tag = "team_1";
+	AnimatedModel character3Mesh(&Characters[2], "Character03.fbx", &animatedShader);
 	character3Mesh.setTexture("CharacterSColor.bmp", "Diffuse");
 	character3Mesh.setTexture("CharacterSAO.bmp", "AO");
+	characterColliders[2].Init(&Characters[2], 0.5f, glm::vec4(0, 1, 0, 1), false, 0.35f);
+	characterColliders[2].setMinMax(-27, 27, -17, 17);
+	//==============================Team 1===============================//
 
-	GameObject Character04;
-	Character04.setPosition(-16, 5, 0);
-	Character04.setRotation(0, 90, 0);
-	AnimatedModel character4Mesh(&Character04, "Character04.fbx", &animatedShader);
-	character4Mesh.setTexture("CharceterXColor.bmp", "Diffuse");
-	character4Mesh.setTexture("CharceterXAO.bmp", "AO");*/
 
+	//==============================Team 2===============================//
+	team2Characters[0].setPosition(16, 0, -5.5);
+	team2Characters[0].setRotation(0, -70, 0);
+	team2Characters[0].name = "Heavy weapon";
+	team2Characters[0].tag = "team_1";
+	AnimatedModel t2characterMesh(&team2Characters[0], "character01.fbx", &negativeShader);
+	t2characterMesh.setTexture("CharacterHWColor.bmp", "Diffuse");
+	t2characterMesh.setTexture("CharacterHWAO.bmp", "AO");
+	team2characterColliders[0].Init(&team2Characters[0], 0.5f, glm::vec4(0, 1, 0, 1), false);
+	team2characterColliders[0].setMinMax(-27, 27, -17, 17);
+
+
+	//GameObject Character02;
+	team2Characters[1].setPosition(16, 0, 0);
+	team2Characters[1].setRotation(0, -90, 0);
+	team2Characters[1].name = "Shield";
+	team2Characters[1].tag = "team_1";
+	AnimatedModel t2character2Mesh(&team2Characters[1], "Character02.fbx", &negativeShader);
+	t2character2Mesh.setTexture("CharacterShieldColor.bmp", "Diffuse");
+	t2character2Mesh.setTexture("CharacterShieldAO.bmp", "AO");
+	team2characterColliders[1].Init(&team2Characters[1], 0.75f, glm::vec4(0, 1, 0, 1), false, 5.0f);
+	team2characterColliders[1].setMinMax(-27, 27, -17, 17);
+
+	//GameObject Character03;
+	team2Characters[2].setPosition(16, 0, 5.5);
+	team2Characters[2].setRotation(0, -120, 0);
+	team2Characters[2].name = "Speed";
+	team2Characters[2].tag = "team_1";
+	AnimatedModel t2character3Mesh(&team2Characters[2], "Character03.fbx", &negativeShader);
+	t2character3Mesh.setTexture("CharacterSColor.bmp", "Diffuse");
+	t2character3Mesh.setTexture("CharacterSAO.bmp", "AO");
+	team2characterColliders[2].Init(&team2Characters[2], 0.5f, glm::vec4(0, 1, 0, 1), false, 0.35f);
+	team2characterColliders[2].setMinMax(-27, 27, -17, 17);
+	//==============================Team 2===============================//
+
+	glm::vec3 data1StartLocation = glm::vec3(26, 0, -6);
 	GameObject DataTeam1;
-	DataTeam1.setPosition(26, 0, 0);
+	DataTeam1.setPosition(data1StartLocation.x, data1StartLocation.y, data1StartLocation.z);
 	DataTeam1.setRotation(0, 90, 0);
-	DataTeam1.name = "data 1";
+	DataTeam1.name = "data";
+	DataTeam1.tag = "team_1";
 	AnimatedModel dataMesh(&DataTeam1, "DataFile.fbx", &staticShader);
 	dataMesh.setTexture("DataColor.bmp", "Diffuse");
 	dataMesh.setTexture("DataAO.bmp", "AO");
 	SphereCollider data01Collider(&DataTeam1, 3, glm::vec4(0, 1, 0, 1), true);
 
+	GameObject GoalTeam1;
+	GoalTeam1.setPosition(-26, 0, 6);
+	GoalTeam1.setRotation(0, 90, 0);
+	GoalTeam1.name = "goal";
+	GoalTeam1.tag = "team_1";
+	AnimatedModel goalMesh(&GoalTeam1, "goal.fbx", &staticShader);
+	goalMesh.setTexture("github.bmp", "Diffuse");
+	goalMesh.setTexture("whiteAO.bmp", "AO");
+	SphereCollider goal01Collider(&GoalTeam1, 3, glm::vec4(0, 1, 0, 1), true);
+
 	GameObject DataTeam2;
-	DataTeam2.setPosition(-26, 0, 0);
+	DataTeam2.setPosition(-26, 0, -5);
 	DataTeam2.setRotation(0, 90, 0);
-	DataTeam2.name = "data 2";
+	DataTeam2.name = "data";
+	DataTeam2.tag = "team_2";
 	AnimatedModel data2Mesh(&DataTeam2, "DataFile.fbx", &staticShader);
 	data2Mesh.setTexture("DataColor.bmp", "Diffuse");
 	data2Mesh.setTexture("DataAO.bmp", "AO");
 	SphereCollider data02Collider(&DataTeam2, 3, glm::vec4(0, 1, 0, 1), true);
+
+	GameObject GoalTeam2;
+	GoalTeam2.setPosition(26, 0, 6);
+	GoalTeam2.setRotation(0, 90, 0);
+	GoalTeam2.name = "goal";
+	GoalTeam2.tag = "team_2";
+	AnimatedModel goal2Mesh(&GoalTeam2, "goal.fbx", &staticShader);
+	goal2Mesh.setTexture("github.bmp", "Diffuse");
+	goal2Mesh.setTexture("whiteAO.bmp", "AO");
+	SphereCollider goal02Collider(&GoalTeam2, 3, glm::vec4(0, 1, 0, 1), true);
 
 	GameObject skyBox;
 	skyBox.setScale(500, 500, 500);
@@ -185,85 +234,185 @@ int main(void)
 	skyBoxMesh.setTexture("space big2ud.bmp", "Diffuse");
 	skyBoxMesh.setTexture("whiteAO.bmp", "AO");
 
+	GameObject shot;
+	shot.setPosition(0, -1000, 0);
+	shot.setScale(0.5f, 0.5f, 0.5f);
+	AnimatedModel shotMesh(&shot, "shot.fbx", &emissionShader);
+	shotMesh.setTexture("whiteAO.bmp", "Diffuse");
+	shotMesh.setTexture("whiteAO.bmp", "AO");
+	SphereCollider shotCollider(&shot, 0.5f, glm::vec4(0, 0, 0, 1), false);
+	shotCollider.setMinMax(-100, 100, -100, 100);
+
 	GameObject scoreScreen;
-	scoreScreen.setPosition(0, 10, 0);
+	scoreScreen.setPosition(0, 6.5f, 0);
 	AnimatedModel scoreScreenMesh(&scoreScreen, "scoreScreen.fbx", &staticShader);
 	scoreScreenMesh.setTexture("scoreScreenColor.bmp", "Diffuse");
 	scoreScreenMesh.setTexture("whiteAO.bmp", "AO");
-
-	GameObject camera;
-	camera.setParent(&Character01);
-	camera.setPosition(-0.5f, 0.75f, -2);
 
 
 	logoUI.setTexture("LogoPresented.bmp");
 	logoUI.position = glm::vec3(-0.75, 0.65, 0);
 	logoUI.scale = glm::vec3(0.25, 0.25, 0);
 
-
 	groundMesh.universalViewProj = &viewProj;
 	dataMesh.universalViewProj = &viewProj;
 	data2Mesh.universalViewProj = &viewProj;
+	goalMesh.universalViewProj = &viewProj;
+	goal2Mesh.universalViewProj = &viewProj;
 	characterMesh.universalViewProj = &viewProj;
 	character2Mesh.universalViewProj = &viewProj;
-	/*character3Mesh.universalViewProj = &viewProj;
-	character4Mesh.universalViewProj = &viewProj;*/
+	character3Mesh.universalViewProj = &viewProj;
+	t2characterMesh.universalViewProj = &viewProj;
+	t2character2Mesh.universalViewProj = &viewProj;
+	t2character3Mesh.universalViewProj = &viewProj;
 	skyBoxMesh.universalViewProj = &viewProj;
 	scoreScreenMesh.universalViewProj = &viewProj;
+	shotMesh.universalViewProj = &viewProj;
 
+
+	int team1score = 0;
+	int selectedCharacter = 0;
+	int holdingCharacter = -1;
+	GameObject camera;
+	camera.setPosition(-0.5f, 0.75f, -2);
+
+	bool selectedPlayer = false;
+	bool keyPressed = false;
+	//Selecting player loop
+	while (!selectedPlayer)
+	{
+		camera.setPosition(-5 + (selectedCharacter - 1) * 3, 0.5, 5 + (selectedCharacter - 1) * 3);
+		camera.setRotation(0, -90, 0);
+
+		viewProj = camera.getViewProjection();
+
+		if (glfwGetKey(GLFW_KEY_RIGHT) == GLFW_PRESS && !keyPressed) {
+			if (selectedCharacter > 0)
+				selectedCharacter--;
+
+			keyPressed = true;
+		}
+		if (glfwGetKey(GLFW_KEY_LEFT) == GLFW_PRESS && !keyPressed) {
+			if (selectedCharacter < 2)
+				selectedCharacter++;
+
+			keyPressed = true;
+		}
+		if (glfwGetKey(GLFW_KEY_ENTER) == GLFW_PRESS) {
+			selectedPlayer = true;
+		}
+
+		if (glfwGetKey(GLFW_KEY_LEFT) == GLFW_RELEASE && glfwGetKey(GLFW_KEY_RIGHT) == GLFW_RELEASE) {
+			keyPressed = false;
+		}
+
+		// Clear the screen
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+		//Calling Transform Function in Every game component First to apply new position,rotation,scale
+		for (int i = 0; i < Transform::allComponents.size(); i++)
+		{
+			Transform::allComponents[i]->Update();
+		}
+
+		//Calling Update Function in Every game component
+		for (int i = 0; i < Component::allComponents.size(); i++)
+		{
+			Component::allComponents[i]->Update();
+		}
+
+		// Swap buffers
+		glfwSwapBuffers();
+	}
+
+	camera.setPosition(-0.5f, 0.75f, -2);
+	camera.setRotation(0, 0, 0);
+	camera.setParent(&Characters[selectedCharacter]);
+
+	bool ctrlPressed = false;
 
 	do {
 
-		//Getting Inputs
+		//Getting Inputs------------------------------------//
 		if (glfwGetKey('W') == GLFW_PRESS || glfwGetKey(GLFW_KEY_UP) == GLFW_PRESS) {
-			CollisionState cs = character01Collider.ApplyForce(Character01.getForwardVector() / 10.0f);
+			CollisionState cs = characterColliders[selectedCharacter].ApplyForce(Characters[selectedCharacter].getForwardVector() / 10.0f);
 			if (cs == COLLIDED) {
-				std::cout << "Collided with " << character01Collider.m_CollidedObjectName << std::endl;
+				std::cout << "Collided with " << characterColliders[selectedCharacter].m_CollidedObjectName << std::endl;
 			}
 			else if (cs == TRIGGERED) {
-				std::cout << "Triggered with " << character01Collider.m_CollidedObjectName << std::endl;
+				std::cout << "Triggered with " << characterColliders[selectedCharacter].m_CollidedObjectName << " " << characterColliders[selectedCharacter].m_CollidedObjectTag << std::endl;
+
+				if (characterColliders[selectedCharacter].m_CollidedObjectTag == Characters[selectedCharacter].tag) {
+					if (characterColliders[selectedCharacter].m_CollidedObjectName == "data") {
+						holdingCharacter = selectedCharacter;
+						data01Collider.m_active = false;
+					}
+					if (characterColliders[selectedCharacter].m_CollidedObjectName == "goal" && selectedCharacter == holdingCharacter) {
+						holdingCharacter = -1;
+						DataTeam1.setPosition(data1StartLocation.x, data1StartLocation.y, data1StartLocation.z);
+						DataTeam1.setScale(1, 1, 1);
+						team1score++;
+						data01Collider.m_active = true;
+					}
+				}
+
 			}
 		}
 		if (glfwGetKey('S') == GLFW_PRESS || glfwGetKey(GLFW_KEY_DOWN) == GLFW_PRESS) {
-			CollisionState cs = character01Collider.ApplyForce(Character01.getForwardVector() / -10.0f);
+			CollisionState cs = characterColliders[selectedCharacter].ApplyForce(Characters[selectedCharacter].getForwardVector() / -100.0f);
 			if (cs == COLLIDED) {
-				std::cout << "Collided with " << character01Collider.m_CollidedObjectName << std::endl;
+				std::cout << "Collided with " << characterColliders[selectedCharacter].m_CollidedObjectName << std::endl;
 			}
 			else if (cs == TRIGGERED) {
-				std::cout << "Triggered with " << character01Collider.m_CollidedObjectName << std::endl;
+				std::cout << "Triggered with " << characterColliders[selectedCharacter].m_CollidedObjectName << std::endl;
 			}
 		}
 		if (glfwGetKey('A') == GLFW_PRESS || glfwGetKey(GLFW_KEY_LEFT) == GLFW_PRESS) {
-			Character01.RotateAroundY(1);
+			Characters[selectedCharacter].RotateAroundY(1);
 		}
 		if (glfwGetKey('D') == GLFW_PRESS || glfwGetKey(GLFW_KEY_RIGHT) == GLFW_PRESS) {
-			Character01.RotateAroundY(-1);
+			Characters[selectedCharacter].RotateAroundY(-1);
 		}
+
+		if (glfwGetKey(GLFW_KEY_SPACE) == GLFW_PRESS) {
+			if (Characters[selectedCharacter].name == "Heavy weapon") {
+				glm::vec3 pos = Characters[selectedCharacter].getPosition() + 2.0f * Characters[selectedCharacter].getForwardVector();
+				glm::vec3 rot = Characters[selectedCharacter].getRotation();
+
+				shot.setPosition(pos.x, pos.y + 1, pos.z - 0.1f);
+				shot.setRotation(rot.x, rot.y, rot.z);
+			}
+		}
+
+		if (glfwGetKey(GLFW_KEY_LCTRL) == GLFW_PRESS && !ctrlPressed) {
+			selectedCharacter++;
+			selectedCharacter %= 3;
+			ctrlPressed = true;
+			camera.setParent(&Characters[selectedCharacter]);
+		}
+		if (glfwGetKey(GLFW_KEY_LCTRL) == GLFW_RELEASE) {
+			ctrlPressed = false;
+		}
+
+		//-----------------------------------------------------------------------------------------------//
+
+		if (holdingCharacter != -1) {
+			DataTeam1.setPosition(Characters[holdingCharacter].getPosition().x, Characters[holdingCharacter].getPosition().y + 2.0f, Characters[holdingCharacter].getPosition().z);
+			DataTeam1.setScale(0.25f, 0.25f, 0.25f);
+		}
+		else {
+			DataTeam1.setPosition(DataTeam1.getPosition().x, 0, DataTeam1.getPosition().z);
+			DataTeam1.setScale(1, 1, 1);
+		}
+
+		shotCollider.ApplyForce(shot.getForwardVector());
+
+		//std::cout << "team 01 score = " << team1score << std::endl;
 
 		DataTeam1.setRotation(0, glfwGetTime() * 50, 0);
 		DataTeam2.setRotation(0, -glfwGetTime() * 50, 0);
 		scoreScreen.setRotation(0, -glfwGetTime() * 50, 0);
 
-		//testAssimp.setRotation(0, glfwGetTime() * 90, 0);
-
-		//go2.setRotation(45, 90, 0);
-		//glm::vec3 go2Up = go2.getUpVector();
-		//glm::vec3 go2F = go2.getForwardVector();
-
-		//glm::vec3 pos = glm::vec3(-sin(glfwGetTime() / 2) * 6, 5.5, sin(glfwGetTime() / 2 + 1) * 5 - 4.5);
-		/*glm::vec3 pos = glm::vec3(0, 7, 0);
-		glm::vec3 forward = glm::rotateY(glm::vec3(-1, -0.5, 0), (float)glfwGetTime() * 50);
-		viewProj = glm::perspective(45.0f, 4.0f / 3.0f, 0.1f, 100.0f) * glm::lookAt(
-			pos,
-			pos + forward,
-			glm::vec3(0, 1, 0)
-		);*/
-
-		//cubeMesh.vp = groundMesh.vp;
-		//viewProj = groundMesh.vp;
-
-		//computeMatricesFromInputs();
-		//viewProj = getProjectionMatrix() * getViewMatrix();
 		viewProj = camera.getViewProjection();
 
 		// Clear the screen

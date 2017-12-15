@@ -54,7 +54,7 @@ glm::mat4 Transform::getViewProjection()
 {
 	glm::vec4 forward;
 	if (Parent == NULL)
-		forward = glm::vec4(-1, 0, 0, 1);
+		forward = glm::rotateY(glm::vec4(0, 0, 1, 1), Rotaion.y);
 	else
 		forward = glm::rotateY(glm::vec4(0, 0, 1, 1), Parent->Rotaion.y);
 
@@ -64,7 +64,7 @@ glm::mat4 Transform::getViewProjection()
 
 	glm::vec3 posVec3 = glm::vec3(positionFromParent.x, positionFromParent.y, positionFromParent.z);
 
-	glm::mat4 viewProj = glm::perspective(45.0f, 4.0f / 3.0f, 0.1f, 500.0f) * glm::lookAt(
+	glm::mat4 viewProj = glm::perspective(45.0f, 4.0f / 3.0f, 0.1f, 600.0f) * glm::lookAt(
 		posVec3,
 		posVec3 + forVec3,
 		glm::vec3(0, 1, 0)
@@ -87,6 +87,11 @@ glm::mat4 Transform::getRotationMatrix()
 glm::vec3 Transform::getPosition()
 {
 	return Position;
+}
+
+glm::vec3 Transform::getRotation()
+{
+	return Rotaion;
 }
 
 void Transform::setPosition(float x, float y, float z)

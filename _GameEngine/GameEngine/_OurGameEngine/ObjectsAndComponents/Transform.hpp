@@ -40,6 +40,7 @@ public:
 	glm::mat4 getRotationMatrix();
 
 	glm::vec3 getPosition();
+	glm::vec3 getRotation();
 
 	void setPosition(float x, float y, float z);
 
@@ -54,6 +55,7 @@ public:
 	glm::vec3 getForwardVector();
 
 	std::string name;
+	std::string tag;
 
 private:
 
