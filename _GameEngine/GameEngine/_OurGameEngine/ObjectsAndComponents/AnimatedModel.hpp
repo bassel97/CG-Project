@@ -83,6 +83,8 @@ class AnimatedModel : public Component
 
 public:
 
+	GameObject* camRef;
+
 	Shader *shader;
 	glm::mat4* universalViewProj;
 

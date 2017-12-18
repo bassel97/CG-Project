@@ -9,9 +9,16 @@ in mat4 rotationMatrix;
 uniform sampler2D Diffuse;
 uniform sampler2D AO;
 
+uniform vec3 camDirection;
+
+uniform float freeze;
+
 void main()
 {
 	vec3 norm = normalize(rotationMatrix * vec4(normal_vector,1)).xyz;
+
+	float bounds =  dot( camDirection, -norm );
+	bounds =  1 -bounds;
 
 	vec3 light_Dir = normalize( vec3(1,1,0) );
 
@@ -56,6 +63,12 @@ void main()
 
 	light_toon =  mag * texture(AO, TexCoord) *  texture(Diffuse, TexCoord);
 
+	light_toon += freeze;
+
 	gl_FragColor = light_toon;
 	//gl_FragColor = color;
+
+	if(bounds > 0.87){
+		gl_FragColor = vec4(0,0,0,1);
+	}
 }

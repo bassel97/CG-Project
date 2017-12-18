@@ -7,6 +7,8 @@ in vec3 normal_vector;
 uniform sampler2D Diffuse;
 uniform sampler2D AO;
 
+uniform vec3 camDirection;
+
 in mat4 rotationMatrix;
 
 void main()

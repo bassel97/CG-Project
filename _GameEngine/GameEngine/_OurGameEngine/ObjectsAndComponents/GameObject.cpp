@@ -2,6 +2,7 @@
 
 GameObject::GameObject()
 {
+	freeze = 0;
 }
 
 GameObject::~GameObject()

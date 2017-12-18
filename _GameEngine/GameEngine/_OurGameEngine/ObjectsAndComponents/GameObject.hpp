@@ -21,6 +21,8 @@ public:
 
 	void addComponent(Component* addedComponent);
 
+	float freeze;
+
 private:
 
 };

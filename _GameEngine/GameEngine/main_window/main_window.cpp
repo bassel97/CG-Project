@@ -2,6 +2,167 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//============================================Network===============================//
+#pragma comment(lib,"ws2_32.lib")
+#include <WinSock2.h>
+#include <string>
+#include <iostream>
+#pragma warning( disable : 4996 C4996 )  
+#define _WINSOCK_DEPRECATED_NO_WARNINGS
+
+//number of clients needed to start networkings
+// Number of Players = num+server = num+1
+const int num = 1;
+SOCKET Connections[num];
+SOCKET Client_Connection;//This client's connection to the server
+
+int ConnectionCounter = 0;
+
+struct data {
+	char buffer[256];
+	int dx;
+	int dataReady;
+	//from 0 to 2
+	int activePlayer;
+
+	bool isShooting;
+
+	float playerPositionX;
+	float playerPositionY;
+	float playerPositionZ;
+
+	float playerRotationX;
+	float playerRotationY;
+	float playerRotationZ;
+
+	int dataFilesCathced;
+
+	data() {
+		dataReady = 0;
+	}
+};
+
+bool gotDataFlag = false;
+data gotData;
+
+void processData(data dd) {
+	//code to handle incoming data
+	//std::cout << dd.buffer << std::endl;
+	//std::cout << " => " << dd.dx << std::endl;
+	gotData = dd;
+	gotDataFlag = true;
+}
+
+void sendDataAsServer(data dout) {
+	for (int i = 0; i < num; i++) //For each client connection
+	{
+		send(Connections[i], (char*)&dout, sizeof(data), NULL);//send the chat message to this client
+	}
+}
+
+void ClientHandlerThread(int index) //index = the index in the SOCKET Connections array
+{
+	data ds;
+	while (true)
+	{
+		recv(Connections[index], (char*)&ds, sizeof(data), NULL); //get message from client
+		processData(ds);
+
+		for (int i = 0; i < num; i++) //For each client connection
+		{
+			if (i == index) //Don't send the chat message to the same user who sent it
+				continue; //Skip user
+			send(Connections[i], (char*)&ds, sizeof(data), NULL);//send the chat message to this client
+		}
+	}
+}
+
+void init_server() {
+	//Winsock Startup
+	WSAData wsaData;
+	WORD DllVersion = MAKEWORD(2, 1);
+	if (WSAStartup(DllVersion, &wsaData) != 0) //If WSAStartup returns anything other than 0, then that means an error has occured in the WinSock Startup.
+	{
+		MessageBoxA(NULL, "WinSock startup failed", "Error", MB_OK | MB_ICONERROR);
+		//return 0;
+	}
+
+	SOCKADDR_IN addr; //Address that we will bind our listening socket to
+	int addrlen = sizeof(addr); //length of the address (required for accept call)
+	addr.sin_addr.s_addr = inet_addr("127.0.0.1"); //Broadcast locally
+	addr.sin_port = htons(1111); //Port
+	addr.sin_family = AF_INET; //IPv4 Socket
+
+	SOCKET sListen = socket(AF_INET, SOCK_STREAM, NULL); //Create socket to listen for new connections
+	bind(sListen, (SOCKADDR*)&addr, sizeof(addr)); //Bind the address to the socket
+	listen(sListen, SOMAXCONN); //Places sListen socket in a state in which it is listening for an incoming connection. Note:SOMAXCONN = Socket Oustanding Max Connections
+
+	SOCKET newConnection; //Socket to hold the client's connection
+	int ConnectionCounter = 0; //# of client connections
+	for (int i = 0; i < num; i++)
+	{
+		newConnection = accept(sListen, (SOCKADDR*)&addr, &addrlen); //Accept a new connection
+		if (newConnection == 0) //If accepting the client connection failed
+		{
+			std::cout << "Failed to accept the client's connection." << std::endl;
+		}
+		else //If client connection properly accepted
+		{
+			std::cout << "Client Connected!" << std::endl;
+			Connections[i] = newConnection; //Set socket in array to be the newest connection before creating the thread to handle this client's socket.
+			ConnectionCounter += 1; //Incremenent total # of clients that have connected
+			CreateThread(NULL, NULL, (LPTHREAD_START_ROUTINE)ClientHandlerThread, (LPVOID)(i), NULL, NULL); //Create Thread to handle this client. The index in the socket array for this thread is the value (i).
+		}
+	}
+	std::cout << "Connection Bandwidth limit Reached " << std::endl;
+}
+
+void sendDataAsClient(data dout) {
+	//sending data to all other clients
+	//call this function to send data 
+	send(Client_Connection, (char*)&dout, sizeof(data), NULL); //Send buffer
+}
+
+void ClientThread()
+{
+	data dc;
+	while (true)
+	{
+		recv(Client_Connection, (char*)&dc, sizeof(data), NULL); //receive buffer
+		processData(dc);
+	}
+}
+void init_client() {
+	//Winsock Startup
+	WSAData wsaData;
+	WORD DllVersion = MAKEWORD(2, 1);
+	if (WSAStartup(DllVersion, &wsaData) != 0)
+	{
+		MessageBoxA(NULL, "Winsock startup failed", "Error", MB_OK | MB_ICONERROR);
+		//return 0;
+	}
+
+	SOCKADDR_IN addr; //Address to be binded to our Connection socket
+	int sizeofaddr = sizeof(addr); //Need sizeofaddr for the connect function
+	addr.sin_addr.s_addr = inet_addr("127.0.0.1"); //Address = localhost (this pc)
+	addr.sin_port = htons(1111); //Port = 1111
+	addr.sin_family = AF_INET; //IPv4 Socket
+
+	Client_Connection = socket(AF_INET, SOCK_STREAM, NULL); //Set Connection socket
+	if (connect(Client_Connection, (SOCKADDR*)&addr, sizeofaddr) != 0) //If we are unable to connect...
+	{
+		MessageBoxA(NULL, "Failed to Connect", "Error", MB_OK | MB_ICONERROR);
+		//return 0; //Failed to Connect
+	}
+
+	std::cout << "Connected!" << std::endl;
+	CreateThread(NULL, NULL, (LPTHREAD_START_ROUTINE)ClientThread, NULL, NULL, NULL);
+	//Create the client thread that will receive any data that the server sends.
+
+}
+//============================================Network===============================//
+
+
 // Include GLEW
 #include <GL/glew.h>
 
@@ -34,6 +195,18 @@ std::vector<SphereCollider*> SphereCollider::m_PhysicsComponents;
 
 int main(void)
 {
+
+	std::cout << "Server or client?(s/c)" << std::endl;
+	char ch;
+	std::cin >> ch;
+
+	if (ch == 's') {
+		init_server();
+	}
+	else {
+		init_client();
+	}
+
 	// Initialise GLFW
 	if (!glfwInit())
 	{
@@ -54,8 +227,9 @@ int main(void)
 	//glfwOpenWindow( int width, int height, int redbits,int greenbits, int bluebits, int alphabits, int depthbits,int stencilbits, int mode ) 
 	//redbits,greenbits,bluebits: number of bits to use for each color.(0 means default color depth) 
 	//mode: specifies whether we will open a GLFW_FullScreen or a GLFW_WINDOW
-	//if (!glfwOpenWindow(1024, 768, 0, 0, 0, 0, 32, 0, GLFW_WINDOW))
-	if (!glfwOpenWindow(1920, 1080, 0, 0, 0, 0, 32, 0, GLFW_WINDOW))
+	if (!glfwOpenWindow(800, 600, 0, 0, 0, 0, 32, 0, GLFW_WINDOW))
+		//if (!glfwOpenWindow(1024, 768, 0, 0, 0, 0, 32, 0, GLFW_WINDOW))
+		//if (!glfwOpenWindow(1920, 1080, 0, 0, 0, 0, 32, 0, GLFW_WINDOW))
 	{
 		fprintf(stderr, "Failed to open GLFW window.\n");
 		glfwTerminate();
@@ -85,8 +259,6 @@ int main(void)
 	//universal view-projection matrix
 	glm::mat4 viewProj;
 
-
-
 	// Clear the screen
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	Shader guiSh("GUI.vs", "GUI.fs");
@@ -96,6 +268,21 @@ int main(void)
 	logoUI.Update();
 	// Swap buffers
 	glfwSwapBuffers();
+
+	GameObject Logo2;
+	GUI team_2Logo(&Logo2, &guiSh, "team_2.bmp");
+	team_2Logo.position = glm::vec3(0.15, 0.85, 0);
+	team_2Logo.scale = glm::vec3(0.15, 0.15, 0);
+
+	GameObject DeadLine;
+	GUI deadLineLogo(&DeadLine, &guiSh, "deadline.bmp");
+	deadLineLogo.position = glm::vec3(0.85, 0.85, 0);
+	deadLineLogo.scale = glm::vec3(0.15, 0.15, 0);
+
+	GameObject DeadLine2;
+	GUI deadLineLogo2(&DeadLine, &guiSh, "deadline.bmp");
+	deadLineLogo2.position = glm::vec3(-0.85, 0.85, 0);
+	deadLineLogo2.scale = glm::vec3(0.15, 0.15, 0);
 
 	Shader staticShader("Static.vs", "Static.fs");
 	Shader animatedShader("Animated.vs", "Animated.fs");
@@ -243,16 +430,27 @@ int main(void)
 	SphereCollider shotCollider(&shot, 0.5f, glm::vec4(0, 0, 0, 1), false);
 	shotCollider.setMinMax(-100, 100, -100, 100);
 
+	GameObject shot2;
+	shot2.setPosition(0, -1000, 0);
+	shot2.setScale(0.5f, 0.5f, 0.5f);
+	AnimatedModel shot2Mesh(&shot2, "shot.fbx", &emissionShader);
+	shot2Mesh.setTexture("whiteAO.bmp", "Diffuse");
+	shot2Mesh.setTexture("whiteAO.bmp", "AO");
+	SphereCollider shot2Collider(&shot, 0.5f, glm::vec4(0, 0, 0, 1), false);
+	shot2Collider.setMinMax(-100, 100, -100, 100);
+
 	GameObject scoreScreen;
 	scoreScreen.setPosition(0, 6.5f, 0);
 	AnimatedModel scoreScreenMesh(&scoreScreen, "scoreScreen.fbx", &staticShader);
 	scoreScreenMesh.setTexture("scoreScreenColor.bmp", "Diffuse");
 	scoreScreenMesh.setTexture("whiteAO.bmp", "AO");
 
+	float myScore = 0;
+	float hisScore = 0;
 
-	logoUI.setTexture("LogoPresented.bmp");
-	logoUI.position = glm::vec3(-0.75, 0.65, 0);
-	logoUI.scale = glm::vec3(0.25, 0.25, 0);
+	logoUI.setTexture("team_1.bmp");
+	logoUI.position = glm::vec3(-0.15, 0.85, 0);
+	logoUI.scale = glm::vec3(0.15, 0.15, 0);
 
 	groundMesh.universalViewProj = &viewProj;
 	dataMesh.universalViewProj = &viewProj;
@@ -268,9 +466,10 @@ int main(void)
 	skyBoxMesh.universalViewProj = &viewProj;
 	scoreScreenMesh.universalViewProj = &viewProj;
 	shotMesh.universalViewProj = &viewProj;
-
+	shot2Mesh.universalViewProj = &viewProj;
 
 	int team1score = 0;
+	int team2score = 0;
 	int selectedCharacter = 0;
 	int holdingCharacter = -1;
 	GameObject camera;
@@ -278,6 +477,26 @@ int main(void)
 
 	bool selectedPlayer = false;
 	bool keyPressed = false;
+
+	bool team1win = false;
+	bool team2win = false;
+
+	groundMesh.camRef = &camera;
+	dataMesh.camRef = &camera;
+	data2Mesh.camRef = &camera;
+	goalMesh.camRef = &camera;
+	goal2Mesh.camRef = &camera;
+	characterMesh.camRef = &camera;
+	character2Mesh.camRef = &camera;
+	character3Mesh.camRef = &camera;
+	t2characterMesh.camRef = &camera;
+	t2character2Mesh.camRef = &camera;
+	t2character3Mesh.camRef = &camera;
+	skyBoxMesh.camRef = &camera;
+	scoreScreenMesh.camRef = &camera;
+	shotMesh.camRef = &camera;
+	shot2Mesh.camRef = &camera;
+
 	//Selecting player loop
 	while (!selectedPlayer)
 	{
@@ -331,8 +550,15 @@ int main(void)
 
 	bool ctrlPressed = false;
 
-	do {
+	// glfwGetTime is called only once, the first time this function is called
+	double lastTime = glfwGetTime();;
 
+	do {
+		// Compute time difference between current and last frame
+		double currentTime = glfwGetTime();
+		float deltaTime = float(currentTime - lastTime);
+
+		bool playerShooting;
 		//Getting Inputs------------------------------------//
 		if (glfwGetKey('W') == GLFW_PRESS || glfwGetKey(GLFW_KEY_UP) == GLFW_PRESS) {
 			CollisionState cs = characterColliders[selectedCharacter].ApplyForce(Characters[selectedCharacter].getForwardVector() / 10.0f);
@@ -375,6 +601,7 @@ int main(void)
 		}
 
 		if (glfwGetKey(GLFW_KEY_SPACE) == GLFW_PRESS) {
+			playerShooting = true;
 			if (Characters[selectedCharacter].name == "Heavy weapon") {
 				glm::vec3 pos = Characters[selectedCharacter].getPosition() + 2.0f * Characters[selectedCharacter].getForwardVector();
 				glm::vec3 rot = Characters[selectedCharacter].getRotation();
@@ -382,6 +609,9 @@ int main(void)
 				shot.setPosition(pos.x, pos.y + 1, pos.z - 0.1f);
 				shot.setRotation(rot.x, rot.y, rot.z);
 			}
+		}
+		else {
+			playerShooting = false;
 		}
 
 		if (glfwGetKey(GLFW_KEY_LCTRL) == GLFW_PRESS && !ctrlPressed) {
@@ -405,15 +635,77 @@ int main(void)
 			DataTeam1.setScale(1, 1, 1);
 		}
 
-		shotCollider.ApplyForce(shot.getForwardVector());
-
-		//std::cout << "team 01 score = " << team1score << std::endl;
+		if (shotCollider.ApplyForce(shot.getForwardVector()) == COLLIDED) {
+			std::cout << shotCollider.m_CollidedObject->name << std::endl;
+			shotCollider.m_CollidedObject->freeze = 1;
+			shot.setPosition(0, -1000, 0);
+		}
 
 		DataTeam1.setRotation(0, glfwGetTime() * 50, 0);
 		DataTeam2.setRotation(0, -glfwGetTime() * 50, 0);
 		scoreScreen.setRotation(0, -glfwGetTime() * 50, 0);
 
 		viewProj = camera.getViewProjection();
+
+		logoUI.position.x = -(team1score * 0.233 + 0.15);
+		team_2Logo.position.x = team2score * 0.233 + 0.15;
+
+		std::cout << team1score << " / " << team2score << std::endl;
+
+		//===================================Sending data==============================//
+		data sentData;
+		sentData.activePlayer = selectedCharacter;
+		glm::vec3 sentPos = Characters[selectedCharacter].getPosition();
+		sentData.playerPositionX = sentPos.x;
+		sentData.playerPositionY = sentPos.y;
+		sentData.playerPositionZ = sentPos.z;
+
+		sentPos = Characters[selectedCharacter].getRotation();
+		sentData.playerRotationX = sentPos.x;
+		sentData.playerRotationY = sentPos.y;
+		sentData.playerRotationZ = sentPos.z;
+
+		sentData.isShooting = playerShooting;
+
+		sentData.dataReady = 255;
+
+		sentData.dataFilesCathced = team1score;
+
+		if (ch == 's') {
+			sendDataAsServer(sentData);
+		}
+		else {
+			sendDataAsClient(sentData);
+		}
+		//===================================Sending data==============================//
+
+		//===================================Recieving data==============================//
+		if (gotDataFlag && gotData.dataReady == 255) {
+
+			//std::cout << "Size of struct : " << sizeof(gotData) << std::endl;
+
+			int team2AcivePlayer = gotData.activePlayer;
+			if (team2AcivePlayer > -1 && team2AcivePlayer < 3) {
+				team2Characters[team2AcivePlayer].setPosition(-gotData.playerPositionX, gotData.playerPositionY, -gotData.playerPositionZ);
+				team2Characters[team2AcivePlayer].setRotation(gotData.playerRotationX, 180 + gotData.playerRotationY, gotData.playerRotationZ);
+				if (gotData.isShooting) {
+					std::cout << "Athor player is shooting :D\n";
+				}
+				gotDataFlag = false;
+				if (gotData.dataFilesCathced > 0 && gotData.dataFilesCathced <= 3)
+					team2score = gotData.dataFilesCathced;
+			}
+		}
+		//===================================Recieving data==============================//
+
+		if (team1score == 3) {
+			team1win = true;
+			break;
+		}
+		if (team2score == 3) {
+			team2win = true;
+			break;
+		}
 
 		// Clear the screen
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -433,9 +725,38 @@ int main(void)
 		// Swap buffers
 		glfwSwapBuffers();
 
+		// For the next frame, the "last time" will be "now"
+		lastTime = currentTime;
+
 	} // Check if the ESC key was pressed or the window was closed
 	while (glfwGetKey(GLFW_KEY_ESC) != GLFW_PRESS &&
 		glfwGetWindowParam(GLFW_OPENED));
+
+	//Setting Winning screen======================================//
+	logoUI.position = glm::vec3(0, 0, 0);
+	logoUI.scale = glm::vec3(1, 1, 1);
+	if (team1win) {
+		logoUI.setTexture("team1win.bmp");
+	}
+	if (team2win) {
+		logoUI.setTexture("team2win.bmp");
+	}
+
+
+	do {
+
+		// Clear the screen
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+		logoUI.Update();
+
+		// Swap buffers
+		glfwSwapBuffers();
+
+	} // Check if the ESC key was pressed or the window was closed
+	while (glfwGetKey(GLFW_KEY_ESC) != GLFW_PRESS &&
+		glfwGetWindowParam(GLFW_OPENED));
+	//Setting Winning screen======================================//
 
 	// Close OpenGL window and terminate GLFW
 	glfwTerminate();

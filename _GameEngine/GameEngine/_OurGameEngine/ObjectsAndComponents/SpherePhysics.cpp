@@ -34,7 +34,9 @@ void SphereCollider::Init(GameObject * containingObject, float radius, glm::vec4
 
 CollisionState SphereCollider::ApplyForce(glm::vec3 force)
 {
-	this->containingObject->Translate(force * (1 / m_weight));
+	float translationSpeed = (1 / m_weight) * (1 - containingObject->freeze);
+
+	this->containingObject->Translate(force * translationSpeed);
 	CollisionState value = DetectCollision();
 
 	bool gotOut = gotOutBoundaries();
@@ -59,11 +61,13 @@ CollisionState SphereCollider::DetectCollision()
 			if (m_PhysicsComponents[i]->m_Trigger) {
 				m_CollidedObjectName = m_PhysicsComponents[i]->containingObject->name;
 				m_CollidedObjectTag = m_PhysicsComponents[i]->containingObject->tag;
+				m_CollidedObject = m_PhysicsComponents[i]->containingObject;
 				return TRIGGERED;
 			}
 			else {
 				m_CollidedObjectName = m_PhysicsComponents[i]->containingObject->name;
 				m_CollidedObjectTag = m_PhysicsComponents[i]->containingObject->tag;
+				m_CollidedObject = m_PhysicsComponents[i]->containingObject;
 				return COLLIDED;
 			}
 		}
@@ -101,4 +105,10 @@ void SphereCollider::Start()
 
 void SphereCollider::Update()
 {
+}
+
+void SphereCollider::UpdateWeight(float scale)
+{
+	if (scale != 0)
+		m_weight *= scale;
 }

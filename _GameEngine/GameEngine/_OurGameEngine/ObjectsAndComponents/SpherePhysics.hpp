@@ -44,8 +44,12 @@ public:
 
 	void Update();
 
+	void UpdateWeight(float scale);
+
 	std::string m_CollidedObjectName;
 	std::string m_CollidedObjectTag;
+
+	GameObject* m_CollidedObject;
 
 	bool m_active;
 

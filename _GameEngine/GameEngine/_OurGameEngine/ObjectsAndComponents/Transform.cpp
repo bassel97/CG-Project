@@ -144,5 +144,11 @@ glm::vec3 Transform::getForwardVector()
 	upV = glm::rotate(upV, Rotaion.y, glm::vec3(0, 1, 0));
 	upV = glm::rotate(upV, Rotaion.z, glm::vec3(0, 0, 1));
 
+	if (Parent != NULL) {
+		upV = glm::rotateY(glm::vec3(0, 0, 1), Parent->Rotaion.y);
+
+	}
+	//std::cout << containingObject->name << " " << camOut.x << " " << camOut.y << " " << camOut.z << " \n";
+
 	return upV;
 }

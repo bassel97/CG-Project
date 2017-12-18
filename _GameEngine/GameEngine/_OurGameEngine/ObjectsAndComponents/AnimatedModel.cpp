@@ -20,6 +20,8 @@ aiNodeAnim* FindNodeAnim(aiAnimation* pAnimation, std::string NodeName)
 
 AnimatedModel::AnimatedModel(GameObject* contObject, const char* path, Shader* _shader) :Component(contObject) {
 
+	camRef = NULL;
+
 	shader = _shader;
 
 	//aiProcess_FlipUVs
@@ -392,23 +394,47 @@ void AnimatedModel::processBones(aiBone** bones, aiNode* rootNode, aiBone* First
 	if (strcmp(FirstBone->mName.C_Str(), "spine.002") == 0) {
 		//rotated = glm::translate(glm::transpose(parentMatrix), glm::vec3(0, sin((float)glfwGetTime() * 2) * 0.05f, 0));
 	}
-	if (strcmp(FirstBone->mName.C_Str(), "shin.L") == 0) {
-		//rotated = boneMatrix * glm::transpose(glm::rotate(glm::mat4(), 45.0f, glm::vec3(0, 0, 1))) * glm::inverse(boneMatrix);
-		//rotated = glm::transpose(boneMatrix) * glm::transpose(glm::translate(glm::mat4(), glm::vec3(1, 0, 0)))  * glm::transpose(glm::inverse(boneMatrix));
-		//rotated = glm::translate(glm::transpose(boneMatrix), glm::vec3(0, 0, 0));
-		//rotated = glm::rotate(glm::transpose(boneMatrix), 45.0f, glm::vec3(0, 0, 1));
 
-		rotated = glm::rotate(glm::transpose(parentMatrix), sin((float)glfwGetTime() * 10) * 25.0f, glm::vec3(1, 1, 0));
-		//rotated = glm::translate(glm::mat4(), glm::vec3(0, sin((float)glfwGetTime() * 2) * 0.25f, sin((float)glfwGetTime() * 2)* 0.25f));
-	}
+	//Walk Animation ====================================================//
+	float sinVal = sin((float)glfwGetTime() * 4);
 
-	if (strcmp(FirstBone->mName.C_Str(), "shin.R") == 0) {
-		//rotated = boneMatrix * glm::transpose(glm::rotate(glm::mat4(), 45.0f, glm::vec3(0, 0, 1))) * glm::inverse(boneMatrix);
-		//rotated = glm::transpose(boneMatrix) * glm::transpose(glm::translate(glm::mat4(), glm::vec3(1, 0, 0)))  * glm::transpose(glm::inverse(boneMatrix));
-		//rotated = glm::translate(glm::transpose(boneMatrix), glm::vec3(0, 0, 0));
-		//rotated = glm::rotate(glm::transpose(boneMatrix), 45.0f, glm::vec3(0, 0, 1));
-		rotated = glm::rotate(glm::transpose(parentMatrix), sin((float)glfwGetTime() * 10) * -25.0f, glm::vec3(1, -1, 0));
+	if (sinVal > 0) {
+		if (strcmp(FirstBone->mName.C_Str(), "heel.02.L") == 0) {
+			//rotated = boneMatrix * glm::transpose(glm::rotate(glm::mat4(), 45.0f, glm::vec3(0, 0, 1))) * glm::inverse(boneMatrix);
+			//rotated = glm::transpose(boneMatrix) * glm::transpose(glm::translate(glm::mat4(), glm::vec3(1, 0, 0)))  * glm::transpose(glm::inverse(boneMatrix));
+			//rotated = glm::translate(glm::transpose(boneMatrix), glm::vec3(0, 0, 0));
+			//rotated = glm::rotate(glm::transpose(boneMatrix), 45.0f, glm::vec3(0, 0, 1));
+
+			//rotated = glm::rotate(glm::transpose(parentMatrix), sin((float)glfwGetTime() * 10) * 25.0f, glm::vec3(1, 1, 0));
+			rotated = glm::translate(glm::mat4(), glm::vec3(0, sinVal*0.25f, sinVal * 0.1f));
+		}
+		if (strcmp(FirstBone->mName.C_Str(), "toe.L") == 0) {
+			rotated = glm::translate(glm::mat4(), glm::vec3(0, sinVal * 0.25f, sinVal * 0.1f));
+		}
+		if (strcmp(FirstBone->mName.C_Str(), "foot.L") == 0) {
+			rotated = glm::translate(glm::mat4(), glm::vec3(0, sinVal * 0.25f, sinVal * 0.1f));
+		}
+		if (strcmp(FirstBone->mName.C_Str(), "shin.L") == 0) {
+			rotated = glm::translate(glm::mat4(), glm::vec3(0, sinVal * 0.25f, sinVal * 0.1f));
+		}
 	}
+	else {
+		sinVal = -sinVal;
+		if (strcmp(FirstBone->mName.C_Str(), "heel.02.R") == 0) {
+			rotated = glm::translate(glm::mat4(), glm::vec3(0, sinVal * 0.25f, sinVal* 0.1f));
+		}
+		if (strcmp(FirstBone->mName.C_Str(), "toe.R") == 0) {
+			rotated = glm::translate(glm::mat4(), glm::vec3(0, sinVal * 0.25f, sinVal* 0.1f));
+		}
+		if (strcmp(FirstBone->mName.C_Str(), "foot.R") == 0) {
+			rotated = glm::translate(glm::mat4(), glm::vec3(0, sinVal * 0.25f, sinVal* 0.1f));
+		}
+		if (strcmp(FirstBone->mName.C_Str(), "shin.R") == 0) {
+			rotated = glm::translate(glm::mat4(), glm::vec3(0, sinVal * 0.25f, sinVal* 0.1f));
+		}
+	}
+	//Walk Animation ====================================================//
+
 
 	if (strcmp(FirstBone->mName.C_Str(), "forearm.R") == 0) {
 		//rotated = boneMatrix * glm::transpose(glm::rotate(glm::mat4(), 45.0f, glm::vec3(0, 0, 1))) * glm::inverse(boneMatrix);
@@ -465,6 +491,18 @@ void AnimatedModel::processBones(aiBone** bones, aiNode* rootNode, aiBone* First
 
 void AnimatedModel::Draw()
 {
+	if (containingObject->freeze > 0)
+		containingObject->freeze -= 0.0008;
+
+	if (camRef) {
+		glm::vec3 camOut = camRef->getForwardVector();
+
+		//std::cout << containingObject->name << " " << camOut.x << " " << camOut.y << " " << camOut.z << " \n";
+
+		//shader->setVec3("camDirection", 1.0f , 1.0f, 1.0f);
+		shader->setVec3("camDirection", camOut);
+	}
+
 	shader->use();
 
 	glm::mat4 transform = containingObject->getTransformMatrix();
@@ -476,6 +514,7 @@ void AnimatedModel::Draw()
 	shader->setMat4("projection", (*universalViewProj));
 
 	shader->setFloat("time", (float)glfwGetTime());
+	shader->setFloat("freeze", containingObject->freeze);
 
 	//shader->setVec4("tests[0]", glm::vec4(sin(glfwGetTime()), 0, 0, 0));
 	//shader->setVec4("tests[1]", glm::vec4(0, cos(glfwGetTime()), 0, 0));
