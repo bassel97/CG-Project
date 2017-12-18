@@ -583,8 +583,9 @@ int main(void)
 				}
 
 			}
+			characterMesh.walking = character2Mesh.walking = character3Mesh.walking = true;
 		}
-		if (glfwGetKey('S') == GLFW_PRESS || glfwGetKey(GLFW_KEY_DOWN) == GLFW_PRESS) {
+		else if (glfwGetKey('S') == GLFW_PRESS || glfwGetKey(GLFW_KEY_DOWN) == GLFW_PRESS) {
 			CollisionState cs = characterColliders[selectedCharacter].ApplyForce(Characters[selectedCharacter].getForwardVector() / -100.0f);
 			if (cs == COLLIDED) {
 				std::cout << "Collided with " << characterColliders[selectedCharacter].m_CollidedObjectName << std::endl;
@@ -592,6 +593,10 @@ int main(void)
 			else if (cs == TRIGGERED) {
 				std::cout << "Triggered with " << characterColliders[selectedCharacter].m_CollidedObjectName << std::endl;
 			}
+			characterMesh.walking = character2Mesh.walking = character3Mesh.walking = true;
+		}
+		else {
+			characterMesh.walking = character2Mesh.walking = character3Mesh.walking = false;
 		}
 		if (glfwGetKey('A') == GLFW_PRESS || glfwGetKey(GLFW_KEY_LEFT) == GLFW_PRESS) {
 			Characters[selectedCharacter].RotateAroundY(1);

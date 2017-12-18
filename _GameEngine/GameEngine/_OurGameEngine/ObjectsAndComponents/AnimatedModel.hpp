@@ -101,8 +101,7 @@ public:
 	void processMesh(aiBone ** bones, aiMesh *mesh, int numBones);
 	void processBones(aiBone** bones, aiNode* rootNode, aiBone* FirstBone, glm::mat4 parentMatrix);
 
-
-	//std::vector<Texture> loadMaterialTextures(aiMaterial * mat, aiTextureType type, std::string typeName);
+	bool walking;
 
 	void Draw();
 

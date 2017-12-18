@@ -21,6 +21,7 @@ aiNodeAnim* FindNodeAnim(aiAnimation* pAnimation, std::string NodeName)
 AnimatedModel::AnimatedModel(GameObject* contObject, const char* path, Shader* _shader) :Component(contObject) {
 
 	camRef = NULL;
+	walking = false;
 
 	shader = _shader;
 
@@ -396,47 +397,49 @@ void AnimatedModel::processBones(aiBone** bones, aiNode* rootNode, aiBone* First
 	}
 
 	//Walk Animation ====================================================//
-	float sinVal = sin((float)glfwGetTime() * 4);
+	if (walking) {
+		float sinVal = sin((float)glfwGetTime() * 10);
 
-	if (sinVal > 0) {
-		if (strcmp(FirstBone->mName.C_Str(), "heel.02.L") == 0) {
-			//rotated = boneMatrix * glm::transpose(glm::rotate(glm::mat4(), 45.0f, glm::vec3(0, 0, 1))) * glm::inverse(boneMatrix);
-			//rotated = glm::transpose(boneMatrix) * glm::transpose(glm::translate(glm::mat4(), glm::vec3(1, 0, 0)))  * glm::transpose(glm::inverse(boneMatrix));
-			//rotated = glm::translate(glm::transpose(boneMatrix), glm::vec3(0, 0, 0));
-			//rotated = glm::rotate(glm::transpose(boneMatrix), 45.0f, glm::vec3(0, 0, 1));
+		if (sinVal > 0) {
+			if (strcmp(FirstBone->mName.C_Str(), "heel.02.L") == 0) {
+				//rotated = boneMatrix * glm::transpose(glm::rotate(glm::mat4(), 45.0f, glm::vec3(0, 0, 1))) * glm::inverse(boneMatrix);
+				//rotated = glm::transpose(boneMatrix) * glm::transpose(glm::translate(glm::mat4(), glm::vec3(1, 0, 0)))  * glm::transpose(glm::inverse(boneMatrix));
+				//rotated = glm::translate(glm::transpose(boneMatrix), glm::vec3(0, 0, 0));
+				//rotated = glm::rotate(glm::transpose(boneMatrix), 45.0f, glm::vec3(0, 0, 1));
 
-			//rotated = glm::rotate(glm::transpose(parentMatrix), sin((float)glfwGetTime() * 10) * 25.0f, glm::vec3(1, 1, 0));
-			rotated = glm::translate(glm::mat4(), glm::vec3(0, sinVal*0.25f, sinVal * 0.1f));
+				//rotated = glm::rotate(glm::transpose(parentMatrix), sin((float)glfwGetTime() * 10) * 25.0f, glm::vec3(1, 1, 0));
+				rotated = glm::translate(glm::mat4(), glm::vec3(0, sinVal*0.25f, sinVal * 0.1f));
+			}
+			if (strcmp(FirstBone->mName.C_Str(), "toe.L") == 0) {
+				rotated = glm::translate(glm::mat4(), glm::vec3(0, sinVal * 0.25f, sinVal * 0.1f));
+			}
+			if (strcmp(FirstBone->mName.C_Str(), "foot.L") == 0) {
+				rotated = glm::translate(glm::mat4(), glm::vec3(0, sinVal * 0.25f, sinVal * 0.1f));
+			}
+			if (strcmp(FirstBone->mName.C_Str(), "shin.L") == 0) {
+				rotated = glm::translate(glm::mat4(), glm::vec3(0, sinVal * 0.25f, sinVal * 0.1f));
+			}
+			if (strcmp(FirstBone->mName.C_Str(), "thigh.L") == 0) {
+				rotated = glm::translate(glm::mat4(), glm::vec3(0, sinVal * 0.1f, sinVal * 0.1f));
+			}
 		}
-		if (strcmp(FirstBone->mName.C_Str(), "toe.L") == 0) {
-			rotated = glm::translate(glm::mat4(), glm::vec3(0, sinVal * 0.25f, sinVal * 0.1f));
-		}
-		if (strcmp(FirstBone->mName.C_Str(), "foot.L") == 0) {
-			rotated = glm::translate(glm::mat4(), glm::vec3(0, sinVal * 0.25f, sinVal * 0.1f));
-		}
-		if (strcmp(FirstBone->mName.C_Str(), "shin.L") == 0) {
-			rotated = glm::translate(glm::mat4(), glm::vec3(0, sinVal * 0.25f, sinVal * 0.1f));
-		}
-		if (strcmp(FirstBone->mName.C_Str(), "thigh.L") == 0) {
-			rotated = glm::translate(glm::mat4(), glm::vec3(0, sinVal * 0.1f, sinVal * 0.1f));
-		}
-	}
-	else {
-		sinVal = -sinVal;
-		if (strcmp(FirstBone->mName.C_Str(), "heel.02.R") == 0) {
-			rotated = glm::translate(glm::mat4(), glm::vec3(0, sinVal * 0.25f, sinVal* 0.1f));
-		}
-		if (strcmp(FirstBone->mName.C_Str(), "toe.R") == 0) {
-			rotated = glm::translate(glm::mat4(), glm::vec3(0, sinVal * 0.25f, sinVal* 0.1f));
-		}
-		if (strcmp(FirstBone->mName.C_Str(), "foot.R") == 0) {
-			rotated = glm::translate(glm::mat4(), glm::vec3(0, sinVal * 0.25f, sinVal* 0.1f));
-		}
-		if (strcmp(FirstBone->mName.C_Str(), "shin.R") == 0) {
-			rotated = glm::translate(glm::mat4(), glm::vec3(0, sinVal * 0.25f, sinVal* 0.1f));
-		}
-		if (strcmp(FirstBone->mName.C_Str(), "thigh.R") == 0) {
-			rotated = glm::translate(glm::mat4(), glm::vec3(0, sinVal * 0.1f, sinVal * 0.1f));
+		else {
+			sinVal = -sinVal;
+			if (strcmp(FirstBone->mName.C_Str(), "heel.02.R") == 0) {
+				rotated = glm::translate(glm::mat4(), glm::vec3(0, sinVal * 0.25f, sinVal* 0.1f));
+			}
+			if (strcmp(FirstBone->mName.C_Str(), "toe.R") == 0) {
+				rotated = glm::translate(glm::mat4(), glm::vec3(0, sinVal * 0.25f, sinVal* 0.1f));
+			}
+			if (strcmp(FirstBone->mName.C_Str(), "foot.R") == 0) {
+				rotated = glm::translate(glm::mat4(), glm::vec3(0, sinVal * 0.25f, sinVal* 0.1f));
+			}
+			if (strcmp(FirstBone->mName.C_Str(), "shin.R") == 0) {
+				rotated = glm::translate(glm::mat4(), glm::vec3(0, sinVal * 0.25f, sinVal* 0.1f));
+			}
+			if (strcmp(FirstBone->mName.C_Str(), "thigh.R") == 0) {
+				rotated = glm::translate(glm::mat4(), glm::vec3(0, sinVal * 0.1f, sinVal * 0.1f));
+			}
 		}
 	}
 	//Walk Animation ====================================================//
