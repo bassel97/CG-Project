@@ -436,7 +436,7 @@ int main(void)
 	AnimatedModel shot2Mesh(&shot2, "shot.fbx", &emissionShader);
 	shot2Mesh.setTexture("whiteAO.bmp", "Diffuse");
 	shot2Mesh.setTexture("whiteAO.bmp", "AO");
-	SphereCollider shot2Collider(&shot, 0.5f, glm::vec4(0, 0, 0, 1), false);
+	SphereCollider shot2Collider(&shot2, 0.5f, glm::vec4(0, 0, 0, 1), false);
 	shot2Collider.setMinMax(-100, 100, -100, 100);
 
 	GameObject scoreScreen;
@@ -601,6 +601,7 @@ int main(void)
 		}
 
 		if (glfwGetKey(GLFW_KEY_SPACE) == GLFW_PRESS) {
+
 			playerShooting = true;
 			if (Characters[selectedCharacter].name == "Heavy weapon") {
 				glm::vec3 pos = Characters[selectedCharacter].getPosition() + 2.0f * Characters[selectedCharacter].getForwardVector();
@@ -608,6 +609,8 @@ int main(void)
 
 				shot.setPosition(pos.x, pos.y + 1, pos.z - 0.1f);
 				shot.setRotation(rot.x, rot.y, rot.z);
+
+				std::cout << shot.getPosition().x << shot.getPosition().y << shot.getPosition().z << std::endl;
 			}
 		}
 		else {
@@ -636,9 +639,14 @@ int main(void)
 		}
 
 		if (shotCollider.ApplyForce(shot.getForwardVector()) == COLLIDED) {
-			std::cout << shotCollider.m_CollidedObject->name << std::endl;
+			//std::cout << shotCollider.m_CollidedObject->name << std::endl;
 			shotCollider.m_CollidedObject->freeze = 1;
 			shot.setPosition(0, -1000, 0);
+		}
+		if (shot2Collider.ApplyForce(shot2.getForwardVector()) == COLLIDED) {
+			//std::cout << shotCollider.m_CollidedObject->name << std::endl;
+			shot2Collider.m_CollidedObject->freeze = 1;
+			shot2.setPosition(0, -1000, 0);
 		}
 
 		DataTeam1.setRotation(0, glfwGetTime() * 50, 0);
@@ -689,7 +697,15 @@ int main(void)
 				team2Characters[team2AcivePlayer].setPosition(-gotData.playerPositionX, gotData.playerPositionY, -gotData.playerPositionZ);
 				team2Characters[team2AcivePlayer].setRotation(gotData.playerRotationX, 180 + gotData.playerRotationY, gotData.playerRotationZ);
 				if (gotData.isShooting) {
-					std::cout << "Athor player is shooting :D\n";
+					//std::cout << "Athor player is shooting :D\n";
+					if (team2Characters[team2AcivePlayer].name == "Heavy weapon") {
+						glm::vec3 pos = team2Characters[team2AcivePlayer].getPosition() + 2.0f * team2Characters[team2AcivePlayer].getForwardVector();
+						glm::vec3 rot = team2Characters[team2AcivePlayer].getRotation();
+
+						shot2.setPosition(pos.x, pos.y + 1, pos.z - 0.1f);
+						shot2.setRotation(rot.x, rot.y, rot.z);
+					}
+
 				}
 				gotDataFlag = false;
 				if (gotData.dataFilesCathced > 0 && gotData.dataFilesCathced <= 3)

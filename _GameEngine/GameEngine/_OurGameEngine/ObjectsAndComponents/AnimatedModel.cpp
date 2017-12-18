@@ -417,6 +417,9 @@ void AnimatedModel::processBones(aiBone** bones, aiNode* rootNode, aiBone* First
 		if (strcmp(FirstBone->mName.C_Str(), "shin.L") == 0) {
 			rotated = glm::translate(glm::mat4(), glm::vec3(0, sinVal * 0.25f, sinVal * 0.1f));
 		}
+		if (strcmp(FirstBone->mName.C_Str(), "thigh.L") == 0) {
+			rotated = glm::translate(glm::mat4(), glm::vec3(0, sinVal * 0.1f, sinVal * 0.1f));
+		}
 	}
 	else {
 		sinVal = -sinVal;
@@ -431,6 +434,9 @@ void AnimatedModel::processBones(aiBone** bones, aiNode* rootNode, aiBone* First
 		}
 		if (strcmp(FirstBone->mName.C_Str(), "shin.R") == 0) {
 			rotated = glm::translate(glm::mat4(), glm::vec3(0, sinVal * 0.25f, sinVal* 0.1f));
+		}
+		if (strcmp(FirstBone->mName.C_Str(), "thigh.R") == 0) {
+			rotated = glm::translate(glm::mat4(), glm::vec3(0, sinVal * 0.1f, sinVal * 0.1f));
 		}
 	}
 	//Walk Animation ====================================================//
