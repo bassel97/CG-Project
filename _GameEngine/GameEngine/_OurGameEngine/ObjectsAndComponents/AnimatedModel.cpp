@@ -49,25 +49,8 @@ AnimatedModel::AnimatedModel(GameObject* contObject, const char* path, Shader* _
 			printf(scene->mMeshes[0]->mBones[i]->mName.C_Str());
 			printf("\n");
 		}
-		/*
-		aiMatrix4x4 firstBoneMatrixAI;
-		aiNode* boneNode = scene->mRootNode->FindNode(scene->mMeshes[0]->mBones[0]->mName.C_Str());
-		aiNode* traverseNode = scene->mRootNode;
-		while (boneNode != traverseNode) {
-			firstBoneMatrixAI *= traverseNode->mTransformation;
-			traverseNode = traverseNode->mChildren[0];
-		}
-		glm::mat4 firstBoneMatrix;
-		for (int i = 0; i < 4; i++)
-		{
-			for (int j = 0; j < 4; j++)
-			{
-				firstBoneMatrix[i][j] = firstBoneMatrixAI[i][j];
-			}
-		}*/
 
 		processMesh(scene->mMeshes[0]->mBones, scene->mMeshes[0], scene->mMeshes[0]->mNumBones);
-		//processBones(scene->mMeshes[0]->mBones, scene->mRootNode, scene->mMeshes[0]->mBones[0], glm::mat4());
 	}
 	else
 		processMesh(scene->mMeshes[0]);
@@ -350,45 +333,17 @@ void AnimatedModel::processMesh(aiBone ** bones, aiMesh *mesh, int numBones)
 
 void AnimatedModel::processBones(aiBone** bones, aiNode* rootNode, aiBone* FirstBone, glm::mat4 parentMatrix)
 {
-	//printf(FirstBone->mName.C_Str());
-	//printf("     ==============================ParentMatrix\n");
-	/*for (int i = 0; i < 4; i++)
-	{
-		for (int j = 0; j < 4; j++)
-		{
-			printf("%f ,", parentMatrix[i][j]);
-		}
-		printf("\n");
-	}*/
-
 	glm::mat4 boneMatrix;
 
 	aiNode *node = rootNode->FindNode(FirstBone->mName);
-
-	//printf(node->mName.C_Str());
-	//printf(" from parent\n");
 
 	for (int i = 0; i < 4; i++)
 	{
 		for (int j = 0; j < 4; j++)
 		{
 			boneMatrix[i][j] = node->mTransformation[i][j];
-			//printf("%f ,", node->mTransformation[i][j]);
 		}
-		//printf("\n");
 	}
-
-	/*printf(node->mName.C_Str());
-	printf(" from origin\n");
-	boneMatrix = parentMatrix * boneMatrix;
-	for (int i = 0; i < 4; i++)
-	{
-		for (int j = 0; j < 4; j++)
-		{
-			printf("%f ,", boneMatrix[i][j]);
-		}
-		printf("\n");
-	}*/
 
 	glm::mat4 rotated = glm::transpose(parentMatrix);// = glm::inverse(glm::transpose(parentMatrix));
 
@@ -402,12 +357,6 @@ void AnimatedModel::processBones(aiBone** bones, aiNode* rootNode, aiBone* First
 
 		if (sinVal > 0) {
 			if (strcmp(FirstBone->mName.C_Str(), "heel.02.L") == 0) {
-				//rotated = boneMatrix * glm::transpose(glm::rotate(glm::mat4(), 45.0f, glm::vec3(0, 0, 1))) * glm::inverse(boneMatrix);
-				//rotated = glm::transpose(boneMatrix) * glm::transpose(glm::translate(glm::mat4(), glm::vec3(1, 0, 0)))  * glm::transpose(glm::inverse(boneMatrix));
-				//rotated = glm::translate(glm::transpose(boneMatrix), glm::vec3(0, 0, 0));
-				//rotated = glm::rotate(glm::transpose(boneMatrix), 45.0f, glm::vec3(0, 0, 1));
-
-				//rotated = glm::rotate(glm::transpose(parentMatrix), sin((float)glfwGetTime() * 10) * 25.0f, glm::vec3(1, 1, 0));
 				rotated = glm::translate(glm::mat4(), glm::vec3(0, sinVal*0.25f, sinVal * 0.1f));
 			}
 			if (strcmp(FirstBone->mName.C_Str(), "toe.L") == 0) {
@@ -446,38 +395,18 @@ void AnimatedModel::processBones(aiBone** bones, aiNode* rootNode, aiBone* First
 
 
 	if (strcmp(FirstBone->mName.C_Str(), "forearm.R") == 0) {
-		//rotated = boneMatrix * glm::transpose(glm::rotate(glm::mat4(), 45.0f, glm::vec3(0, 0, 1))) * glm::inverse(boneMatrix);
-		//rotated = glm::transpose(boneMatrix) * glm::transpose(glm::translate(glm::mat4(), glm::vec3(1, 0, 0)))  * glm::transpose(glm::inverse(boneMatrix));
-		//rotated = glm::translate(glm::transpose(boneMatrix), glm::vec3(0, 0, 0));
-		//rotated = glm::rotate(glm::transpose(boneMatrix), 45.0f, glm::vec3(0, 0, 1));
 		rotated = glm::rotate(glm::transpose(parentMatrix), sin((float)glfwGetTime() * 10) * -7.0f, glm::vec3(0, 1, 0));
 	}
 
 	if (strcmp(FirstBone->mName.C_Str(), "upper_arm.L") == 0) {
-		//rotated = boneMatrix * glm::transpose(glm::rotate(glm::mat4(), 45.0f, glm::vec3(0, 0, 1))) * glm::inverse(boneMatrix);
-		//rotated = glm::transpose(boneMatrix) * glm::transpose(glm::translate(glm::mat4(), glm::vec3(1, 0, 0)))  * glm::transpose(glm::inverse(boneMatrix));
-		//rotated = glm::translate(glm::transpose(boneMatrix), glm::vec3(0, 0, 0));
-		//rotated = glm::rotate(glm::transpose(boneMatrix), 45.0f, glm::vec3(0, 0, 1));
 		rotated = glm::rotate(glm::transpose(parentMatrix), sin((float)glfwGetTime() * 10) * 7.0f, glm::vec3(0, 1, 0));
 	}
-
-	/*printf("Rotated matrix\n");
-	for (int i = 0; i < 4; i++)
-	{
-		for (int j = 0; j < 4; j++)
-		{
-			printf("%f ,", rotated[i][j]);
-		}
-		printf("\n");
-	}*/
 
 	for (int i = 0; i < bonesNumber; i++)
 	{
 		if (bones[i]->mName == FirstBone->mName)
 		{
 			BonesTransforms[i] = rotated;
-			//printf("%d", i);
-			//printf(" Passed to shader\n");
 			break;
 		}
 	}
@@ -506,9 +435,6 @@ void AnimatedModel::Draw()
 	if (camRef) {
 		glm::vec3 camOut = camRef->getForwardVector();
 
-		//std::cout << containingObject->name << " " << camOut.x << " " << camOut.y << " " << camOut.z << " \n";
-
-		//shader->setVec3("camDirection", 1.0f , 1.0f, 1.0f);
 		shader->setVec3("camDirection", camOut);
 	}
 
@@ -525,9 +451,6 @@ void AnimatedModel::Draw()
 	shader->setFloat("time", (float)glfwGetTime());
 	shader->setFloat("freeze", containingObject->freeze);
 
-	//shader->setVec4("tests[0]", glm::vec4(sin(glfwGetTime()), 0, 0, 0));
-	//shader->setVec4("tests[1]", glm::vec4(0, cos(glfwGetTime()), 0, 0));
-
 	if (bonesNumber > 0) {
 		shader->setInt("numBones", bonesNumber);
 
@@ -539,8 +462,6 @@ void AnimatedModel::Draw()
 		}
 	}
 
-
-
 	//bind appropriate textures
 	unsigned int diffuseNr = 1;
 	unsigned int specularNr = 1;
@@ -550,18 +471,8 @@ void AnimatedModel::Draw()
 	{
 		glActiveTexture(GL_TEXTURE0 + i); // active proper texture unit before binding
 										  // retrieve texture number (the N in diffuse_textureN)
-		//std::string number;
-		std::string name = textures[i].type;
-		//if (name == "texture_diffuse")
-		//	number = std::to_string(diffuseNr++);
-		//else if (name == "texture_specular")
-		//	number = std::to_string(specularNr++); // transfer unsigned int to stream
-		//else if (name == "texture_normal")
-		//	number = std::to_string(normalNr++); // transfer unsigned int to stream
-		//else if (name == "texture_height")
-		//	number = std::to_string(heightNr++); // transfer unsigned int to stream
 
-		//printf("%f\n", (name + number).c_str());
+		std::string name = textures[i].type;
 
 		// now set the sampler to the correct texture unit
 		glUniform1i(glGetUniformLocation(shader->ID, name.c_str()), i);

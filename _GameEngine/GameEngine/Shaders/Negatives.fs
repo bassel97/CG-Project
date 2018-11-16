@@ -49,6 +49,6 @@ void main()
 	gl_FragColor = negative;
 	
 	if(bounds > 0.75){
-		gl_FragColor = vec4(0,0,0,1);
+		//gl_FragColor = vec4(0,0,0,1);
 	}
 }

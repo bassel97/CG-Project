@@ -223,11 +223,15 @@ int main(void)
 	glfwOpenWindowHint(GLFW_OPENGL_VERSION_MAJOR, 2);
 	glfwOpenWindowHint(GLFW_OPENGL_VERSION_MINOR, 1);
 
+	// settings
+	const unsigned int SCR_WIDTH = 800;// 1920;// 1280;//800
+	const unsigned int SCR_HEIGHT = 600;// 1080;// 720;//600
+
 	// Open a window and create its OpenGL context
 	//glfwOpenWindow( int width, int height, int redbits,int greenbits, int bluebits, int alphabits, int depthbits,int stencilbits, int mode ) 
 	//redbits,greenbits,bluebits: number of bits to use for each color.(0 means default color depth) 
 	//mode: specifies whether we will open a GLFW_FullScreen or a GLFW_WINDOW
-	if (!glfwOpenWindow(800, 600, 0, 0, 0, 0, 32, 0, GLFW_WINDOW))
+	if (!glfwOpenWindow(SCR_WIDTH, SCR_HEIGHT, 0, 0, 0, 0, 32, 0, GLFW_WINDOW))
 		//if (!glfwOpenWindow(1024, 768, 0, 0, 0, 0, 32, 0, GLFW_WINDOW))
 		//if (!glfwOpenWindow(1920, 1080, 0, 0, 0, 0, 32, 0, GLFW_WINDOW))
 	{
@@ -288,6 +292,7 @@ int main(void)
 	Shader animatedShader("Animated.vs", "Animated.fs");
 	Shader emissionShader("Emission.vs", "Emission.fs");
 	Shader negativeShader("Animated.vs", "Negatives.fs");
+	Shader guiShpp("GUI.vs", "GUIpp.fs");
 
 	GameObject Ground;
 	Ground.setScale(2, 2, 2);
@@ -371,7 +376,8 @@ int main(void)
 	team2characterColliders[2].Init(&team2Characters[2], 0.5f, glm::vec4(0, 1, 0, 1), false, 0.35f);
 	team2characterColliders[2].setMinMax(-27, 27, -17, 17);
 	//==============================Team 2===============================//
-
+	
+	//===================================Setting other data=============//
 	glm::vec3 data1StartLocation = glm::vec3(26, 0, -6);
 	GameObject DataTeam1;
 	DataTeam1.setPosition(data1StartLocation.x, data1StartLocation.y, data1StartLocation.z);
@@ -444,6 +450,15 @@ int main(void)
 	AnimatedModel scoreScreenMesh(&scoreScreen, "scoreScreen.fbx", &staticShader);
 	scoreScreenMesh.setTexture("scoreScreenColor.bmp", "Diffuse");
 	scoreScreenMesh.setTexture("whiteAO.bmp", "AO");
+	//===================================Setting other data=============//
+
+
+	//==================================Setting main Window============//
+	GameObject MainWindow;
+	GUI MainWindow_GUI(&MainWindow, &guiShpp, SCR_WIDTH, SCR_HEIGHT);
+	MainWindow_GUI.scale = glm::vec3(0.9, 0.9, 0.9);
+	//==================================Setting main Window============//
+
 
 	float myScore = 0;
 	float hisScore = 0;
@@ -452,6 +467,7 @@ int main(void)
 	logoUI.position = glm::vec3(-0.15, 0.85, 0);
 	logoUI.scale = glm::vec3(0.15, 0.15, 0);
 
+	//Setting VP refrence for each object =====================//
 	groundMesh.universalViewProj = &viewProj;
 	dataMesh.universalViewProj = &viewProj;
 	data2Mesh.universalViewProj = &viewProj;
@@ -467,6 +483,7 @@ int main(void)
 	scoreScreenMesh.universalViewProj = &viewProj;
 	shotMesh.universalViewProj = &viewProj;
 	shot2Mesh.universalViewProj = &viewProj;
+	//Setting VP refrence for each object =====================//
 
 	int team1score = 0;
 	int team2score = 0;
@@ -481,6 +498,7 @@ int main(void)
 	bool team1win = false;
 	bool team2win = false;
 
+	//Setting Cam refrence for each object =====================//
 	groundMesh.camRef = &camera;
 	dataMesh.camRef = &camera;
 	data2Mesh.camRef = &camera;
@@ -496,8 +514,9 @@ int main(void)
 	scoreScreenMesh.camRef = &camera;
 	shotMesh.camRef = &camera;
 	shot2Mesh.camRef = &camera;
+	//Setting Cam refrence for each object =====================//
 
-	//Selecting player loop
+	//Selecting player loop============================================//
 	while (!selectedPlayer)
 	{
 		camera.setPosition(-5 + (selectedCharacter - 1) * 3, 0.5, 5 + (selectedCharacter - 1) * 3);
@@ -525,6 +544,12 @@ int main(void)
 			keyPressed = false;
 		}
 
+
+		// render
+		// ------
+		// bind to framebuffer and draw scene as we normally would to color texture 
+		glBindFramebuffer(GL_FRAMEBUFFER, MainWindow_GUI.framebuffer);
+
 		// Clear the screen
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
@@ -540,9 +565,18 @@ int main(void)
 			Component::allComponents[i]->Update();
 		}
 
+		// now bind back to default framebuffer and draw a quad plane with the attached framebuffer color texture
+		glBindFramebuffer(GL_FRAMEBUFFER, 0);
+		// clear all relevant buffers
+		glClearColor(0.0f, 0.0f, 0.0f, 1.0f); // set clear color to white (not really necessery actually, since we won't be able to see behind the quad anyways)
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+		MainWindow_GUI.drawWindow();
+
 		// Swap buffers
 		glfwSwapBuffers();
 	}
+	//Selecting player loop============================================//
 
 	camera.setPosition(-0.5f, 0.75f, -2);
 	camera.setRotation(0, 0, 0);
@@ -550,9 +584,12 @@ int main(void)
 
 	bool ctrlPressed = false;
 
-	// glfwGetTime is called only once, the first time this function is called
-	double lastTime = glfwGetTime();;
+	MainWindow_GUI.scale = glm::vec3(0.96, 0.96, 0.96);
 
+	// glfwGetTime is called only once, the first time this function is called
+	double lastTime = glfwGetTime();
+
+	//Main Game Loop with Logic===========================================//
 	do {
 		// Compute time difference between current and last frame
 		double currentTime = glfwGetTime();
@@ -728,6 +765,10 @@ int main(void)
 			break;
 		}
 
+		// render
+		// ------
+		// bind to framebuffer and draw scene as we normally would to color texture 
+		glBindFramebuffer(GL_FRAMEBUFFER, MainWindow_GUI.framebuffer);
 		// Clear the screen
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
@@ -743,6 +784,14 @@ int main(void)
 			Component::allComponents[i]->Update();
 		}
 
+		// now bind back to default framebuffer and draw a quad plane with the attached framebuffer color texture
+		glBindFramebuffer(GL_FRAMEBUFFER, 0);
+		// clear all relevant buffers
+		glClearColor(0.0f, 0.0f, 0.0f, 1.0f); // set clear color to white (not really necessery actually, since we won't be able to see behind the quad anyways)
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+		MainWindow_GUI.drawWindow();
+
 		// Swap buffers
 		glfwSwapBuffers();
 
@@ -752,6 +801,7 @@ int main(void)
 	} // Check if the ESC key was pressed or the window was closed
 	while (glfwGetKey(GLFW_KEY_ESC) != GLFW_PRESS &&
 		glfwGetWindowParam(GLFW_OPENED));
+	//Main Game Loop with Logic===========================================//
 
 	//Setting Winning screen======================================//
 	logoUI.position = glm::vec3(0, 0, 0);
@@ -762,6 +812,7 @@ int main(void)
 	if (team2win) {
 		logoUI.setTexture("team2win.bmp");
 	}
+	//Setting Winning screen======================================//
 
 
 	do {
