@@ -232,8 +232,6 @@ int main(void)
 	//redbits,greenbits,bluebits: number of bits to use for each color.(0 means default color depth) 
 	//mode: specifies whether we will open a GLFW_FullScreen or a GLFW_WINDOW
 	if (!glfwOpenWindow(SCR_WIDTH, SCR_HEIGHT, 0, 0, 0, 0, 32, 0, GLFW_WINDOW))
-		//if (!glfwOpenWindow(1024, 768, 0, 0, 0, 0, 32, 0, GLFW_WINDOW))
-		//if (!glfwOpenWindow(1920, 1080, 0, 0, 0, 0, 32, 0, GLFW_WINDOW))
 	{
 		fprintf(stderr, "Failed to open GLFW window.\n");
 		glfwTerminate();
